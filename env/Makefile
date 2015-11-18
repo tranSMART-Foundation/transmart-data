@@ -10,7 +10,7 @@ GROOVY_VERSION=2.1.9
 ONDREJ_KEY=E5267A6C
 
 GROOVY_ZIP=groovy-binary-$(GROOVY_VERSION).zip
-GROOVY_URL=http://dist.groovy.codehaus.org/distributions/$(GROOVY_ZIP)
+GROOVY_URL=http://dl.bintray.com/groovy/maven/$(GROOVY_ZIP)
 GROOVY_BIN=groovy-$(GROOVY_VERSION)/bin/groovy
 
 PHP_VERSION=5.5.13
@@ -24,6 +24,8 @@ TRANSMART_LOADER=transmart-loader
 TRANSMART_BATCH_VERSION=1.0-SNAPSHOT
 TRANSMART_BATCH_FILE=transmart-batch-capsule.jar
 TRANSMART_BATCH_URL=https://repo.thehyve.nl/content/repositories/snapshots/org/transmartproject/transmart-batch/$(TRANSMART_BATCH_VERSION)/transmart-batch-$(TRANSMART_BATCH_VERSION)-capsule.jar
+
+include ../lib/makefile.inc
 
 %/conf/log4j.properties:
 	mkdir -p $*/conf \
@@ -60,7 +62,7 @@ batchdb-oracle.properties: batchdb-oracle.properties.php ../vars
 .PHONY: $(TRANSMART_BATCH_FILE)
 
 $(GROOVY_ZIP):
-	curl -f "$(GROOVY_URL)" > $@
+	curl -L "$(GROOVY_URL)" > $@
 
 $(GROOVY_BIN): $(GROOVY_ZIP)
 	unzip $<
@@ -99,14 +101,18 @@ update_repos = if [ ! -d $(1) ]; then \
 	else cd $(1) && git pull; fi
 
 update_etl:
-	$(call update_repos,tranSMART-ETL,git://github.com/thehyve/tranSMART-ETL.git,master)
+	$(call update_repos,tranSMART-ETL,https://github.com/transmart/tranSMART-ETL.git,master)
 .PHONY: update_repos, $(TRANSMART_LOADER)-from-file-server, $(TRANSMART_LOADER)-latest-bamboo-snapshot
 
 KETTLE_ARCHIVE=pdi-ce-$(KETTLE_VERSION)-stable.tar.gz
 $(KETTLE_ARCHIVE):
 	curl -L -f "http://downloads.sourceforge.net/project/pentaho/Data%20Integration/4.4.0-stable/$@" > $@
 
-data-integration: data-integration/.keep
+KETTLE_ORACLE_DRIVER=data-integration/libext/JDBC/$(JDBC_DRIVER_ORA)
+$(KETTLE_ORACLE_DRIVER): $(JDBC_DRIVER_ORA_PATH) data-integration/.keep
+	cp --reflink=auto "$<" "$@"
+
+data-integration: data-integration/.keep $(KETTLE_ORACLE_DRIVER)
 .PHONY: data-integration
 data-integration/.keep: $(KETTLE_ARCHIVE)
 	 tar -xzf $<
