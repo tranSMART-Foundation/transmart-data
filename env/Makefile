@@ -101,7 +101,7 @@ update_repos = if [ ! -d $(1) ]; then \
 	else cd $(1) && git pull; fi
 
 update_etl:
-	$(call update_repos,tranSMART-ETL,https://github.com/transmart/tranSMART-ETL.git,master)
+	$(call update_repos,tranSMART-ETL,https://github.com/tranSMART-Foundation/tranSMART-ETL.git,release-1.2.4)
 .PHONY: update_repos, $(TRANSMART_LOADER)-from-file-server, $(TRANSMART_LOADER)-latest-bamboo-snapshot
 
 KETTLE_ARCHIVE=pdi-ce-$(KETTLE_VERSION)-stable.tar.gz
