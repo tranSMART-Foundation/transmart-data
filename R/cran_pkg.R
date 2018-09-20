@@ -7,10 +7,15 @@ missing.packages <- function(required) {
 }
 new.packages <- missing.packages(required.packages)
 if (length(new.packages)) {
+	print("Installing packages...")
+	print(new.packages)
 	install.packages(new.packages, repos=Sys.getenv("CRAN_MIRROR"));
 }
 
 if (length(missing.packages(required.packages))) {
+	print("Failed packages...")
+	failed.packages <- missing.packages(required.packages)
+	print(failed.packages)
 	warning('Some packages not installed');
-	quit(1);
+	quit("no");
 }

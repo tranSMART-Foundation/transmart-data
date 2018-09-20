@@ -47,6 +47,9 @@ if (length(intersect(new.packages, c("WGCNA")))) {
 }
 
 if (length(missing.packages(required.packages))) {
+	print("Failed packages...")
+	failed.packages <- missing.packages(required.packages)
+	print(failed.packages)
 	warning('Some packages not installed');
-	quit(1);
+	quit("no");
 }
