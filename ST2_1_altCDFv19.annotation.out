@@ -1,0 +1,14 @@
+make: Entering directory `/transmart/transmart-data/samples/postgres'
+DATA_LOCATION="/transmart/transmart-data/samples/studies/ST2_1_altCDFv19/annotation" \
+	KETTLE_HOME="/transmart/transmart-data/samples/postgres/kettle-home" \
+	PSQL_COMMAND="/usr/bin/psql -v ON_ERROR_STOP=1 --single-transaction -X" \
+	./load_annotation.sh ../studies/ST2_1_altCDFv19/annotation.params
+Processing file ../studies/ST2_1_altCDFv19/annotation.params $PARAMS_FILENAME /transmart/transmart-data/samples/studies/ST2_1_altCDFv19/annotation.params
+Info load_annotation.sh: Sourced params file /transmart/transmart-data/samples/studies/ST2_1_altCDFv19/annotation.params
+Warning: could not determine STUDY_NAME or STUDY_ID
+         that's probably OK for platform definitions.
+Info load_annotation.sh: assuming STUDY_ID=
+Going to upload platform definition
+TRUNCATE TABLE
+Number of rows uploaded: 25581
+make: Leaving directory `/transmart/transmart-data/samples/postgres'

@@ -1,0 +1,11 @@
+make: Entering directory `/transmart/transmart-data/samples/postgres'
+make -C ../studies .o/annotation.params
+make[1]: Entering directory `/transmart/transmart-data/samples/studies'
+make .o/.o_annotation.tar.xz
+make[2]: Entering directory `/transmart/transmart-data/samples/studies'
+make[2]: *** No rule to make target `.o/.o_annotation.tar.xz'.  Stop.
+make[2]: Leaving directory `/transmart/transmart-data/samples/studies'
+make[1]: *** [.o/annotation.params] Error 2
+make[1]: Leaving directory `/transmart/transmart-data/samples/studies'
+make: *** [../studies/.o/annotation.params] Error 2
+make: Leaving directory `/transmart/transmart-data/samples/postgres'

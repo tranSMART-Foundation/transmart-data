@@ -1,0 +1,1241 @@
+make: Entering directory `/transmart/transmart-data/samples/postgres'
+php -d variables_order=E gen_kettle_properties.php > kettle-home/kettle.properties
+STUDY_ID=Neptune_V16 DATA_LOCATION="/transmart/transmart-data/samples/studies/Neptune_V16/clinical" \
+		KETTLE_HOME="/transmart/transmart-data/samples/postgres/kettle-home" \
+		./load_clinical.sh ../studies/Neptune_V16/clinical.params
+Processing file ../studies/Neptune_V16/clinical.params $PARAMS_FILENAME /transmart/transmart-data/samples/studies/Neptune_V16/clinical.params
+Info load_clinical.sh: Sourced params file /transmart/transmart-data/samples/studies/Neptune_V16/clinical.params
+Info load_clinical.sh: assuming STUDY_NAME=Neptune_V16
+2018/10/12 15:57:59 - Kitchen - Start of run.
+2018/10/12 15:58:00 - create_clinical_data - Start of job execution
+2018/10/12 15:58:00 - create_clinical_data - Starting entry [Validate parameters]
+2018/10/12 15:58:00 - Validate parameters - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/validate_clinical_data_params.ktr]
+2018/10/12 15:58:00 - validate_clinical_data_params - Dispatching started for transformation [validate_clinical_data_params]
+2018/10/12 15:58:00 - Get variables for STUDY_ID, TOP_NODE, LOAD_TYPE.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:00 - Check STUDY_ID is not nul.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:00 - Check TOP_NODE is not nul.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:00 - Check LOAD_TYPE in I, L, F.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:00 - Dummy (do nothing).0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:00 - create_clinical_data - Starting entry [Write To Log]
+2018/10/12 15:58:00 - \Private Studies\Neptune_V16\ - This is the topNode
+2018/10/12 15:58:00 - create_clinical_data - Starting entry [Check if columns file exists]
+2018/10/12 15:58:00 - create_clinical_data - Starting entry [Check if LOAD_TYPE=F 2]
+2018/10/12 15:58:00 - create_clinical_data - Starting entry [Start Audit]
+2018/10/12 15:58:00 - Start Audit - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/cz_start_audit.ktr]
+2018/10/12 15:58:00 - cz_start_audit - Dispatching started for transformation [cz_start_audit]
+2018/10/12 15:58:00 - Generate Rows.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2018/10/12 15:58:00 - Get Job Name.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:01 - Set Env for the job.0 - Setting environment variables...
+2018/10/12 15:58:01 - Set Env for the job.0 - Set variable ETL_JOB_NAME to value [create_clinical_data]
+2018/10/12 15:58:01 - Set Env for the job.0 - Set variable ETL_JOB_ID to value [39]
+2018/10/12 15:58:01 - Set Env for the job.0 - Finished after 1 rows.
+2018/10/12 15:58:01 - Set Env for the job.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:01 - Call cz_start_audit.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:01 - create_clinical_data - Starting entry [Write study_id to audit]
+2018/10/12 15:58:01 - Write study_id to audit - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/write_study_id_to_audit.ktr]
+2018/10/12 15:58:01 - write_study_id_to_audit - Dispatching started for transformation [write_study_id_to_audit]
+2018/10/12 15:58:01 - Get System Info.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:01 - Get job_name, study_id.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:01 - Add constants.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:01 - Set procedure_name.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:01 - Call cz_write_audit.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:01 - create_clinical_data - Starting entry [Truncate lt_src_clinical_data]
+2018/10/12 15:58:01 - create_clinical_data - Starting entry [Get data filenames from columns file]
+2018/10/12 15:58:01 - Get data filenames from columns file - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/get_data_filenames.ktr]
+2018/10/12 15:58:01 - get_data_filenames - Dispatching started for transformation [get_data_filenames]
+2018/10/12 15:58:01 - Get filenames from columns file.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/colmapping_v16.txt
+2018/10/12 15:58:01 - Get filenames from columns file.0 - Finished processing (I=550, O=0, R=0, W=549, U=1, E=0)
+2018/10/12 15:58:01 - Filter rows.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:01 - Sort rows.0 - Finished processing (I=0, O=0, R=549, W=5, U=0, E=0)
+2018/10/12 15:58:01 - Copy rows to result.0 - Finished processing (I=0, O=0, R=5, W=5, U=0, E=0)
+2018/10/12 15:58:01 - create_clinical_data - Starting entry [Load data from each file]
+2018/10/12 15:58:01 - load_lt_clinical_data_audit - Starting entry [Set data_filename as variable]
+2018/10/12 15:58:01 - Set data_filename as variable - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/set_data_filename.ktr]
+2018/10/12 15:58:01 - set_data_filename - Dispatching started for transformation [set_data_filename]
+2018/10/12 15:58:01 - Get rows from result.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:01 - Set DATA_FILENAME Variables.0 - Setting environment variables...
+2018/10/12 15:58:01 - Set DATA_FILENAME Variables.0 - Set variable DATA_FILENAME to value [biospecimens_v16.txt]
+2018/10/12 15:58:01 - Set DATA_FILENAME Variables.0 - Finished after 1 rows.
+2018/10/12 15:58:01 - Set DATA_FILENAME Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:01 - load_lt_clinical_data_audit - Starting entry [Processing file]
+2018/10/12 15:58:01 - Processing file biospecimens_v16.txt - *****************************************************
+2018/10/12 15:58:01 - load_lt_clinical_data_audit - Starting entry [Map Data to Standard Format]
+2018/10/12 15:58:01 - Map Data to Standard Format - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/map_data_to_std_format.ktr]
+2018/10/12 15:58:01 - map_data_to_std_format - Dispatching started for transformation [map_data_to_std_format]
+2018/10/12 15:58:02 - Insert to lt_src_clinical_data.0 - Connected to database [TM_LZ] (commit=1000)
+2018/10/12 15:58:02 - Get data file.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/biospecimens_v16.txt
+2018/10/12 15:58:02 - Get data_labels from first data row.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/biospecimens_v16.txt
+2018/10/12 15:58:02 - Get data_labels from first data row.0 - Finished processing (I=1, O=0, R=0, W=1, U=1, E=0)
+2018/10/12 15:58:02 - Get data file.0 - Finished processing (I=3636, O=0, R=0, W=3635, U=1, E=0)
+2018/10/12 15:58:02 - Split labels from first row.0 - Finished processing (I=0, O=0, R=1, W=7, U=0, E=0)
+2018/10/12 15:58:02 - Get category_cd, data_label for columns.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/colmapping_v16.txt
+2018/10/12 15:58:02 - Trim label_col_value.0 - Finished processing (I=0, O=0, R=7, W=7, U=0, E=0)
+2018/10/12 15:58:02 - Sort hdr labels by col_num.0 - Finished processing (I=0, O=0, R=7, W=7, U=0, E=0)
+2018/10/12 15:58:02 - Add record number to each row.0 - Finished processing (I=0, O=0, R=3635, W=3635, U=0, E=0)
+2018/10/12 15:58:02 - Get category_cd, data_label for columns.0 - Finished processing (I=550, O=0, R=0, W=549, U=1, E=0)
+2018/10/12 15:58:02 - Check if MIN/MAX/MEAN.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:02 - Parse alt_data_label into number and position.0 - Optimization level set to 9.
+2018/10/12 15:58:02 - Split field to rows.0 - Finished processing (I=0, O=0, R=3635, W=24357, U=0, E=0)
+2018/10/12 15:58:02 - Trim column value.0 - Finished processing (I=0, O=0, R=24357, W=24357, U=0, E=0)
+2018/10/12 15:58:02 - Replace double-quote in col_value.0 - Finished processing (I=0, O=0, R=24357, W=24357, U=0, E=0)
+2018/10/12 15:58:03 - Parse alt_data_label into number and position.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:03 - Add null aggregate_type.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:03 - Set data_filename for columns filter.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:03 - Check if columns for data file.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:03 - Check if data_label_col missing.0 - Finished processing (I=0, O=0, R=7, W=7, U=0, E=0)
+2018/10/12 15:58:03 - set data_label_col to col_nbr.0 - Finished processing (I=0, O=0, R=7, W=7, U=0, E=0)
+2018/10/12 15:58:03 - Sort columns by col_num.0 - Finished processing (I=0, O=0, R=7, W=7, U=0, E=0)
+2018/10/12 15:58:03 - Skip columns for other data files.0 - Finished processing (I=0, O=0, R=542, W=542, U=0, E=0)
+2018/10/12 15:58:03 - Sort data rows by col_num, col_value.0 - Finished processing (I=0, O=0, R=24357, W=24357, U=0, E=0)
+2018/10/12 15:58:03 - Add data_label from header.0 - Finished processing (I=0, O=0, R=14, W=7, U=0, E=0)
+2018/10/12 15:58:03 - Join for exclusion values.0 - Finished processing (I=0, O=0, R=24357, W=24357, U=0, E=0)
+2018/10/12 15:58:03 - No data_label?.0 - Finished processing (I=0, O=0, R=7, W=7, U=0, E=0)
+2018/10/12 15:58:03 - Select values 4.0 - Finished processing (I=0, O=0, R=24357, W=48714, U=0, E=0)
+2018/10/12 15:58:03 - Check for excluded record.0 - Finished processing (I=0, O=0, R=24357, W=24357, U=0, E=0)
+2018/10/12 15:58:03 - Select values.0 - Finished processing (I=0, O=0, R=7, W=7, U=0, E=0)
+2018/10/12 15:58:03 - Replace double_quote in data_label.0 - Finished processing (I=0, O=0, R=7, W=7, U=0, E=0)
+2018/10/12 15:58:03 - Record not excluded.0 - Finished processing (I=0, O=0, R=24357, W=24357, U=0, E=0)
+2018/10/12 15:58:03 - Sort data_label rows.0 - Finished processing (I=0, O=0, R=7, W=7, U=0, E=0)
+2018/10/12 15:58:03 - Sort rows 2.0 - Finished processing (I=0, O=0, R=24357, W=24357, U=0, E=0)
+2018/10/12 15:58:03 - Add data_value mapping if found.0 - Finished processing (I=0, O=0, R=24357, W=24357, U=0, E=0)
+2018/10/12 15:58:03 - col_num = word_map_col?.0 - Finished processing (I=0, O=0, R=24357, W=24357, U=0, E=0)
+2018/10/12 15:58:03 - Set data_value to col_value.0 - Finished processing (I=0, O=0, R=24357, W=24357, U=0, E=0)
+2018/10/12 15:58:03 - Select rec_num, col_num, data_value.0 - Finished processing (I=0, O=0, R=24357, W=24357, U=0, E=0)
+2018/10/12 15:58:04 - Sort data rows.0 - Finished processing (I=0, O=0, R=24357, W=24357, U=0, E=0)
+2018/10/12 15:58:04 - Add category_cd, data_label for column.0 - Finished processing (I=0, O=0, R=24364, W=24357, U=0, E=0)
+2018/10/12 15:58:04 - Select needed fields.0 - Finished processing (I=0, O=0, R=24357, W=24357, U=0, E=0)
+2018/10/12 15:58:04 - Check data_label value.0 - Finished processing (I=0, O=0, R=24357, W=24357, U=0, E=0)
+2018/10/12 15:58:04 - Select relevant columns.0 - Finished processing (I=0, O=0, R=17087, W=51261, U=0, E=0)
+2018/10/12 15:58:04 - Sort rows for special columns.0 - Finished processing (I=0, O=0, R=7270, W=7270, U=0, E=0)
+2018/10/12 15:58:04 - Select only col_num.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:04 - Select only rec_num.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:04 - Count nbr of data columns.0 - Finished processing (I=0, O=0, R=17087, W=5, U=0, E=0)
+2018/10/12 15:58:04 - Count nbr of rows.0 - Finished processing (I=0, O=0, R=17087, W=3634, U=0, E=0)
+2018/10/12 15:58:04 - Dummy (do nothing) 3.0 - Finished processing (I=0, O=0, R=5, W=5, U=0, E=0)
+2018/10/12 15:58:04 - Dummy (do nothing) 2.0 - Finished processing (I=0, O=0, R=3634, W=3634, U=0, E=0)
+2018/10/12 15:58:04 - Flatten special columns into single record.0 - Finished processing (I=0, O=0, R=7270, W=3635, U=0, E=0)
+2018/10/12 15:58:04 - Null if....0 - Finished processing (I=0, O=0, R=3635, W=3635, U=0, E=0)
+2018/10/12 15:58:04 - Sort subject_id's by rec_num.0 - Finished processing (I=0, O=0, R=3635, W=3635, U=0, E=0)
+2018/10/12 15:58:04 - Sort data by rec_num, col_num.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:04 - Add units.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:04 - Check for units.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:04 - Sort data by rec_num.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Add subject_id to data.0 - Finished processing (I=0, O=0, R=20722, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Check for missing subject_id.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Check if only DATALABEL in category_cd.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Select values 2.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Sort by rec_num for exclusion check.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Merge with exclusion rec_num.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Check for exclusion.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Check for both visit names null.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Add backslash for visit names.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Set null visit names to \.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Concatenate visit names.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Replace double backlash with single in new visit_name.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Set visit_name to new_visit_name.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Remove new fields from stream.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Use original data_label.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:05 - Keep standard fields.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:06 - Drop null or . data_values.0 - Finished processing (I=0, O=0, R=17087, W=17087, U=0, E=0)
+2018/10/12 15:58:06 - Check for aggregate_type null.0 - Finished processing (I=0, O=0, R=15426, W=15426, U=0, E=0)
+2018/10/12 15:58:06 - Drop null or suppressed data values.0 - Finished processing (I=0, O=0, R=1661, W=1661, U=0, E=0)
+2018/10/12 15:58:06 - Select output columns.0 - Finished processing (I=0, O=0, R=15426, W=15426, U=0, E=0)
+2018/10/12 15:58:06 - Get Variables.0 - Finished processing (I=0, O=0, R=15426, W=15426, U=0, E=0)
+2018/10/12 15:58:06 - Uppercase study_id.0 - Finished processing (I=0, O=0, R=15426, W=15426, U=0, E=0)
+2018/10/12 15:58:06 - Check for null or. in data_value.0 - Finished processing (I=0, O=0, R=15426, W=15426, U=0, E=0)
+2018/10/12 15:58:06 - Remove double quotes in data_label, data_value.0 - Finished processing (I=0, O=0, R=15426, W=15426, U=0, E=0)
+2018/10/12 15:58:06 - Remove any duplicates.0 - Finished processing (I=0, O=0, R=15426, W=15426, U=0, E=0)
+2018/10/12 15:58:06 - seq_col not null.0 - Finished processing (I=0, O=0, R=15426, W=15426, U=0, E=0)
+2018/10/12 15:58:06 - Set standard columns.0 - Finished processing (I=0, O=0, R=15426, W=15426, U=0, E=0)
+2018/10/12 15:58:06 - Check LOAD_TYPE.0 - Finished processing (I=0, O=0, R=15426, W=15426, U=0, E=0)
+2018/10/12 15:58:06 - Bulk Loader.0 - The input stream of this step and/or the PSQL process is null.  Load was not executed.
+2018/10/12 15:58:07 - Insert to lt_src_clinical_data.0 - Finished processing (I=0, O=15426, R=15426, W=15426, U=0, E=0)
+2018/10/12 15:58:07 - Get stats from steps.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:07 - Check for Remove any Duplicates step.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:07 - Calculate nbr rows dropped.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:07 - Replace Lines output with dropped_recs.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:07 - Copy rows to result.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:07 - load_lt_clinical_data_audit - Starting entry [Check if LOAD_TYPE = F]
+2018/10/12 15:58:07 - load_lt_clinical_data_audit - Starting entry [Write clinical audit records]
+2018/10/12 15:58:07 - Write clinical audit records - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/write_clinical_audit.ktr]
+2018/10/12 15:58:07 - write_clinical_audit - Dispatching started for transformation [write_clinical_audit]
+2018/10/12 15:58:07 - Get Audit rows.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:07 - Reset step names.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:07 - Set step_number based on step_name.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:07 - Sort audit records by step_number.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:07 - Split for input and output counts.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:07 - Set counts for input steps.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:07 - Set counts for output steps.0 - Finished processing (I=0, O=0, R=8, W=7, U=0, E=0)
+2018/10/12 15:58:07 - Set step_number to numeric.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:07 - Resort by step_number.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:07 - Get Variables.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:07 - Add proc_prefix, step_status.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:07 - Set procedure_name.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:07 - Call cz_write_audit.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:07 - load_lt_clinical_data_audit - Finished job entry [Write clinical audit records] (result=[true])
+2018/10/12 15:58:07 - load_lt_clinical_data_audit - Finished job entry [Check if LOAD_TYPE = F] (result=[true])
+2018/10/12 15:58:07 - load_lt_clinical_data_audit - Finished job entry [Map Data to Standard Format] (result=[true])
+2018/10/12 15:58:07 - load_lt_clinical_data_audit - Finished job entry [Processing file] (result=[true])
+2018/10/12 15:58:07 - load_lt_clinical_data_audit - Finished job entry [Set data_filename as variable] (result=[true])
+2018/10/12 15:58:07 - load_lt_clinical_data_audit - Starting entry [Set data_filename as variable]
+2018/10/12 15:58:07 - Set data_filename as variable - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/set_data_filename.ktr]
+2018/10/12 15:58:07 - set_data_filename - Dispatching started for transformation [set_data_filename]
+2018/10/12 15:58:07 - Get rows from result.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:07 - Set DATA_FILENAME Variables.0 - Setting environment variables...
+2018/10/12 15:58:07 - Set DATA_FILENAME Variables.0 - Set variable DATA_FILENAME to value [luminex_v16.txt]
+2018/10/12 15:58:07 - Set DATA_FILENAME Variables.0 - Finished after 1 rows.
+2018/10/12 15:58:07 - Set DATA_FILENAME Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:07 - load_lt_clinical_data_audit - Starting entry [Processing file]
+2018/10/12 15:58:07 - Processing file luminex_v16.txt - *****************************************************
+2018/10/12 15:58:07 - load_lt_clinical_data_audit - Starting entry [Map Data to Standard Format]
+2018/10/12 15:58:07 - Map Data to Standard Format - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/map_data_to_std_format.ktr]
+2018/10/12 15:58:07 - map_data_to_std_format - Dispatching started for transformation [map_data_to_std_format]
+2018/10/12 15:58:07 - Insert to lt_src_clinical_data.0 - Connected to database [TM_LZ] (commit=1000)
+2018/10/12 15:58:07 - Get data file.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/luminex_v16.txt
+2018/10/12 15:58:08 - Get data_labels from first data row.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/luminex_v16.txt
+2018/10/12 15:58:08 - Get category_cd, data_label for columns.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/colmapping_v16.txt
+2018/10/12 15:58:08 - Parse alt_data_label into number and position.0 - Optimization level set to 9.
+2018/10/12 15:58:08 - Get data file.0 - Finished processing (I=892, O=0, R=0, W=891, U=1, E=0)
+2018/10/12 15:58:08 - Add record number to each row.0 - Finished processing (I=0, O=0, R=891, W=891, U=0, E=0)
+2018/10/12 15:58:08 - Get data_labels from first data row.0 - Finished processing (I=1, O=0, R=0, W=1, U=1, E=0)
+2018/10/12 15:58:08 - Split labels from first row.0 - Finished processing (I=0, O=0, R=1, W=218, U=0, E=0)
+2018/10/12 15:58:08 - Trim label_col_value.0 - Finished processing (I=0, O=0, R=218, W=218, U=0, E=0)
+2018/10/12 15:58:08 - Sort hdr labels by col_num.0 - Finished processing (I=0, O=0, R=218, W=218, U=0, E=0)
+2018/10/12 15:58:08 - Get category_cd, data_label for columns.0 - Finished processing (I=550, O=0, R=0, W=549, U=1, E=0)
+2018/10/12 15:58:08 - Check if MIN/MAX/MEAN.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:08 - Parse alt_data_label into number and position.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:08 - Add null aggregate_type.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:08 - Set data_filename for columns filter.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:08 - Check if columns for data file.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:08 - Skip columns for other data files.0 - Finished processing (I=0, O=0, R=331, W=331, U=0, E=0)
+2018/10/12 15:58:08 - Check if data_label_col missing.0 - Finished processing (I=0, O=0, R=218, W=218, U=0, E=0)
+2018/10/12 15:58:08 - set data_label_col to col_nbr.0 - Finished processing (I=0, O=0, R=218, W=218, U=0, E=0)
+2018/10/12 15:58:08 - Sort columns by col_num.0 - Finished processing (I=0, O=0, R=218, W=218, U=0, E=0)
+2018/10/12 15:58:08 - Sort data rows by col_num, col_value.0 - Linenr 50000
+2018/10/12 15:58:08 - Sort data rows by col_num, col_value.0 - Linenr 100000
+2018/10/12 15:58:08 - Add data_label from header.0 - Finished processing (I=0, O=0, R=436, W=218, U=0, E=0)
+2018/10/12 15:58:08 - No data_label?.0 - Finished processing (I=0, O=0, R=218, W=218, U=0, E=0)
+2018/10/12 15:58:08 - Select values.0 - Finished processing (I=0, O=0, R=218, W=218, U=0, E=0)
+2018/10/12 15:58:09 - Sort data rows by col_num, col_value.0 - Linenr 150000
+2018/10/12 15:58:09 - Replace double_quote in data_label.0 - Finished processing (I=0, O=0, R=218, W=218, U=0, E=0)
+2018/10/12 15:58:09 - Sort data_label rows.0 - Finished processing (I=0, O=0, R=218, W=218, U=0, E=0)
+2018/10/12 15:58:09 - Split field to rows.0 - Finished processing (I=0, O=0, R=891, W=194126, U=0, E=0)
+2018/10/12 15:58:09 - Trim column value.0 - Finished processing (I=0, O=0, R=194126, W=194126, U=0, E=0)
+2018/10/12 15:58:09 - Replace double-quote in col_value.0 - Finished processing (I=0, O=0, R=194126, W=194126, U=0, E=0)
+2018/10/12 15:58:09 - Join for exclusion values.0 - linenr 50000
+2018/10/12 15:58:09 - Select values 4.0 - linenr 50000
+2018/10/12 15:58:09 - Sort rows 2.0 - Linenr 50000
+2018/10/12 15:58:09 - Check for excluded record.0 - linenr 50000
+2018/10/12 15:58:09 - Record not excluded.0 - Linenr 50000
+2018/10/12 15:58:09 - Join for exclusion values.0 - linenr 100000
+2018/10/12 15:58:09 - Select values 4.0 - linenr 100000
+2018/10/12 15:58:09 - Sort rows 2.0 - Linenr 100000
+2018/10/12 15:58:09 - Check for excluded record.0 - linenr 100000
+2018/10/12 15:58:09 - Record not excluded.0 - Linenr 100000
+2018/10/12 15:58:09 - Join for exclusion values.0 - linenr 150000
+2018/10/12 15:58:09 - Select values 4.0 - linenr 150000
+2018/10/12 15:58:09 - Sort rows 2.0 - Linenr 150000
+2018/10/12 15:58:09 - Check for excluded record.0 - linenr 150000
+2018/10/12 15:58:09 - Record not excluded.0 - Linenr 150000
+2018/10/12 15:58:10 - Sort data rows by col_num, col_value.0 - Finished processing (I=0, O=0, R=194126, W=194126, U=0, E=0)
+2018/10/12 15:58:10 - Join for exclusion values.0 - Finished processing (I=0, O=0, R=194126, W=194126, U=0, E=0)
+2018/10/12 15:58:10 - Select values 4.0 - Finished processing (I=0, O=0, R=194126, W=388252, U=0, E=0)
+2018/10/12 15:58:10 - Check for excluded record.0 - Finished processing (I=0, O=0, R=194126, W=194126, U=0, E=0)
+2018/10/12 15:58:10 - Record not excluded.0 - Finished processing (I=0, O=0, R=194126, W=194126, U=0, E=0)
+2018/10/12 15:58:10 - Add data_value mapping if found.0 - linenr 50000
+2018/10/12 15:58:10 - col_num = word_map_col?.0 - linenr 50000
+2018/10/12 15:58:10 - Set data_value to col_value.0 - linenr 50000
+2018/10/12 15:58:10 - Select rec_num, col_num, data_value.0 - linenr 50000
+2018/10/12 15:58:10 - Sort data rows.0 - Linenr 50000
+2018/10/12 15:58:10 - Add data_value mapping if found.0 - linenr 100000
+2018/10/12 15:58:10 - col_num = word_map_col?.0 - linenr 100000
+2018/10/12 15:58:10 - Set data_value to col_value.0 - linenr 100000
+2018/10/12 15:58:10 - Select rec_num, col_num, data_value.0 - linenr 100000
+2018/10/12 15:58:10 - Sort data rows.0 - Linenr 100000
+2018/10/12 15:58:10 - Add data_value mapping if found.0 - linenr 150000
+2018/10/12 15:58:10 - col_num = word_map_col?.0 - linenr 150000
+2018/10/12 15:58:10 - Set data_value to col_value.0 - linenr 150000
+2018/10/12 15:58:10 - Select rec_num, col_num, data_value.0 - linenr 150000
+2018/10/12 15:58:10 - Sort data rows.0 - Linenr 150000
+2018/10/12 15:58:10 - Sort rows 2.0 - Finished processing (I=0, O=0, R=194126, W=194126, U=0, E=0)
+2018/10/12 15:58:11 - Add data_value mapping if found.0 - Finished processing (I=0, O=0, R=194126, W=194126, U=0, E=0)
+2018/10/12 15:58:11 - col_num = word_map_col?.0 - Finished processing (I=0, O=0, R=194126, W=194126, U=0, E=0)
+2018/10/12 15:58:11 - Set data_value to col_value.0 - Finished processing (I=0, O=0, R=194126, W=194126, U=0, E=0)
+2018/10/12 15:58:11 - Select rec_num, col_num, data_value.0 - Finished processing (I=0, O=0, R=194126, W=194126, U=0, E=0)
+2018/10/12 15:58:11 - Select needed fields.0 - linenr 50000
+2018/10/12 15:58:11 - Check data_label value.0 - linenr 50000
+2018/10/12 15:58:11 - Select relevant columns.0 - linenr 50000
+2018/10/12 15:58:11 - Select only col_num.0 - linenr 50000
+2018/10/12 15:58:11 - Count nbr of data columns.0 - Linenr 50000
+2018/10/12 15:58:11 - Select only rec_num.0 - linenr 50000
+2018/10/12 15:58:11 - Sort data by rec_num, col_num.0 - Linenr 50000
+2018/10/12 15:58:11 - Count nbr of rows.0 - Linenr 50000
+2018/10/12 15:58:11 - Select needed fields.0 - linenr 100000
+2018/10/12 15:58:11 - Check data_label value.0 - linenr 100000
+2018/10/12 15:58:11 - Select relevant columns.0 - linenr 100000
+2018/10/12 15:58:11 - Sort data by rec_num, col_num.0 - Linenr 100000
+2018/10/12 15:58:11 - Select only rec_num.0 - linenr 100000
+2018/10/12 15:58:11 - Select only col_num.0 - linenr 100000
+2018/10/12 15:58:11 - Count nbr of data columns.0 - Linenr 100000
+2018/10/12 15:58:11 - Count nbr of rows.0 - Linenr 100000
+2018/10/12 15:58:11 - Select needed fields.0 - linenr 150000
+2018/10/12 15:58:11 - Check data_label value.0 - linenr 150000
+2018/10/12 15:58:12 - Select relevant columns.0 - linenr 150000
+2018/10/12 15:58:12 - Sort data by rec_num, col_num.0 - Linenr 150000
+2018/10/12 15:58:12 - Select only col_num.0 - linenr 150000
+2018/10/12 15:58:12 - Count nbr of data columns.0 - Linenr 150000
+2018/10/12 15:58:12 - Select only rec_num.0 - linenr 150000
+2018/10/12 15:58:12 - Count nbr of rows.0 - Linenr 150000
+2018/10/12 15:58:12 - Sort data rows.0 - Finished processing (I=0, O=0, R=194126, W=194126, U=0, E=0)
+2018/10/12 15:58:12 - Add category_cd, data_label for column.0 - Finished processing (I=0, O=0, R=194344, W=194126, U=0, E=0)
+2018/10/12 15:58:12 - Select needed fields.0 - Finished processing (I=0, O=0, R=194126, W=194126, U=0, E=0)
+2018/10/12 15:58:12 - Check data_label value.0 - Finished processing (I=0, O=0, R=194126, W=194126, U=0, E=0)
+2018/10/12 15:58:12 - Select relevant columns.0 - Finished processing (I=0, O=0, R=192344, W=577032, U=0, E=0)
+2018/10/12 15:58:12 - Sort rows for special columns.0 - Finished processing (I=0, O=0, R=1782, W=1782, U=0, E=0)
+2018/10/12 15:58:12 - Select only rec_num.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:12 - Select only col_num.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:12 - Flatten special columns into single record.0 - Finished processing (I=0, O=0, R=1782, W=891, U=0, E=0)
+2018/10/12 15:58:12 - Null if....0 - Finished processing (I=0, O=0, R=891, W=891, U=0, E=0)
+2018/10/12 15:58:12 - Sort subject_id's by rec_num.0 - Finished processing (I=0, O=0, R=891, W=891, U=0, E=0)
+2018/10/12 15:58:12 - Count nbr of data columns.0 - Finished processing (I=0, O=0, R=192344, W=216, U=0, E=0)
+2018/10/12 15:58:12 - Dummy (do nothing) 3.0 - Finished processing (I=0, O=0, R=216, W=216, U=0, E=0)
+2018/10/12 15:58:12 - Count nbr of rows.0 - Finished processing (I=0, O=0, R=192344, W=891, U=0, E=0)
+2018/10/12 15:58:12 - Dummy (do nothing) 2.0 - Finished processing (I=0, O=0, R=891, W=891, U=0, E=0)
+2018/10/12 15:58:13 - Add units.0 - linenr 50000
+2018/10/12 15:58:13 - Check for units.0 - linenr 50000
+2018/10/12 15:58:13 - Sort data by rec_num.0 - Linenr 50000
+2018/10/12 15:58:13 - Add units.0 - linenr 100000
+2018/10/12 15:58:13 - Check for units.0 - linenr 100000
+2018/10/12 15:58:13 - Sort data by rec_num.0 - Linenr 100000
+2018/10/12 15:58:13 - Add units.0 - linenr 150000
+2018/10/12 15:58:13 - Check for units.0 - linenr 150000
+2018/10/12 15:58:13 - Sort data by rec_num.0 - Linenr 150000
+2018/10/12 15:58:13 - Sort data by rec_num, col_num.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:13 - Add units.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:13 - Check for units.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:13 - Check for missing subject_id.0 - linenr 50000
+2018/10/12 15:58:13 - Check if only DATALABEL in category_cd.0 - linenr 50000
+2018/10/12 15:58:13 - Select values 2.0 - linenr 50000
+2018/10/12 15:58:13 - Sort by rec_num for exclusion check.0 - Linenr 50000
+2018/10/12 15:58:13 - Check for missing subject_id.0 - linenr 100000
+2018/10/12 15:58:13 - Check if only DATALABEL in category_cd.0 - linenr 100000
+2018/10/12 15:58:13 - Select values 2.0 - linenr 100000
+2018/10/12 15:58:13 - Sort by rec_num for exclusion check.0 - Linenr 100000
+2018/10/12 15:58:13 - Check for missing subject_id.0 - linenr 150000
+2018/10/12 15:58:13 - Check if only DATALABEL in category_cd.0 - linenr 150000
+2018/10/12 15:58:14 - Select values 2.0 - linenr 150000
+2018/10/12 15:58:14 - Sort by rec_num for exclusion check.0 - Linenr 150000
+2018/10/12 15:58:14 - Sort data by rec_num.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:14 - Add subject_id to data.0 - Finished processing (I=0, O=0, R=193235, W=192344, U=0, E=0)
+2018/10/12 15:58:14 - Check for missing subject_id.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:14 - Check if only DATALABEL in category_cd.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:14 - Select values 2.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:14 - Merge with exclusion rec_num.0 - linenr 50000
+2018/10/12 15:58:14 - Check for exclusion.0 - linenr 50000
+2018/10/12 15:58:14 - Check for both visit names null.0 - linenr 50000
+2018/10/12 15:58:15 - Add backslash for visit names.0 - LineNr : 50000
+2018/10/12 15:58:15 - Concatenate visit names.0 - Linenr 50000
+2018/10/12 15:58:15 - Merge with exclusion rec_num.0 - linenr 100000
+2018/10/12 15:58:15 - Check for exclusion.0 - linenr 100000
+2018/10/12 15:58:15 - Remove new fields from stream.0 - linenr 50000
+2018/10/12 15:58:16 - Use original data_label.0 - linenr 50000
+2018/10/12 15:58:16 - Keep standard fields.0 - linenr 50000
+2018/10/12 15:58:16 - Drop null or . data_values.0 - linenr 50000
+2018/10/12 15:58:16 - Check for aggregate_type null.0 - linenr 50000
+2018/10/12 15:58:16 - Check for both visit names null.0 - linenr 100000
+2018/10/12 15:58:16 - Select output columns.0 - linenr 50000
+2018/10/12 15:58:16 - Check for null or. in data_value.0 - linenr 50000
+2018/10/12 15:58:16 - Add backslash for visit names.0 - LineNr : 100000
+2018/10/12 15:58:16 - Remove any duplicates.0 - Linenr 50000
+2018/10/12 15:58:16 - Concatenate visit names.0 - Linenr 100000
+2018/10/12 15:58:16 - Merge with exclusion rec_num.0 - linenr 150000
+2018/10/12 15:58:16 - Remove new fields from stream.0 - linenr 100000
+2018/10/12 15:58:16 - Use original data_label.0 - linenr 100000
+2018/10/12 15:58:16 - Keep standard fields.0 - linenr 100000
+2018/10/12 15:58:16 - Check for exclusion.0 - linenr 150000
+2018/10/12 15:58:16 - Drop null or . data_values.0 - linenr 100000
+2018/10/12 15:58:16 - Check for aggregate_type null.0 - linenr 100000
+2018/10/12 15:58:16 - Select output columns.0 - linenr 100000
+2018/10/12 15:58:16 - Check for both visit names null.0 - linenr 150000
+2018/10/12 15:58:16 - Check for null or. in data_value.0 - linenr 100000
+2018/10/12 15:58:16 - Add backslash for visit names.0 - LineNr : 150000
+2018/10/12 15:58:16 - Remove any duplicates.0 - Linenr 100000
+2018/10/12 15:58:16 - Sort by rec_num for exclusion check.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:16 - Concatenate visit names.0 - Linenr 150000
+2018/10/12 15:58:16 - Merge with exclusion rec_num.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:17 - Check for exclusion.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:17 - Remove new fields from stream.0 - linenr 150000
+2018/10/12 15:58:17 - Use original data_label.0 - linenr 150000
+2018/10/12 15:58:17 - Check for both visit names null.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:17 - Keep standard fields.0 - linenr 150000
+2018/10/12 15:58:17 - Drop null or . data_values.0 - linenr 150000
+2018/10/12 15:58:17 - Add backslash for visit names.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:17 - Check for aggregate_type null.0 - linenr 150000
+2018/10/12 15:58:17 - Select output columns.0 - linenr 150000
+2018/10/12 15:58:17 - Check for null or. in data_value.0 - linenr 150000
+2018/10/12 15:58:17 - Remove any duplicates.0 - Linenr 150000
+2018/10/12 15:58:17 - Set null visit names to \.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:17 - Concatenate visit names.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:17 - Replace double backlash with single in new visit_name.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:17 - Set visit_name to new_visit_name.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:17 - Remove new fields from stream.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:17 - Use original data_label.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:17 - Keep standard fields.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:17 - Drop null or . data_values.0 - Finished processing (I=0, O=0, R=192344, W=192344, U=0, E=0)
+2018/10/12 15:58:17 - Check for aggregate_type null.0 - Finished processing (I=0, O=0, R=179802, W=179802, U=0, E=0)
+2018/10/12 15:58:17 - Drop null or suppressed data values.0 - Finished processing (I=0, O=0, R=12542, W=12542, U=0, E=0)
+2018/10/12 15:58:17 - Select output columns.0 - Finished processing (I=0, O=0, R=179802, W=179802, U=0, E=0)
+2018/10/12 15:58:17 - Get Variables.0 - Finished processing (I=0, O=0, R=179802, W=179802, U=0, E=0)
+2018/10/12 15:58:17 - Uppercase study_id.0 - Finished processing (I=0, O=0, R=179802, W=179802, U=0, E=0)
+2018/10/12 15:58:17 - Check for null or. in data_value.0 - Finished processing (I=0, O=0, R=179802, W=179802, U=0, E=0)
+2018/10/12 15:58:17 - Remove double quotes in data_label, data_value.0 - Finished processing (I=0, O=0, R=179802, W=179802, U=0, E=0)
+2018/10/12 15:58:19 - seq_col not null.0 - linenr 50000
+2018/10/12 15:58:20 - Set standard columns.0 - linenr 50000
+2018/10/12 15:58:20 - Check LOAD_TYPE.0 - linenr 50000
+2018/10/12 15:58:20 - Insert to lt_src_clinical_data.0 - linenr 50000
+2018/10/12 15:58:21 - seq_col not null.0 - linenr 100000
+2018/10/12 15:58:21 - Set standard columns.0 - linenr 100000
+2018/10/12 15:58:22 - Check LOAD_TYPE.0 - linenr 100000
+2018/10/12 15:58:22 - Insert to lt_src_clinical_data.0 - linenr 100000
+2018/10/12 15:58:22 - seq_col not null.0 - linenr 150000
+2018/10/12 15:58:23 - Set standard columns.0 - linenr 150000
+2018/10/12 15:58:23 - Check LOAD_TYPE.0 - linenr 150000
+2018/10/12 15:58:23 - Remove any duplicates.0 - Finished processing (I=0, O=0, R=179802, W=179802, U=0, E=0)
+2018/10/12 15:58:23 - seq_col not null.0 - Finished processing (I=0, O=0, R=179802, W=179802, U=0, E=0)
+2018/10/12 15:58:23 - Insert to lt_src_clinical_data.0 - linenr 150000
+2018/10/12 15:58:24 - Set standard columns.0 - Finished processing (I=0, O=0, R=179802, W=179802, U=0, E=0)
+2018/10/12 15:58:24 - Check LOAD_TYPE.0 - Finished processing (I=0, O=0, R=179802, W=179802, U=0, E=0)
+2018/10/12 15:58:24 - Bulk Loader.0 - The input stream of this step and/or the PSQL process is null.  Load was not executed.
+2018/10/12 15:58:24 - Insert to lt_src_clinical_data.0 - Finished processing (I=0, O=179802, R=179802, W=179802, U=0, E=0)
+2018/10/12 15:58:25 - Get stats from steps.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:25 - Check for Remove any Duplicates step.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:25 - Calculate nbr rows dropped.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:25 - Replace Lines output with dropped_recs.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:25 - Copy rows to result.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:25 - load_lt_clinical_data_audit - Starting entry [Check if LOAD_TYPE = F]
+2018/10/12 15:58:25 - load_lt_clinical_data_audit - Starting entry [Write clinical audit records]
+2018/10/12 15:58:25 - Write clinical audit records - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/write_clinical_audit.ktr]
+2018/10/12 15:58:25 - write_clinical_audit - Dispatching started for transformation [write_clinical_audit]
+2018/10/12 15:58:25 - Get Audit rows.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:25 - Reset step names.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:25 - Set step_number based on step_name.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:25 - Sort audit records by step_number.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:25 - Split for input and output counts.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:25 - Set counts for input steps.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:25 - Set counts for output steps.0 - Finished processing (I=0, O=0, R=8, W=7, U=0, E=0)
+2018/10/12 15:58:25 - Set step_number to numeric.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:25 - Resort by step_number.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:25 - Get Variables.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:25 - Add proc_prefix, step_status.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:25 - Set procedure_name.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:25 - Call cz_write_audit.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:25 - load_lt_clinical_data_audit - Finished job entry [Write clinical audit records] (result=[true])
+2018/10/12 15:58:25 - load_lt_clinical_data_audit - Finished job entry [Check if LOAD_TYPE = F] (result=[true])
+2018/10/12 15:58:25 - load_lt_clinical_data_audit - Finished job entry [Map Data to Standard Format] (result=[true])
+2018/10/12 15:58:25 - load_lt_clinical_data_audit - Finished job entry [Processing file] (result=[true])
+2018/10/12 15:58:25 - load_lt_clinical_data_audit - Finished job entry [Set data_filename as variable] (result=[true])
+2018/10/12 15:58:25 - load_lt_clinical_data_audit - Starting entry [Set data_filename as variable]
+2018/10/12 15:58:25 - Set data_filename as variable - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/set_data_filename.ktr]
+2018/10/12 15:58:25 - set_data_filename - Dispatching started for transformation [set_data_filename]
+2018/10/12 15:58:25 - Get rows from result.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:25 - Set DATA_FILENAME Variables.0 - Setting environment variables...
+2018/10/12 15:58:25 - Set DATA_FILENAME Variables.0 - Set variable DATA_FILENAME to value [patients_v16.txt]
+2018/10/12 15:58:25 - Set DATA_FILENAME Variables.0 - Finished after 1 rows.
+2018/10/12 15:58:25 - Set DATA_FILENAME Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:25 - load_lt_clinical_data_audit - Starting entry [Processing file]
+2018/10/12 15:58:25 - Processing file patients_v16.txt - *****************************************************
+2018/10/12 15:58:25 - load_lt_clinical_data_audit - Starting entry [Map Data to Standard Format]
+2018/10/12 15:58:25 - Map Data to Standard Format - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/map_data_to_std_format.ktr]
+2018/10/12 15:58:25 - map_data_to_std_format - Dispatching started for transformation [map_data_to_std_format]
+2018/10/12 15:58:25 - Insert to lt_src_clinical_data.0 - Connected to database [TM_LZ] (commit=1000)
+2018/10/12 15:58:25 - Get data file.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/patients_v16.txt
+2018/10/12 15:58:25 - Get data_labels from first data row.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/patients_v16.txt
+2018/10/12 15:58:25 - Get category_cd, data_label for columns.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/colmapping_v16.txt
+2018/10/12 15:58:25 - Parse alt_data_label into number and position.0 - Optimization level set to 9.
+2018/10/12 15:58:25 - Get category_cd, data_label for columns.0 - Finished processing (I=550, O=0, R=0, W=549, U=1, E=0)
+2018/10/12 15:58:25 - Parse alt_data_label into number and position.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:25 - Sort hdr labels by col_num.0 - Finished processing (I=0, O=0, R=212, W=212, U=0, E=0)
+2018/10/12 15:58:25 - Trim label_col_value.0 - Finished processing (I=0, O=0, R=212, W=212, U=0, E=0)
+2018/10/12 15:58:25 - Add null aggregate_type.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:25 - Split labels from first row.0 - Finished processing (I=0, O=0, R=1, W=212, U=0, E=0)
+2018/10/12 15:58:25 - Check if MIN/MAX/MEAN.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:25 - Get data_labels from first data row.0 - Finished processing (I=1, O=0, R=0, W=1, U=1, E=0)
+2018/10/12 15:58:25 - Set data_filename for columns filter.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:25 - Check if columns for data file.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:25 - Skip columns for other data files.0 - Finished processing (I=0, O=0, R=337, W=337, U=0, E=0)
+2018/10/12 15:58:25 - Check if data_label_col missing.0 - Finished processing (I=0, O=0, R=212, W=212, U=0, E=0)
+2018/10/12 15:58:25 - Sort columns by col_num.0 - Finished processing (I=0, O=0, R=212, W=212, U=0, E=0)
+2018/10/12 15:58:25 - Get data file.0 - Finished processing (I=669, O=0, R=0, W=668, U=1, E=0)
+2018/10/12 15:58:25 - set data_label_col to col_nbr.0 - Finished processing (I=0, O=0, R=212, W=212, U=0, E=0)
+2018/10/12 15:58:25 - Add record number to each row.0 - Finished processing (I=0, O=0, R=668, W=668, U=0, E=0)
+2018/10/12 15:58:26 - Sort data rows by col_num, col_value.0 - Linenr 50000
+2018/10/12 15:58:26 - Sort data rows by col_num, col_value.0 - Linenr 100000
+2018/10/12 15:58:26 - Split field to rows.0 - Finished processing (I=0, O=0, R=668, W=141072, U=0, E=0)
+2018/10/12 15:58:26 - Trim column value.0 - Finished processing (I=0, O=0, R=141072, W=141072, U=0, E=0)
+2018/10/12 15:58:26 - Replace double-quote in col_value.0 - Finished processing (I=0, O=0, R=141072, W=141072, U=0, E=0)
+2018/10/12 15:58:26 - Add data_label from header.0 - Finished processing (I=0, O=0, R=424, W=212, U=0, E=0)
+2018/10/12 15:58:26 - No data_label?.0 - Finished processing (I=0, O=0, R=212, W=212, U=0, E=0)
+2018/10/12 15:58:26 - Select values.0 - Finished processing (I=0, O=0, R=212, W=212, U=0, E=0)
+2018/10/12 15:58:26 - Replace double_quote in data_label.0 - Finished processing (I=0, O=0, R=212, W=212, U=0, E=0)
+2018/10/12 15:58:26 - Sort data_label rows.0 - Finished processing (I=0, O=0, R=212, W=212, U=0, E=0)
+2018/10/12 15:58:26 - Join for exclusion values.0 - linenr 50000
+2018/10/12 15:58:26 - Select values 4.0 - linenr 50000
+2018/10/12 15:58:26 - Sort rows 2.0 - Linenr 50000
+2018/10/12 15:58:26 - Check for excluded record.0 - linenr 50000
+2018/10/12 15:58:26 - Record not excluded.0 - Linenr 50000
+2018/10/12 15:58:26 - Join for exclusion values.0 - linenr 100000
+2018/10/12 15:58:26 - Select values 4.0 - linenr 100000
+2018/10/12 15:58:26 - Check for excluded record.0 - linenr 100000
+2018/10/12 15:58:26 - Record not excluded.0 - Linenr 100000
+2018/10/12 15:58:26 - Sort rows 2.0 - Linenr 100000
+2018/10/12 15:58:26 - Sort data rows by col_num, col_value.0 - Finished processing (I=0, O=0, R=141072, W=141072, U=0, E=0)
+2018/10/12 15:58:27 - Join for exclusion values.0 - Finished processing (I=0, O=0, R=141072, W=141072, U=0, E=0)
+2018/10/12 15:58:27 - Select values 4.0 - Finished processing (I=0, O=0, R=141072, W=282144, U=0, E=0)
+2018/10/12 15:58:27 - Check for excluded record.0 - Finished processing (I=0, O=0, R=141072, W=141072, U=0, E=0)
+2018/10/12 15:58:27 - Record not excluded.0 - Finished processing (I=0, O=0, R=141072, W=141072, U=0, E=0)
+2018/10/12 15:58:27 - Add data_value mapping if found.0 - linenr 50000
+2018/10/12 15:58:27 - col_num = word_map_col?.0 - linenr 50000
+2018/10/12 15:58:27 - Set data_value to col_value.0 - linenr 50000
+2018/10/12 15:58:27 - Select rec_num, col_num, data_value.0 - linenr 50000
+2018/10/12 15:58:27 - Sort data rows.0 - Linenr 50000
+2018/10/12 15:58:27 - Add data_value mapping if found.0 - linenr 100000
+2018/10/12 15:58:27 - col_num = word_map_col?.0 - linenr 100000
+2018/10/12 15:58:27 - Set data_value to col_value.0 - linenr 100000
+2018/10/12 15:58:27 - Select rec_num, col_num, data_value.0 - linenr 100000
+2018/10/12 15:58:27 - Sort data rows.0 - Linenr 100000
+2018/10/12 15:58:27 - Sort rows 2.0 - Finished processing (I=0, O=0, R=141072, W=141072, U=0, E=0)
+2018/10/12 15:58:27 - Add data_value mapping if found.0 - Finished processing (I=0, O=0, R=141072, W=141072, U=0, E=0)
+2018/10/12 15:58:27 - col_num = word_map_col?.0 - Finished processing (I=0, O=0, R=141072, W=141072, U=0, E=0)
+2018/10/12 15:58:27 - Set data_value to col_value.0 - Finished processing (I=0, O=0, R=141072, W=141072, U=0, E=0)
+2018/10/12 15:58:27 - Select rec_num, col_num, data_value.0 - Finished processing (I=0, O=0, R=141072, W=141072, U=0, E=0)
+2018/10/12 15:58:27 - Select needed fields.0 - linenr 50000
+2018/10/12 15:58:27 - Check data_label value.0 - linenr 50000
+2018/10/12 15:58:27 - Select relevant columns.0 - linenr 50000
+2018/10/12 15:58:27 - Sort data by rec_num, col_num.0 - Linenr 50000
+2018/10/12 15:58:27 - Select only rec_num.0 - linenr 50000
+2018/10/12 15:58:27 - Count nbr of rows.0 - Linenr 50000
+2018/10/12 15:58:27 - Select only col_num.0 - linenr 50000
+2018/10/12 15:58:27 - Count nbr of data columns.0 - Linenr 50000
+2018/10/12 15:58:27 - Select needed fields.0 - linenr 100000
+2018/10/12 15:58:27 - Check data_label value.0 - linenr 100000
+2018/10/12 15:58:27 - Select relevant columns.0 - linenr 100000
+2018/10/12 15:58:27 - Sort data by rec_num, col_num.0 - Linenr 100000
+2018/10/12 15:58:27 - Select only col_num.0 - linenr 100000
+2018/10/12 15:58:27 - Select only rec_num.0 - linenr 100000
+2018/10/12 15:58:27 - Count nbr of data columns.0 - Linenr 100000
+2018/10/12 15:58:27 - Count nbr of rows.0 - Linenr 100000
+2018/10/12 15:58:28 - Sort data rows.0 - Finished processing (I=0, O=0, R=141072, W=141072, U=0, E=0)
+2018/10/12 15:58:28 - Add category_cd, data_label for column.0 - Finished processing (I=0, O=0, R=141284, W=141072, U=0, E=0)
+2018/10/12 15:58:28 - Select needed fields.0 - Finished processing (I=0, O=0, R=141072, W=141072, U=0, E=0)
+2018/10/12 15:58:28 - Check data_label value.0 - Finished processing (I=0, O=0, R=141072, W=141072, U=0, E=0)
+2018/10/12 15:58:28 - Select relevant columns.0 - Finished processing (I=0, O=0, R=140404, W=421212, U=0, E=0)
+2018/10/12 15:58:28 - Select only col_num.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:28 - Sort rows for special columns.0 - Finished processing (I=0, O=0, R=668, W=668, U=0, E=0)
+2018/10/12 15:58:28 - Select only rec_num.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:28 - Flatten special columns into single record.0 - Finished processing (I=0, O=0, R=668, W=668, U=0, E=0)
+2018/10/12 15:58:28 - Count nbr of data columns.0 - Finished processing (I=0, O=0, R=140404, W=211, U=0, E=0)
+2018/10/12 15:58:28 - Null if....0 - Finished processing (I=0, O=0, R=668, W=668, U=0, E=0)
+2018/10/12 15:58:28 - Dummy (do nothing) 3.0 - Finished processing (I=0, O=0, R=211, W=211, U=0, E=0)
+2018/10/12 15:58:28 - Sort subject_id's by rec_num.0 - Finished processing (I=0, O=0, R=668, W=668, U=0, E=0)
+2018/10/12 15:58:28 - Count nbr of rows.0 - Finished processing (I=0, O=0, R=140404, W=668, U=0, E=0)
+2018/10/12 15:58:28 - Dummy (do nothing) 2.0 - Finished processing (I=0, O=0, R=668, W=668, U=0, E=0)
+2018/10/12 15:58:28 - Add units.0 - linenr 50000
+2018/10/12 15:58:28 - Check for units.0 - linenr 50000
+2018/10/12 15:58:28 - Sort data by rec_num.0 - Linenr 50000
+2018/10/12 15:58:28 - Add units.0 - linenr 100000
+2018/10/12 15:58:28 - Check for units.0 - linenr 100000
+2018/10/12 15:58:28 - Sort data by rec_num.0 - Linenr 100000
+2018/10/12 15:58:28 - Sort data by rec_num, col_num.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:28 - Add units.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:28 - Check for units.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:29 - Check for missing subject_id.0 - linenr 50000
+2018/10/12 15:58:29 - Check if only DATALABEL in category_cd.0 - linenr 50000
+2018/10/12 15:58:29 - Select values 2.0 - linenr 50000
+2018/10/12 15:58:29 - Sort by rec_num for exclusion check.0 - Linenr 50000
+2018/10/12 15:58:29 - Check for missing subject_id.0 - linenr 100000
+2018/10/12 15:58:29 - Check if only DATALABEL in category_cd.0 - linenr 100000
+2018/10/12 15:58:29 - Select values 2.0 - linenr 100000
+2018/10/12 15:58:29 - Sort by rec_num for exclusion check.0 - Linenr 100000
+2018/10/12 15:58:29 - Sort data by rec_num.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:29 - Add subject_id to data.0 - Finished processing (I=0, O=0, R=141072, W=140404, U=0, E=0)
+2018/10/12 15:58:29 - Check for missing subject_id.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:29 - Check if only DATALABEL in category_cd.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:29 - Select values 2.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:29 - Merge with exclusion rec_num.0 - linenr 50000
+2018/10/12 15:58:29 - Check for exclusion.0 - linenr 50000
+2018/10/12 15:58:29 - Check for both visit names null.0 - linenr 50000
+2018/10/12 15:58:29 - Use original data_label.0 - linenr 50000
+2018/10/12 15:58:29 - Keep standard fields.0 - linenr 50000
+2018/10/12 15:58:30 - Drop null or . data_values.0 - linenr 50000
+2018/10/12 15:58:30 - Merge with exclusion rec_num.0 - linenr 100000
+2018/10/12 15:58:30 - Check for exclusion.0 - linenr 100000
+2018/10/12 15:58:30 - Check for both visit names null.0 - linenr 100000
+2018/10/12 15:58:30 - Check for aggregate_type null.0 - linenr 50000
+2018/10/12 15:58:30 - Select output columns.0 - linenr 50000
+2018/10/12 15:58:30 - Use original data_label.0 - linenr 100000
+2018/10/12 15:58:30 - Keep standard fields.0 - linenr 100000
+2018/10/12 15:58:30 - Sort by rec_num for exclusion check.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:30 - Drop null or . data_values.0 - linenr 100000
+2018/10/12 15:58:30 - Check for null or. in data_value.0 - linenr 50000
+2018/10/12 15:58:30 - Drop null or suppressed data values.0 - Linenr 50000
+2018/10/12 15:58:30 - Remove any duplicates.0 - Linenr 50000
+2018/10/12 15:58:30 - Merge with exclusion rec_num.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:30 - Check for exclusion.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:30 - Check for both visit names null.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:30 - Use original data_label.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:30 - Keep standard fields.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:30 - Drop null or . data_values.0 - Finished processing (I=0, O=0, R=140404, W=140404, U=0, E=0)
+2018/10/12 15:58:30 - Drop null or suppressed data values.0 - Finished processing (I=0, O=0, R=67537, W=67537, U=0, E=0)
+2018/10/12 15:58:30 - Check for aggregate_type null.0 - Finished processing (I=0, O=0, R=72867, W=72867, U=0, E=0)
+2018/10/12 15:58:30 - Select output columns.0 - Finished processing (I=0, O=0, R=72867, W=72867, U=0, E=0)
+2018/10/12 15:58:30 - Get Variables.0 - Finished processing (I=0, O=0, R=72867, W=72867, U=0, E=0)
+2018/10/12 15:58:30 - Uppercase study_id.0 - Finished processing (I=0, O=0, R=72867, W=72867, U=0, E=0)
+2018/10/12 15:58:30 - Check for null or. in data_value.0 - Finished processing (I=0, O=0, R=72867, W=72867, U=0, E=0)
+2018/10/12 15:58:30 - Remove double quotes in data_label, data_value.0 - Finished processing (I=0, O=0, R=72867, W=72867, U=0, E=0)
+2018/10/12 15:58:31 - seq_col not null.0 - linenr 50000
+2018/10/12 15:58:31 - Set standard columns.0 - linenr 50000
+2018/10/12 15:58:31 - Remove any duplicates.0 - Finished processing (I=0, O=0, R=72867, W=72867, U=0, E=0)
+2018/10/12 15:58:32 - Check LOAD_TYPE.0 - linenr 50000
+2018/10/12 15:58:32 - seq_col not null.0 - Finished processing (I=0, O=0, R=72867, W=72867, U=0, E=0)
+2018/10/12 15:58:32 - Insert to lt_src_clinical_data.0 - linenr 50000
+2018/10/12 15:58:32 - Set standard columns.0 - Finished processing (I=0, O=0, R=72867, W=72867, U=0, E=0)
+2018/10/12 15:58:32 - Check LOAD_TYPE.0 - Finished processing (I=0, O=0, R=72867, W=72867, U=0, E=0)
+2018/10/12 15:58:32 - Bulk Loader.0 - The input stream of this step and/or the PSQL process is null.  Load was not executed.
+2018/10/12 15:58:32 - Insert to lt_src_clinical_data.0 - Finished processing (I=0, O=72867, R=72867, W=72867, U=0, E=0)
+2018/10/12 15:58:32 - Get stats from steps.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:32 - Check for Remove any Duplicates step.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:32 - Calculate nbr rows dropped.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:32 - Replace Lines output with dropped_recs.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:32 - Copy rows to result.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:32 - load_lt_clinical_data_audit - Starting entry [Check if LOAD_TYPE = F]
+2018/10/12 15:58:32 - load_lt_clinical_data_audit - Starting entry [Write clinical audit records]
+2018/10/12 15:58:32 - Write clinical audit records - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/write_clinical_audit.ktr]
+2018/10/12 15:58:32 - write_clinical_audit - Dispatching started for transformation [write_clinical_audit]
+2018/10/12 15:58:32 - Get Audit rows.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:32 - Reset step names.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:32 - Set step_number based on step_name.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:32 - Sort audit records by step_number.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:32 - Split for input and output counts.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:32 - Set counts for input steps.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:32 - Set counts for output steps.0 - Finished processing (I=0, O=0, R=8, W=7, U=0, E=0)
+2018/10/12 15:58:33 - Set step_number to numeric.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:33 - Resort by step_number.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:33 - Get Variables.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:33 - Add proc_prefix, step_status.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:33 - Set procedure_name.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:33 - Call cz_write_audit.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:33 - load_lt_clinical_data_audit - Finished job entry [Write clinical audit records] (result=[true])
+2018/10/12 15:58:33 - load_lt_clinical_data_audit - Finished job entry [Check if LOAD_TYPE = F] (result=[true])
+2018/10/12 15:58:33 - load_lt_clinical_data_audit - Finished job entry [Map Data to Standard Format] (result=[true])
+2018/10/12 15:58:33 - load_lt_clinical_data_audit - Finished job entry [Processing file] (result=[true])
+2018/10/12 15:58:33 - load_lt_clinical_data_audit - Finished job entry [Set data_filename as variable] (result=[true])
+2018/10/12 15:58:33 - load_lt_clinical_data_audit - Starting entry [Set data_filename as variable]
+2018/10/12 15:58:33 - Set data_filename as variable - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/set_data_filename.ktr]
+2018/10/12 15:58:33 - set_data_filename - Dispatching started for transformation [set_data_filename]
+2018/10/12 15:58:33 - Get rows from result.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:33 - Set DATA_FILENAME Variables.0 - Setting environment variables...
+2018/10/12 15:58:33 - Set DATA_FILENAME Variables.0 - Set variable DATA_FILENAME to value [Pregnancy_v16.txt]
+2018/10/12 15:58:33 - Set DATA_FILENAME Variables.0 - Finished after 1 rows.
+2018/10/12 15:58:33 - Set DATA_FILENAME Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:33 - load_lt_clinical_data_audit - Starting entry [Processing file]
+2018/10/12 15:58:33 - Processing file Pregnancy_v16.txt - *****************************************************
+2018/10/12 15:58:33 - load_lt_clinical_data_audit - Starting entry [Map Data to Standard Format]
+2018/10/12 15:58:33 - Map Data to Standard Format - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/map_data_to_std_format.ktr]
+2018/10/12 15:58:33 - map_data_to_std_format - Dispatching started for transformation [map_data_to_std_format]
+2018/10/12 15:58:33 - Insert to lt_src_clinical_data.0 - Connected to database [TM_LZ] (commit=1000)
+2018/10/12 15:58:33 - Get data file.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/Pregnancy_v16.txt
+2018/10/12 15:58:33 - Get data_labels from first data row.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/Pregnancy_v16.txt
+2018/10/12 15:58:33 - Get data file.0 - Finished processing (I=56, O=0, R=0, W=55, U=1, E=0)
+2018/10/12 15:58:33 - Get data_labels from first data row.0 - Finished processing (I=1, O=0, R=0, W=1, U=1, E=0)
+2018/10/12 15:58:33 - Split labels from first row.0 - Finished processing (I=0, O=0, R=1, W=27, U=0, E=0)
+2018/10/12 15:58:33 - Add record number to each row.0 - Finished processing (I=0, O=0, R=55, W=55, U=0, E=0)
+2018/10/12 15:58:33 - Trim label_col_value.0 - Finished processing (I=0, O=0, R=27, W=27, U=0, E=0)
+2018/10/12 15:58:33 - Split field to rows.0 - Finished processing (I=0, O=0, R=55, W=1472, U=0, E=0)
+2018/10/12 15:58:33 - Trim column value.0 - Finished processing (I=0, O=0, R=1472, W=1472, U=0, E=0)
+2018/10/12 15:58:33 - Replace double-quote in col_value.0 - Finished processing (I=0, O=0, R=1472, W=1472, U=0, E=0)
+2018/10/12 15:58:33 - Sort hdr labels by col_num.0 - Finished processing (I=0, O=0, R=27, W=27, U=0, E=0)
+2018/10/12 15:58:33 - Get category_cd, data_label for columns.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/colmapping_v16.txt
+2018/10/12 15:58:33 - Parse alt_data_label into number and position.0 - Optimization level set to 9.
+2018/10/12 15:58:33 - Sort data rows by col_num, col_value.0 - Finished processing (I=0, O=0, R=1472, W=1472, U=0, E=0)
+2018/10/12 15:58:33 - Get category_cd, data_label for columns.0 - Finished processing (I=550, O=0, R=0, W=549, U=1, E=0)
+2018/10/12 15:58:33 - Check if MIN/MAX/MEAN.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:33 - Parse alt_data_label into number and position.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:33 - Add null aggregate_type.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:33 - Set data_filename for columns filter.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:33 - Check if columns for data file.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:33 - Skip columns for other data files.0 - Finished processing (I=0, O=0, R=531, W=531, U=0, E=0)
+2018/10/12 15:58:33 - Check if data_label_col missing.0 - Finished processing (I=0, O=0, R=18, W=18, U=0, E=0)
+2018/10/12 15:58:33 - set data_label_col to col_nbr.0 - Finished processing (I=0, O=0, R=18, W=18, U=0, E=0)
+2018/10/12 15:58:33 - Sort columns by col_num.0 - Finished processing (I=0, O=0, R=18, W=18, U=0, E=0)
+2018/10/12 15:58:33 - Join for exclusion values.0 - Finished processing (I=0, O=0, R=1472, W=1472, U=0, E=0)
+2018/10/12 15:58:33 - Select values 4.0 - Finished processing (I=0, O=0, R=1472, W=2944, U=0, E=0)
+2018/10/12 15:58:33 - Sort rows 2.0 - Finished processing (I=0, O=0, R=1472, W=1472, U=0, E=0)
+2018/10/12 15:58:33 - Check for excluded record.0 - Finished processing (I=0, O=0, R=1472, W=1472, U=0, E=0)
+2018/10/12 15:58:33 - Record not excluded.0 - Finished processing (I=0, O=0, R=1472, W=1472, U=0, E=0)
+2018/10/12 15:58:33 - Add data_label from header.0 - Finished processing (I=0, O=0, R=45, W=18, U=0, E=0)
+2018/10/12 15:58:33 - No data_label?.0 - Finished processing (I=0, O=0, R=18, W=18, U=0, E=0)
+2018/10/12 15:58:33 - Select values.0 - Finished processing (I=0, O=0, R=18, W=18, U=0, E=0)
+2018/10/12 15:58:33 - Replace double_quote in data_label.0 - Finished processing (I=0, O=0, R=18, W=18, U=0, E=0)
+2018/10/12 15:58:33 - Sort data_label rows.0 - Finished processing (I=0, O=0, R=18, W=18, U=0, E=0)
+2018/10/12 15:58:34 - Add data_value mapping if found.0 - Finished processing (I=0, O=0, R=1472, W=1472, U=0, E=0)
+2018/10/12 15:58:34 - col_num = word_map_col?.0 - Finished processing (I=0, O=0, R=1472, W=1472, U=0, E=0)
+2018/10/12 15:58:34 - Set data_value to col_value.0 - Finished processing (I=0, O=0, R=1472, W=1472, U=0, E=0)
+2018/10/12 15:58:34 - Select rec_num, col_num, data_value.0 - Finished processing (I=0, O=0, R=1472, W=1472, U=0, E=0)
+2018/10/12 15:58:34 - Sort data rows.0 - Finished processing (I=0, O=0, R=1472, W=1472, U=0, E=0)
+2018/10/12 15:58:34 - Add category_cd, data_label for column.0 - Finished processing (I=0, O=0, R=1490, W=977, U=0, E=0)
+2018/10/12 15:58:34 - Select needed fields.0 - Finished processing (I=0, O=0, R=977, W=977, U=0, E=0)
+2018/10/12 15:58:34 - Check data_label value.0 - Finished processing (I=0, O=0, R=977, W=977, U=0, E=0)
+2018/10/12 15:58:34 - Select relevant columns.0 - Finished processing (I=0, O=0, R=867, W=2601, U=0, E=0)
+2018/10/12 15:58:34 - Select only rec_num.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:34 - Select only col_num.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:34 - Sort data by rec_num, col_num.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:34 - Sort rows for special columns.0 - Finished processing (I=0, O=0, R=110, W=110, U=0, E=0)
+2018/10/12 15:58:34 - Count nbr of data columns.0 - Finished processing (I=0, O=0, R=867, W=16, U=0, E=0)
+2018/10/12 15:58:34 - Count nbr of rows.0 - Finished processing (I=0, O=0, R=867, W=55, U=0, E=0)
+2018/10/12 15:58:34 - Flatten special columns into single record.0 - Finished processing (I=0, O=0, R=110, W=55, U=0, E=0)
+2018/10/12 15:58:34 - Dummy (do nothing) 3.0 - Finished processing (I=0, O=0, R=16, W=16, U=0, E=0)
+2018/10/12 15:58:34 - Dummy (do nothing) 2.0 - Finished processing (I=0, O=0, R=55, W=55, U=0, E=0)
+2018/10/12 15:58:34 - Null if....0 - Finished processing (I=0, O=0, R=55, W=55, U=0, E=0)
+2018/10/12 15:58:34 - Sort subject_id's by rec_num.0 - Finished processing (I=0, O=0, R=55, W=55, U=0, E=0)
+2018/10/12 15:58:34 - Add units.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:34 - Check for units.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:34 - Sort data by rec_num.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Add subject_id to data.0 - Finished processing (I=0, O=0, R=922, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Check for missing subject_id.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Check if only DATALABEL in category_cd.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Select values 2.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Sort by rec_num for exclusion check.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Merge with exclusion rec_num.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Check for exclusion.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Check for both visit names null.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Add backslash for visit names.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Set null visit names to \.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Concatenate visit names.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Replace double backlash with single in new visit_name.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Set visit_name to new_visit_name.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Remove new fields from stream.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Use original data_label.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Keep standard fields.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Drop null or . data_values.0 - Finished processing (I=0, O=0, R=867, W=867, U=0, E=0)
+2018/10/12 15:58:35 - Check for aggregate_type null.0 - Finished processing (I=0, O=0, R=693, W=693, U=0, E=0)
+2018/10/12 15:58:35 - Drop null or suppressed data values.0 - Finished processing (I=0, O=0, R=174, W=174, U=0, E=0)
+2018/10/12 15:58:35 - Select output columns.0 - Finished processing (I=0, O=0, R=693, W=693, U=0, E=0)
+2018/10/12 15:58:35 - Get Variables.0 - Finished processing (I=0, O=0, R=693, W=693, U=0, E=0)
+2018/10/12 15:58:35 - Uppercase study_id.0 - Finished processing (I=0, O=0, R=693, W=693, U=0, E=0)
+2018/10/12 15:58:35 - Check for null or. in data_value.0 - Finished processing (I=0, O=0, R=693, W=693, U=0, E=0)
+2018/10/12 15:58:35 - Remove double quotes in data_label, data_value.0 - Finished processing (I=0, O=0, R=693, W=693, U=0, E=0)
+2018/10/12 15:58:35 - Remove any duplicates.0 - Finished processing (I=0, O=0, R=693, W=693, U=0, E=0)
+2018/10/12 15:58:35 - seq_col not null.0 - Finished processing (I=0, O=0, R=693, W=693, U=0, E=0)
+2018/10/12 15:58:35 - Set standard columns.0 - Finished processing (I=0, O=0, R=693, W=693, U=0, E=0)
+2018/10/12 15:58:35 - Check LOAD_TYPE.0 - Finished processing (I=0, O=0, R=693, W=693, U=0, E=0)
+2018/10/12 15:58:35 - Bulk Loader.0 - The input stream of this step and/or the PSQL process is null.  Load was not executed.
+2018/10/12 15:58:35 - Insert to lt_src_clinical_data.0 - Finished processing (I=0, O=693, R=693, W=693, U=0, E=0)
+2018/10/12 15:58:35 - Get stats from steps.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:35 - Check for Remove any Duplicates step.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:35 - Calculate nbr rows dropped.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:35 - Replace Lines output with dropped_recs.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:35 - Copy rows to result.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:35 - load_lt_clinical_data_audit - Starting entry [Check if LOAD_TYPE = F]
+2018/10/12 15:58:35 - load_lt_clinical_data_audit - Starting entry [Write clinical audit records]
+2018/10/12 15:58:35 - Write clinical audit records - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/write_clinical_audit.ktr]
+2018/10/12 15:58:35 - write_clinical_audit - Dispatching started for transformation [write_clinical_audit]
+2018/10/12 15:58:35 - Get Audit rows.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:35 - Reset step names.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:35 - Set step_number based on step_name.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:35 - Sort audit records by step_number.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:35 - Split for input and output counts.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:35 - Set counts for input steps.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:35 - Set counts for output steps.0 - Finished processing (I=0, O=0, R=8, W=7, U=0, E=0)
+2018/10/12 15:58:35 - Set step_number to numeric.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:35 - Resort by step_number.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:36 - Get Variables.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:36 - Add proc_prefix, step_status.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:36 - Set procedure_name.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:36 - Call cz_write_audit.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:36 - load_lt_clinical_data_audit - Finished job entry [Write clinical audit records] (result=[true])
+2018/10/12 15:58:36 - load_lt_clinical_data_audit - Finished job entry [Check if LOAD_TYPE = F] (result=[true])
+2018/10/12 15:58:36 - load_lt_clinical_data_audit - Finished job entry [Map Data to Standard Format] (result=[true])
+2018/10/12 15:58:36 - load_lt_clinical_data_audit - Finished job entry [Processing file] (result=[true])
+2018/10/12 15:58:36 - load_lt_clinical_data_audit - Finished job entry [Set data_filename as variable] (result=[true])
+2018/10/12 15:58:36 - load_lt_clinical_data_audit - Starting entry [Set data_filename as variable]
+2018/10/12 15:58:36 - Set data_filename as variable - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/set_data_filename.ktr]
+2018/10/12 15:58:36 - set_data_filename - Dispatching started for transformation [set_data_filename]
+2018/10/12 15:58:36 - Get rows from result.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:36 - Set DATA_FILENAME Variables.0 - Setting environment variables...
+2018/10/12 15:58:36 - Set DATA_FILENAME Variables.0 - Set variable DATA_FILENAME to value [visits_v16.txt]
+2018/10/12 15:58:36 - Set DATA_FILENAME Variables.0 - Finished after 1 rows.
+2018/10/12 15:58:36 - Set DATA_FILENAME Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:36 - load_lt_clinical_data_audit - Starting entry [Processing file]
+2018/10/12 15:58:36 - Processing file visits_v16.txt - *****************************************************
+2018/10/12 15:58:36 - load_lt_clinical_data_audit - Starting entry [Map Data to Standard Format]
+2018/10/12 15:58:36 - Map Data to Standard Format - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/map_data_to_std_format.ktr]
+2018/10/12 15:58:36 - map_data_to_std_format - Dispatching started for transformation [map_data_to_std_format]
+2018/10/12 15:58:36 - Insert to lt_src_clinical_data.0 - Connected to database [TM_LZ] (commit=1000)
+2018/10/12 15:58:36 - Get data file.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/visits_v16.txt
+2018/10/12 15:58:36 - Get data_labels from first data row.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/visits_v16.txt
+2018/10/12 15:58:36 - Get data file.0 - Finished processing (I=5142, O=0, R=0, W=5141, U=1, E=0)
+2018/10/12 15:58:36 - Add record number to each row.0 - Finished processing (I=0, O=0, R=5141, W=5141, U=0, E=0)
+2018/10/12 15:58:36 - Sort data rows by col_num, col_value.0 - Linenr 50000
+2018/10/12 15:58:36 - Get data_labels from first data row.0 - Finished processing (I=1, O=0, R=0, W=1, U=1, E=0)
+2018/10/12 15:58:36 - Get category_cd, data_label for columns.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/clinical/colmapping_v16.txt
+2018/10/12 15:58:36 - Get category_cd, data_label for columns.0 - Finished processing (I=550, O=0, R=0, W=549, U=1, E=0)
+2018/10/12 15:58:36 - Split labels from first row.0 - Finished processing (I=0, O=0, R=1, W=94, U=0, E=0)
+2018/10/12 15:58:36 - Parse alt_data_label into number and position.0 - Optimization level set to 9.
+2018/10/12 15:58:37 - Sort data rows by col_num, col_value.0 - Linenr 100000
+2018/10/12 15:58:37 - Trim label_col_value.0 - Finished processing (I=0, O=0, R=94, W=94, U=0, E=0)
+2018/10/12 15:58:37 - Check if MIN/MAX/MEAN.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:37 - Sort hdr labels by col_num.0 - Finished processing (I=0, O=0, R=94, W=94, U=0, E=0)
+2018/10/12 15:58:37 - Parse alt_data_label into number and position.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:37 - Add null aggregate_type.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:37 - Sort data rows by col_num, col_value.0 - Linenr 150000
+2018/10/12 15:58:37 - Set data_filename for columns filter.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:37 - Check if columns for data file.0 - Finished processing (I=0, O=0, R=549, W=549, U=0, E=0)
+2018/10/12 15:58:37 - Check if data_label_col missing.0 - Finished processing (I=0, O=0, R=94, W=94, U=0, E=0)
+2018/10/12 15:58:37 - Skip columns for other data files.0 - Finished processing (I=0, O=0, R=455, W=455, U=0, E=0)
+2018/10/12 15:58:37 - set data_label_col to col_nbr.0 - Finished processing (I=0, O=0, R=94, W=94, U=0, E=0)
+2018/10/12 15:58:37 - Sort columns by col_num.0 - Finished processing (I=0, O=0, R=94, W=94, U=0, E=0)
+2018/10/12 15:58:37 - Sort data rows by col_num, col_value.0 - Linenr 200000
+2018/10/12 15:58:37 - Sort data rows by col_num, col_value.0 - Linenr 250000
+2018/10/12 15:58:37 - Sort data rows by col_num, col_value.0 - Linenr 300000
+2018/10/12 15:58:37 - Sort data rows by col_num, col_value.0 - Linenr 350000
+2018/10/12 15:58:37 - Add data_label from header.0 - Finished processing (I=0, O=0, R=188, W=94, U=0, E=0)
+2018/10/12 15:58:37 - Sort data rows by col_num, col_value.0 - Linenr 400000
+2018/10/12 15:58:37 - No data_label?.0 - Finished processing (I=0, O=0, R=94, W=94, U=0, E=0)
+2018/10/12 15:58:37 - Split field to rows.0 - Finished processing (I=0, O=0, R=5141, W=422704, U=0, E=0)
+2018/10/12 15:58:37 - Trim column value.0 - Finished processing (I=0, O=0, R=422704, W=422704, U=0, E=0)
+2018/10/12 15:58:37 - Select values.0 - Finished processing (I=0, O=0, R=94, W=94, U=0, E=0)
+2018/10/12 15:58:37 - Replace double-quote in col_value.0 - Finished processing (I=0, O=0, R=422704, W=422704, U=0, E=0)
+2018/10/12 15:58:37 - Replace double_quote in data_label.0 - Finished processing (I=0, O=0, R=94, W=94, U=0, E=0)
+2018/10/12 15:58:37 - Sort data_label rows.0 - Finished processing (I=0, O=0, R=94, W=94, U=0, E=0)
+2018/10/12 15:58:38 - Join for exclusion values.0 - linenr 50000
+2018/10/12 15:58:38 - Select values 4.0 - linenr 50000
+2018/10/12 15:58:38 - Check for excluded record.0 - linenr 50000
+2018/10/12 15:58:38 - Sort rows 2.0 - Linenr 50000
+2018/10/12 15:58:38 - Record not excluded.0 - Linenr 50000
+2018/10/12 15:58:38 - Join for exclusion values.0 - linenr 100000
+2018/10/12 15:58:38 - Select values 4.0 - linenr 100000
+2018/10/12 15:58:38 - Sort rows 2.0 - Linenr 100000
+2018/10/12 15:58:38 - Check for excluded record.0 - linenr 100000
+2018/10/12 15:58:38 - Record not excluded.0 - Linenr 100000
+2018/10/12 15:58:38 - Join for exclusion values.0 - linenr 150000
+2018/10/12 15:58:38 - Select values 4.0 - linenr 150000
+2018/10/12 15:58:38 - Sort rows 2.0 - Linenr 150000
+2018/10/12 15:58:38 - Check for excluded record.0 - linenr 150000
+2018/10/12 15:58:38 - Record not excluded.0 - Linenr 150000
+2018/10/12 15:58:38 - Join for exclusion values.0 - linenr 200000
+2018/10/12 15:58:38 - Select values 4.0 - linenr 200000
+2018/10/12 15:58:38 - Sort rows 2.0 - Linenr 200000
+2018/10/12 15:58:38 - Check for excluded record.0 - linenr 200000
+2018/10/12 15:58:38 - Record not excluded.0 - Linenr 200000
+2018/10/12 15:58:38 - Join for exclusion values.0 - linenr 250000
+2018/10/12 15:58:38 - Select values 4.0 - linenr 250000
+2018/10/12 15:58:38 - Check for excluded record.0 - linenr 250000
+2018/10/12 15:58:38 - Record not excluded.0 - Linenr 250000
+2018/10/12 15:58:38 - Sort rows 2.0 - Linenr 250000
+2018/10/12 15:58:38 - Join for exclusion values.0 - linenr 300000
+2018/10/12 15:58:38 - Select values 4.0 - linenr 300000
+2018/10/12 15:58:38 - Sort rows 2.0 - Linenr 300000
+2018/10/12 15:58:38 - Check for excluded record.0 - linenr 300000
+2018/10/12 15:58:38 - Record not excluded.0 - Linenr 300000
+2018/10/12 15:58:38 - Join for exclusion values.0 - linenr 350000
+2018/10/12 15:58:38 - Select values 4.0 - linenr 350000
+2018/10/12 15:58:38 - Check for excluded record.0 - linenr 350000
+2018/10/12 15:58:38 - Record not excluded.0 - Linenr 350000
+2018/10/12 15:58:38 - Sort rows 2.0 - Linenr 350000
+2018/10/12 15:58:38 - Join for exclusion values.0 - linenr 400000
+2018/10/12 15:58:38 - Select values 4.0 - linenr 400000
+2018/10/12 15:58:38 - Sort rows 2.0 - Linenr 400000
+2018/10/12 15:58:38 - Check for excluded record.0 - linenr 400000
+2018/10/12 15:58:38 - Sort data rows by col_num, col_value.0 - Finished processing (I=0, O=0, R=422704, W=422704, U=0, E=0)
+2018/10/12 15:58:38 - Record not excluded.0 - Linenr 400000
+2018/10/12 15:58:38 - Join for exclusion values.0 - Finished processing (I=0, O=0, R=422704, W=422704, U=0, E=0)
+2018/10/12 15:58:38 - Select values 4.0 - Finished processing (I=0, O=0, R=422704, W=845408, U=0, E=0)
+2018/10/12 15:58:38 - Check for excluded record.0 - Finished processing (I=0, O=0, R=422704, W=422704, U=0, E=0)
+2018/10/12 15:58:38 - Record not excluded.0 - Finished processing (I=0, O=0, R=422704, W=422704, U=0, E=0)
+2018/10/12 15:58:39 - Add data_value mapping if found.0 - linenr 50000
+2018/10/12 15:58:39 - col_num = word_map_col?.0 - linenr 50000
+2018/10/12 15:58:39 - Set data_value to col_value.0 - linenr 50000
+2018/10/12 15:58:39 - Select rec_num, col_num, data_value.0 - linenr 50000
+2018/10/12 15:58:39 - Sort data rows.0 - Linenr 50000
+2018/10/12 15:58:39 - Add data_value mapping if found.0 - linenr 100000
+2018/10/12 15:58:39 - col_num = word_map_col?.0 - linenr 100000
+2018/10/12 15:58:39 - Set data_value to col_value.0 - linenr 100000
+2018/10/12 15:58:39 - Select rec_num, col_num, data_value.0 - linenr 100000
+2018/10/12 15:58:39 - Sort data rows.0 - Linenr 100000
+2018/10/12 15:58:39 - Add data_value mapping if found.0 - linenr 150000
+2018/10/12 15:58:39 - col_num = word_map_col?.0 - linenr 150000
+2018/10/12 15:58:39 - Set data_value to col_value.0 - linenr 150000
+2018/10/12 15:58:39 - Select rec_num, col_num, data_value.0 - linenr 150000
+2018/10/12 15:58:39 - Sort data rows.0 - Linenr 150000
+2018/10/12 15:58:39 - Add data_value mapping if found.0 - linenr 200000
+2018/10/12 15:58:39 - col_num = word_map_col?.0 - linenr 200000
+2018/10/12 15:58:39 - Set data_value to col_value.0 - linenr 200000
+2018/10/12 15:58:39 - Select rec_num, col_num, data_value.0 - linenr 200000
+2018/10/12 15:58:39 - Sort data rows.0 - Linenr 200000
+2018/10/12 15:58:39 - Add data_value mapping if found.0 - linenr 250000
+2018/10/12 15:58:39 - col_num = word_map_col?.0 - linenr 250000
+2018/10/12 15:58:39 - Set data_value to col_value.0 - linenr 250000
+2018/10/12 15:58:39 - Select rec_num, col_num, data_value.0 - linenr 250000
+2018/10/12 15:58:39 - Sort data rows.0 - Linenr 250000
+2018/10/12 15:58:39 - Add data_value mapping if found.0 - linenr 300000
+2018/10/12 15:58:39 - col_num = word_map_col?.0 - linenr 300000
+2018/10/12 15:58:39 - Set data_value to col_value.0 - linenr 300000
+2018/10/12 15:58:39 - Select rec_num, col_num, data_value.0 - linenr 300000
+2018/10/12 15:58:39 - Sort data rows.0 - Linenr 300000
+2018/10/12 15:58:39 - Add data_value mapping if found.0 - linenr 350000
+2018/10/12 15:58:39 - col_num = word_map_col?.0 - linenr 350000
+2018/10/12 15:58:39 - Set data_value to col_value.0 - linenr 350000
+2018/10/12 15:58:39 - Select rec_num, col_num, data_value.0 - linenr 350000
+2018/10/12 15:58:39 - Sort data rows.0 - Linenr 350000
+2018/10/12 15:58:39 - Add data_value mapping if found.0 - linenr 400000
+2018/10/12 15:58:39 - col_num = word_map_col?.0 - linenr 400000
+2018/10/12 15:58:39 - Set data_value to col_value.0 - linenr 400000
+2018/10/12 15:58:39 - Select rec_num, col_num, data_value.0 - linenr 400000
+2018/10/12 15:58:39 - Sort rows 2.0 - Finished processing (I=0, O=0, R=422704, W=422704, U=0, E=0)
+2018/10/12 15:58:39 - Sort data rows.0 - Linenr 400000
+2018/10/12 15:58:39 - Add data_value mapping if found.0 - Finished processing (I=0, O=0, R=422704, W=422704, U=0, E=0)
+2018/10/12 15:58:39 - col_num = word_map_col?.0 - Finished processing (I=0, O=0, R=422704, W=422704, U=0, E=0)
+2018/10/12 15:58:39 - Set data_value to col_value.0 - Finished processing (I=0, O=0, R=422704, W=422704, U=0, E=0)
+2018/10/12 15:58:39 - Select rec_num, col_num, data_value.0 - Finished processing (I=0, O=0, R=422704, W=422704, U=0, E=0)
+2018/10/12 15:58:39 - Select needed fields.0 - linenr 50000
+2018/10/12 15:58:39 - Check data_label value.0 - linenr 50000
+2018/10/12 15:58:40 - Select relevant columns.0 - linenr 50000
+2018/10/12 15:58:40 - Select only col_num.0 - linenr 50000
+2018/10/12 15:58:40 - Sort data by rec_num, col_num.0 - Linenr 50000
+2018/10/12 15:58:40 - Count nbr of data columns.0 - Linenr 50000
+2018/10/12 15:58:40 - Select only rec_num.0 - linenr 50000
+2018/10/12 15:58:40 - Count nbr of rows.0 - Linenr 50000
+2018/10/12 15:58:40 - Select needed fields.0 - linenr 100000
+2018/10/12 15:58:40 - Check data_label value.0 - linenr 100000
+2018/10/12 15:58:40 - Select relevant columns.0 - linenr 100000
+2018/10/12 15:58:40 - Select only rec_num.0 - linenr 100000
+2018/10/12 15:58:40 - Count nbr of rows.0 - Linenr 100000
+2018/10/12 15:58:40 - Sort data by rec_num, col_num.0 - Linenr 100000
+2018/10/12 15:58:40 - Select only col_num.0 - linenr 100000
+2018/10/12 15:58:40 - Count nbr of data columns.0 - Linenr 100000
+2018/10/12 15:58:40 - Select needed fields.0 - linenr 150000
+2018/10/12 15:58:40 - Check data_label value.0 - linenr 150000
+2018/10/12 15:58:40 - Select relevant columns.0 - linenr 150000
+2018/10/12 15:58:40 - Select only col_num.0 - linenr 150000
+2018/10/12 15:58:40 - Count nbr of data columns.0 - Linenr 150000
+2018/10/12 15:58:40 - Sort data by rec_num, col_num.0 - Linenr 150000
+2018/10/12 15:58:40 - Select only rec_num.0 - linenr 150000
+2018/10/12 15:58:40 - Count nbr of rows.0 - Linenr 150000
+2018/10/12 15:58:40 - Select needed fields.0 - linenr 200000
+2018/10/12 15:58:40 - Check data_label value.0 - linenr 200000
+2018/10/12 15:58:40 - Select relevant columns.0 - linenr 200000
+2018/10/12 15:58:40 - Select only col_num.0 - linenr 200000
+2018/10/12 15:58:40 - Count nbr of data columns.0 - Linenr 200000
+2018/10/12 15:58:40 - Sort data by rec_num, col_num.0 - Linenr 200000
+2018/10/12 15:58:40 - Select only rec_num.0 - linenr 200000
+2018/10/12 15:58:40 - Count nbr of rows.0 - Linenr 200000
+2018/10/12 15:58:40 - Select needed fields.0 - linenr 250000
+2018/10/12 15:58:40 - Check data_label value.0 - linenr 250000
+2018/10/12 15:58:40 - Select relevant columns.0 - linenr 250000
+2018/10/12 15:58:40 - Select only col_num.0 - linenr 250000
+2018/10/12 15:58:40 - Count nbr of data columns.0 - Linenr 250000
+2018/10/12 15:58:40 - Select only rec_num.0 - linenr 250000
+2018/10/12 15:58:40 - Sort data by rec_num, col_num.0 - Linenr 250000
+2018/10/12 15:58:40 - Count nbr of rows.0 - Linenr 250000
+2018/10/12 15:58:40 - Select needed fields.0 - linenr 300000
+2018/10/12 15:58:40 - Check data_label value.0 - linenr 300000
+2018/10/12 15:58:40 - Select relevant columns.0 - linenr 300000
+2018/10/12 15:58:40 - Sort data by rec_num, col_num.0 - Linenr 300000
+2018/10/12 15:58:40 - Select only col_num.0 - linenr 300000
+2018/10/12 15:58:40 - Select only rec_num.0 - linenr 300000
+2018/10/12 15:58:40 - Count nbr of data columns.0 - Linenr 300000
+2018/10/12 15:58:40 - Count nbr of rows.0 - Linenr 300000
+2018/10/12 15:58:40 - Select needed fields.0 - linenr 350000
+2018/10/12 15:58:40 - Check data_label value.0 - linenr 350000
+2018/10/12 15:58:40 - Select relevant columns.0 - linenr 350000
+2018/10/12 15:58:40 - Sort data by rec_num, col_num.0 - Linenr 350000
+2018/10/12 15:58:40 - Select only col_num.0 - linenr 350000
+2018/10/12 15:58:40 - Count nbr of data columns.0 - Linenr 350000
+2018/10/12 15:58:40 - Select only rec_num.0 - linenr 350000
+2018/10/12 15:58:40 - Count nbr of rows.0 - Linenr 350000
+2018/10/12 15:58:40 - Select needed fields.0 - linenr 400000
+2018/10/12 15:58:40 - Sort data rows.0 - Finished processing (I=0, O=0, R=422704, W=422704, U=0, E=0)
+2018/10/12 15:58:40 - Check data_label value.0 - linenr 400000
+2018/10/12 15:58:40 - Select relevant columns.0 - linenr 400000
+2018/10/12 15:58:40 - Sort data by rec_num, col_num.0 - Linenr 400000
+2018/10/12 15:58:40 - Select only col_num.0 - linenr 400000
+2018/10/12 15:58:40 - Select only rec_num.0 - linenr 400000
+2018/10/12 15:58:40 - Count nbr of data columns.0 - Linenr 400000
+2018/10/12 15:58:40 - Count nbr of rows.0 - Linenr 400000
+2018/10/12 15:58:41 - Add category_cd, data_label for column.0 - Finished processing (I=0, O=0, R=422798, W=422704, U=0, E=0)
+2018/10/12 15:58:41 - Select needed fields.0 - Finished processing (I=0, O=0, R=422704, W=422704, U=0, E=0)
+2018/10/12 15:58:41 - Check data_label value.0 - Finished processing (I=0, O=0, R=422704, W=422704, U=0, E=0)
+2018/10/12 15:58:41 - Select relevant columns.0 - Finished processing (I=0, O=0, R=412422, W=1237266, U=0, E=0)
+2018/10/12 15:58:41 - Select only rec_num.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:41 - Select only col_num.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:41 - Sort rows for special columns.0 - Finished processing (I=0, O=0, R=10282, W=10282, U=0, E=0)
+2018/10/12 15:58:41 - Flatten special columns into single record.0 - Finished processing (I=0, O=0, R=10282, W=5141, U=0, E=0)
+2018/10/12 15:58:41 - Null if....0 - Finished processing (I=0, O=0, R=5141, W=5141, U=0, E=0)
+2018/10/12 15:58:41 - Count nbr of data columns.0 - Finished processing (I=0, O=0, R=412422, W=92, U=0, E=0)
+2018/10/12 15:58:41 - Sort subject_id's by rec_num.0 - Finished processing (I=0, O=0, R=5141, W=5141, U=0, E=0)
+2018/10/12 15:58:41 - Dummy (do nothing) 3.0 - Finished processing (I=0, O=0, R=92, W=92, U=0, E=0)
+2018/10/12 15:58:41 - Count nbr of rows.0 - Finished processing (I=0, O=0, R=412422, W=4785, U=0, E=0)
+2018/10/12 15:58:41 - Dummy (do nothing) 2.0 - Finished processing (I=0, O=0, R=4785, W=4785, U=0, E=0)
+2018/10/12 15:58:41 - Add units.0 - linenr 50000
+2018/10/12 15:58:41 - Check for units.0 - linenr 50000
+2018/10/12 15:58:41 - Sort data by rec_num.0 - Linenr 50000
+2018/10/12 15:58:41 - Add units.0 - linenr 100000
+2018/10/12 15:58:41 - Check for units.0 - linenr 100000
+2018/10/12 15:58:41 - Sort data by rec_num.0 - Linenr 100000
+2018/10/12 15:58:41 - Add units.0 - linenr 150000
+2018/10/12 15:58:41 - Check for units.0 - linenr 150000
+2018/10/12 15:58:41 - Sort data by rec_num.0 - Linenr 150000
+2018/10/12 15:58:41 - Add units.0 - linenr 200000
+2018/10/12 15:58:41 - Check for units.0 - linenr 200000
+2018/10/12 15:58:41 - Sort data by rec_num.0 - Linenr 200000
+2018/10/12 15:58:41 - Add units.0 - linenr 250000
+2018/10/12 15:58:41 - Check for units.0 - linenr 250000
+2018/10/12 15:58:41 - Sort data by rec_num.0 - Linenr 250000
+2018/10/12 15:58:42 - Add units.0 - linenr 300000
+2018/10/12 15:58:42 - Check for units.0 - linenr 300000
+2018/10/12 15:58:42 - Sort data by rec_num.0 - Linenr 300000
+2018/10/12 15:58:42 - Add units.0 - linenr 350000
+2018/10/12 15:58:42 - Check for units.0 - linenr 350000
+2018/10/12 15:58:42 - Sort data by rec_num.0 - Linenr 350000
+2018/10/12 15:58:42 - Add units.0 - linenr 400000
+2018/10/12 15:58:42 - Check for units.0 - linenr 400000
+2018/10/12 15:58:42 - Sort data by rec_num.0 - Linenr 400000
+2018/10/12 15:58:42 - Sort data by rec_num, col_num.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:42 - Add units.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:42 - Check for units.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:42 - Check for missing subject_id.0 - linenr 50000
+2018/10/12 15:58:42 - Check if only DATALABEL in category_cd.0 - linenr 50000
+2018/10/12 15:58:42 - Select values 2.0 - linenr 50000
+2018/10/12 15:58:42 - Sort by rec_num for exclusion check.0 - Linenr 50000
+2018/10/12 15:58:42 - Check for missing subject_id.0 - linenr 100000
+2018/10/12 15:58:42 - Check if only DATALABEL in category_cd.0 - linenr 100000
+2018/10/12 15:58:42 - Select values 2.0 - linenr 100000
+2018/10/12 15:58:42 - Sort by rec_num for exclusion check.0 - Linenr 100000
+2018/10/12 15:58:42 - Check for missing subject_id.0 - linenr 150000
+2018/10/12 15:58:42 - Check if only DATALABEL in category_cd.0 - linenr 150000
+2018/10/12 15:58:42 - Select values 2.0 - linenr 150000
+2018/10/12 15:58:42 - Sort by rec_num for exclusion check.0 - Linenr 150000
+2018/10/12 15:58:42 - Check for missing subject_id.0 - linenr 200000
+2018/10/12 15:58:42 - Check if only DATALABEL in category_cd.0 - linenr 200000
+2018/10/12 15:58:42 - Select values 2.0 - linenr 200000
+2018/10/12 15:58:42 - Sort by rec_num for exclusion check.0 - Linenr 200000
+2018/10/12 15:58:42 - Check for missing subject_id.0 - linenr 250000
+2018/10/12 15:58:42 - Check if only DATALABEL in category_cd.0 - linenr 250000
+2018/10/12 15:58:42 - Select values 2.0 - linenr 250000
+2018/10/12 15:58:42 - Sort by rec_num for exclusion check.0 - Linenr 250000
+2018/10/12 15:58:42 - Check for missing subject_id.0 - linenr 300000
+2018/10/12 15:58:42 - Check if only DATALABEL in category_cd.0 - linenr 300000
+2018/10/12 15:58:42 - Select values 2.0 - linenr 300000
+2018/10/12 15:58:42 - Sort by rec_num for exclusion check.0 - Linenr 300000
+2018/10/12 15:58:42 - Check for missing subject_id.0 - linenr 350000
+2018/10/12 15:58:42 - Check if only DATALABEL in category_cd.0 - linenr 350000
+2018/10/12 15:58:42 - Select values 2.0 - linenr 350000
+2018/10/12 15:58:42 - Sort by rec_num for exclusion check.0 - Linenr 350000
+2018/10/12 15:58:42 - Check for missing subject_id.0 - linenr 400000
+2018/10/12 15:58:42 - Sort data by rec_num.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:42 - Check if only DATALABEL in category_cd.0 - linenr 400000
+2018/10/12 15:58:42 - Select values 2.0 - linenr 400000
+2018/10/12 15:58:42 - Sort by rec_num for exclusion check.0 - Linenr 400000
+2018/10/12 15:58:43 - Add subject_id to data.0 - Finished processing (I=0, O=0, R=417563, W=412422, U=0, E=0)
+2018/10/12 15:58:43 - Check for missing subject_id.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:43 - Check if only DATALABEL in category_cd.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:43 - Select values 2.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:43 - Merge with exclusion rec_num.0 - linenr 50000
+2018/10/12 15:58:43 - Check for exclusion.0 - linenr 50000
+2018/10/12 15:58:43 - Check for both visit names null.0 - linenr 50000
+2018/10/12 15:58:43 - Add backslash for visit names.0 - LineNr : 50000
+2018/10/12 15:58:43 - Concatenate visit names.0 - Linenr 50000
+2018/10/12 15:58:43 - Merge with exclusion rec_num.0 - linenr 100000
+2018/10/12 15:58:43 - Remove new fields from stream.0 - linenr 50000
+2018/10/12 15:58:43 - Use original data_label.0 - linenr 50000
+2018/10/12 15:58:43 - Keep standard fields.0 - linenr 50000
+2018/10/12 15:58:43 - Drop null or . data_values.0 - linenr 50000
+2018/10/12 15:58:43 - Check for exclusion.0 - linenr 100000
+2018/10/12 15:58:43 - Check for both visit names null.0 - linenr 100000
+2018/10/12 15:58:43 - Add backslash for visit names.0 - LineNr : 100000
+2018/10/12 15:58:44 - Concatenate visit names.0 - Linenr 100000
+2018/10/12 15:58:44 - Drop null or suppressed data values.0 - Linenr 50000
+2018/10/12 15:58:44 - Remove new fields from stream.0 - linenr 100000
+2018/10/12 15:58:44 - Use original data_label.0 - linenr 100000
+2018/10/12 15:58:44 - Merge with exclusion rec_num.0 - linenr 150000
+2018/10/12 15:58:44 - Keep standard fields.0 - linenr 100000
+2018/10/12 15:58:45 - Check for exclusion.0 - linenr 150000
+2018/10/12 15:58:45 - Drop null or . data_values.0 - linenr 100000
+2018/10/12 15:58:45 - Check for aggregate_type null.0 - linenr 50000
+2018/10/12 15:58:45 - Select output columns.0 - linenr 50000
+2018/10/12 15:58:45 - Check for null or. in data_value.0 - linenr 50000
+2018/10/12 15:58:45 - Remove any duplicates.0 - Linenr 50000
+2018/10/12 15:58:45 - Check for both visit names null.0 - linenr 150000
+2018/10/12 15:58:45 - Add backslash for visit names.0 - LineNr : 150000
+2018/10/12 15:58:45 - Concatenate visit names.0 - Linenr 150000
+2018/10/12 15:58:45 - Merge with exclusion rec_num.0 - linenr 200000
+2018/10/12 15:58:45 - Remove new fields from stream.0 - linenr 150000
+2018/10/12 15:58:45 - Use original data_label.0 - linenr 150000
+2018/10/12 15:58:45 - Keep standard fields.0 - linenr 150000
+2018/10/12 15:58:45 - Drop null or . data_values.0 - linenr 150000
+2018/10/12 15:58:45 - Check for exclusion.0 - linenr 200000
+2018/10/12 15:58:45 - Check for both visit names null.0 - linenr 200000
+2018/10/12 15:58:45 - Add backslash for visit names.0 - LineNr : 200000
+2018/10/12 15:58:45 - Concatenate visit names.0 - Linenr 200000
+2018/10/12 15:58:45 - Merge with exclusion rec_num.0 - linenr 250000
+2018/10/12 15:58:45 - Remove new fields from stream.0 - linenr 200000
+2018/10/12 15:58:45 - Use original data_label.0 - linenr 200000
+2018/10/12 15:58:45 - Check for exclusion.0 - linenr 250000
+2018/10/12 15:58:45 - Check for both visit names null.0 - linenr 250000
+2018/10/12 15:58:45 - Keep standard fields.0 - linenr 200000
+2018/10/12 15:58:45 - Drop null or . data_values.0 - linenr 200000
+2018/10/12 15:58:45 - Check for aggregate_type null.0 - linenr 100000
+2018/10/12 15:58:45 - Select output columns.0 - linenr 100000
+2018/10/12 15:58:45 - Drop null or suppressed data values.0 - Linenr 100000
+2018/10/12 15:58:45 - Check for null or. in data_value.0 - linenr 100000
+2018/10/12 15:58:45 - Remove any duplicates.0 - Linenr 100000
+2018/10/12 15:58:45 - Add backslash for visit names.0 - LineNr : 250000
+2018/10/12 15:58:45 - Concatenate visit names.0 - Linenr 250000
+2018/10/12 15:58:45 - Merge with exclusion rec_num.0 - linenr 300000
+2018/10/12 15:58:45 - Remove new fields from stream.0 - linenr 250000
+2018/10/12 15:58:45 - Check for exclusion.0 - linenr 300000
+2018/10/12 15:58:45 - Use original data_label.0 - linenr 250000
+2018/10/12 15:58:45 - Keep standard fields.0 - linenr 250000
+2018/10/12 15:58:45 - Drop null or . data_values.0 - linenr 250000
+2018/10/12 15:58:45 - Check for both visit names null.0 - linenr 300000
+2018/10/12 15:58:45 - Add backslash for visit names.0 - LineNr : 300000
+2018/10/12 15:58:45 - Concatenate visit names.0 - Linenr 300000
+2018/10/12 15:58:45 - Remove new fields from stream.0 - linenr 300000
+2018/10/12 15:58:45 - Drop null or suppressed data values.0 - Linenr 150000
+2018/10/12 15:58:45 - Merge with exclusion rec_num.0 - linenr 350000
+2018/10/12 15:58:45 - Use original data_label.0 - linenr 300000
+2018/10/12 15:58:45 - Keep standard fields.0 - linenr 300000
+2018/10/12 15:58:45 - Check for exclusion.0 - linenr 350000
+2018/10/12 15:58:45 - Drop null or . data_values.0 - linenr 300000
+2018/10/12 15:58:45 - Check for aggregate_type null.0 - linenr 150000
+2018/10/12 15:58:46 - Select output columns.0 - linenr 150000
+2018/10/12 15:58:46 - Check for both visit names null.0 - linenr 350000
+2018/10/12 15:58:46 - Check for null or. in data_value.0 - linenr 150000
+2018/10/12 15:58:46 - Add backslash for visit names.0 - LineNr : 350000
+2018/10/12 15:58:46 - Remove any duplicates.0 - Linenr 150000
+2018/10/12 15:58:46 - Concatenate visit names.0 - Linenr 350000
+2018/10/12 15:58:46 - Remove new fields from stream.0 - linenr 350000
+2018/10/12 15:58:46 - Use original data_label.0 - linenr 350000
+2018/10/12 15:58:46 - Merge with exclusion rec_num.0 - linenr 400000
+2018/10/12 15:58:46 - Sort by rec_num for exclusion check.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:46 - Keep standard fields.0 - linenr 350000
+2018/10/12 15:58:46 - Drop null or . data_values.0 - linenr 350000
+2018/10/12 15:58:46 - Check for exclusion.0 - linenr 400000
+2018/10/12 15:58:46 - Check for both visit names null.0 - linenr 400000
+2018/10/12 15:58:46 - Add backslash for visit names.0 - LineNr : 400000
+2018/10/12 15:58:46 - Drop null or suppressed data values.0 - Linenr 200000
+2018/10/12 15:58:46 - Merge with exclusion rec_num.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:46 - Concatenate visit names.0 - Linenr 400000
+2018/10/12 15:58:46 - Check for exclusion.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:46 - Check for both visit names null.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:46 - Remove new fields from stream.0 - linenr 400000
+2018/10/12 15:58:46 - Use original data_label.0 - linenr 400000
+2018/10/12 15:58:46 - Add backslash for visit names.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:46 - Keep standard fields.0 - linenr 400000
+2018/10/12 15:58:46 - Drop null or . data_values.0 - linenr 400000
+2018/10/12 15:58:46 - Set null visit names to \.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:46 - Concatenate visit names.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:46 - Replace double backlash with single in new visit_name.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:46 - Set visit_name to new_visit_name.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:46 - Remove new fields from stream.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:46 - Use original data_label.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:46 - Keep standard fields.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:46 - Drop null or . data_values.0 - Finished processing (I=0, O=0, R=412422, W=412422, U=0, E=0)
+2018/10/12 15:58:46 - Check for aggregate_type null.0 - Finished processing (I=0, O=0, R=186274, W=186274, U=0, E=0)
+2018/10/12 15:58:46 - Drop null or suppressed data values.0 - Finished processing (I=0, O=0, R=226148, W=226148, U=0, E=0)
+2018/10/12 15:58:46 - Select output columns.0 - Finished processing (I=0, O=0, R=186274, W=186274, U=0, E=0)
+2018/10/12 15:58:46 - Get Variables.0 - Finished processing (I=0, O=0, R=186274, W=186274, U=0, E=0)
+2018/10/12 15:58:46 - Uppercase study_id.0 - Finished processing (I=0, O=0, R=186274, W=186274, U=0, E=0)
+2018/10/12 15:58:46 - Check for null or. in data_value.0 - Finished processing (I=0, O=0, R=186274, W=186274, U=0, E=0)
+2018/10/12 15:58:46 - Remove double quotes in data_label, data_value.0 - Finished processing (I=0, O=0, R=186274, W=186274, U=0, E=0)
+2018/10/12 15:58:47 - seq_col not null.0 - linenr 50000
+2018/10/12 15:58:48 - Set standard columns.0 - linenr 50000
+2018/10/12 15:58:48 - Check LOAD_TYPE.0 - linenr 50000
+2018/10/12 15:58:48 - Insert to lt_src_clinical_data.0 - linenr 50000
+2018/10/12 15:58:49 - seq_col not null.0 - linenr 100000
+2018/10/12 15:58:49 - Set standard columns.0 - linenr 100000
+2018/10/12 15:58:49 - Check LOAD_TYPE.0 - linenr 100000
+2018/10/12 15:58:50 - Insert to lt_src_clinical_data.0 - linenr 100000
+2018/10/12 15:58:50 - seq_col not null.0 - linenr 150000
+2018/10/12 15:58:51 - Set standard columns.0 - linenr 150000
+2018/10/12 15:58:51 - Check LOAD_TYPE.0 - linenr 150000
+2018/10/12 15:58:51 - Remove any duplicates.0 - Finished processing (I=0, O=0, R=186274, W=186274, U=0, E=0)
+2018/10/12 15:58:51 - Insert to lt_src_clinical_data.0 - linenr 150000
+2018/10/12 15:58:51 - seq_col not null.0 - Finished processing (I=0, O=0, R=186274, W=186274, U=0, E=0)
+2018/10/12 15:58:52 - Set standard columns.0 - Finished processing (I=0, O=0, R=186274, W=186274, U=0, E=0)
+2018/10/12 15:58:52 - Check LOAD_TYPE.0 - Finished processing (I=0, O=0, R=186274, W=186274, U=0, E=0)
+2018/10/12 15:58:52 - Bulk Loader.0 - The input stream of this step and/or the PSQL process is null.  Load was not executed.
+2018/10/12 15:58:52 - Insert to lt_src_clinical_data.0 - Finished processing (I=0, O=186274, R=186274, W=186274, U=0, E=0)
+2018/10/12 15:58:52 - Get stats from steps.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:52 - Check for Remove any Duplicates step.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:52 - Calculate nbr rows dropped.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:52 - Replace Lines output with dropped_recs.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:52 - Copy rows to result.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:52 - load_lt_clinical_data_audit - Starting entry [Check if LOAD_TYPE = F]
+2018/10/12 15:58:52 - load_lt_clinical_data_audit - Starting entry [Write clinical audit records]
+2018/10/12 15:58:52 - Write clinical audit records - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/write_clinical_audit.ktr]
+2018/10/12 15:58:52 - write_clinical_audit - Dispatching started for transformation [write_clinical_audit]
+2018/10/12 15:58:52 - Get Audit rows.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:52 - Reset step names.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:52 - Set step_number based on step_name.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:52 - Sort audit records by step_number.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:52 - Split for input and output counts.0 - Finished processing (I=0, O=0, R=9, W=9, U=0, E=0)
+2018/10/12 15:58:52 - Set counts for input steps.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:52 - Set counts for output steps.0 - Finished processing (I=0, O=0, R=8, W=7, U=0, E=0)
+2018/10/12 15:58:52 - Set step_number to numeric.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:52 - Resort by step_number.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:52 - Get Variables.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:52 - Add proc_prefix, step_status.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:52 - Set procedure_name.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:53 - Call cz_write_audit.0 - Finished processing (I=0, O=0, R=8, W=8, U=0, E=0)
+2018/10/12 15:58:53 - load_lt_clinical_data_audit - Finished job entry [Write clinical audit records] (result=[true])
+2018/10/12 15:58:53 - load_lt_clinical_data_audit - Finished job entry [Check if LOAD_TYPE = F] (result=[true])
+2018/10/12 15:58:53 - load_lt_clinical_data_audit - Finished job entry [Map Data to Standard Format] (result=[true])
+2018/10/12 15:58:53 - load_lt_clinical_data_audit - Finished job entry [Processing file] (result=[true])
+2018/10/12 15:58:53 - load_lt_clinical_data_audit - Finished job entry [Set data_filename as variable] (result=[true])
+2018/10/12 15:58:53 - create_clinical_data - Starting entry [Check if LOAD_TYPE=F]
+2018/10/12 15:58:53 - create_clinical_data - Starting entry [run i2b2_load_clinical_data]
+2018/10/12 15:58:53 - run i2b2_load_clinical_data - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/run_i2b2_load_clinical_data.ktr]
+2018/10/12 15:58:53 - run_i2b2_load_clinical_data - Dispatching started for transformation [run_i2b2_load_clinical_data]
+2018/10/12 15:58:53 - Get Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:53 - Write to log.0 - 
+2018/10/12 15:58:53 - Write to log.0 - ------------> Linenr 1------------------------------
+2018/10/12 15:58:53 - Write to log.0 - i2b2_load_clinical_data params
+2018/10/12 15:58:53 - Write to log.0 - 
+2018/10/12 15:58:53 - Write to log.0 - study_id = NEPTUNE_V16
+2018/10/12 15:58:53 - Write to log.0 - top_node = \Private Studies\Neptune_V16\
+2018/10/12 15:58:53 - Write to log.0 - secure_study = Y
+2018/10/12 15:58:53 - Write to log.0 - highlight_study = N
+2018/10/12 15:58:53 - Write to log.0 - job_id =  00000000000000000000000000039.00
+2018/10/12 15:58:53 - Write to log.0 - 
+2018/10/12 15:58:53 - Write to log.0 - ====================
+2018/10/12 15:58:53 - Uppercase STUDY_ID.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:53 - If field value is null.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 15:58:53 - Write to log.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:20:35 - run i2b2_load_clinical_data.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:20:35 - Check rtnCd.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:20:35 - Dummy (do nothing).0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:20:35 - create_clinical_data - Starting entry [End  Audit]
+2018/10/12 16:20:35 - End  Audit - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/cz_end_audit.ktr]
+2018/10/12 16:20:35 - cz_end_audit - Dispatching started for transformation [cz_end_audit]
+2018/10/12 16:20:35 - Generate Rows.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2018/10/12 16:20:35 - Get Job Name.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:20:35 - Call cz_end_audit.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:20:35 - create_clinical_data - Finished job entry [End  Audit] (result=[true])
+2018/10/12 16:20:35 - create_clinical_data - Finished job entry [run i2b2_load_clinical_data] (result=[true])
+2018/10/12 16:20:35 - create_clinical_data - Finished job entry [Check if LOAD_TYPE=F] (result=[true])
+2018/10/12 16:20:35 - create_clinical_data - Finished job entry [Load data from each file] (result=[true])
+2018/10/12 16:20:35 - create_clinical_data - Finished job entry [Get data filenames from columns file] (result=[true])
+2018/10/12 16:20:35 - create_clinical_data - Finished job entry [Truncate lt_src_clinical_data] (result=[true])
+2018/10/12 16:20:35 - create_clinical_data - Finished job entry [Write study_id to audit] (result=[true])
+2018/10/12 16:20:35 - create_clinical_data - Finished job entry [Start Audit] (result=[true])
+2018/10/12 16:20:35 - create_clinical_data - Finished job entry [Check if LOAD_TYPE=F 2] (result=[true])
+2018/10/12 16:20:35 - create_clinical_data - Finished job entry [Check if columns file exists] (result=[true])
+2018/10/12 16:20:35 - create_clinical_data - Finished job entry [Write To Log] (result=[true])
+2018/10/12 16:20:35 - create_clinical_data - Finished job entry [Validate parameters] (result=[true])
+2018/10/12 16:20:35 - create_clinical_data - Job execution finished
+2018/10/12 16:20:35 - Kitchen - Finished!
+2018/10/12 16:20:35 - Kitchen - Start=2018/10/12 15:57:59.484, Stop=2018/10/12 16:20:35.248
+2018/10/12 16:20:35 - Kitchen - Processing ended after 22 minutes and 35 seconds (1355 seconds total).
+All done.
+make: Leaving directory `/transmart/transmart-data/samples/postgres'

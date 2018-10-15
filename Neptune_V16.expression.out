@@ -1,0 +1,1000 @@
+make: Entering directory `/transmart/transmart-data/samples/postgres'
+php -d variables_order=E gen_kettle_properties.php > kettle-home/kettle.properties
+STUDY_ID=Neptune_V16 DATA_LOCATION="/transmart/transmart-data/samples/studies/Neptune_V16/expression" \
+		KETTLE_HOME="/transmart/transmart-data/samples/postgres/kettle-home" \
+		./load_expression.sh ../studies/Neptune_V16/expression.params
+Processing file ../studies/Neptune_V16/expression.params $PARAMS_FILENAME /transmart/transmart-data/samples/studies/Neptune_V16/expression.params
+Info load_expression.sh: Sourced params file /transmart/transmart-data/samples/studies/Neptune_V16/expression.params
+Info load_expression.sh: assuming STUDY_NAME=Neptune_V16
+2018/10/12 16:31:38 - Kitchen - Start of run.
+2018/10/12 16:31:39 - load_gene_expression_data - Start of job execution
+2018/10/12 16:31:39 - load_gene_expression_data - Starting entry [Validate parameters]
+2018/10/12 16:31:39 - Validate parameters - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/validate_gene_expression_params.ktr]
+2018/10/12 16:31:39 - validate_gene_expression_params - Dispatching started for transformation [validate_gene_expression_params]
+2018/10/12 16:31:39 - Get variables for STUDY_ID, TOP_NODE, LOAD_TYPE, DATA_TYPE.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:39 - Check STUDY_ID is not nul.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:39 - Check TOP_NODE is not nul.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:39 - Check LOAD_TYPE in I, L, F.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:39 - Filter rows.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:39 - Dummy (do nothing).0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:39 - load_gene_expression_data - Starting entry [Write To Log]
+2018/10/12 16:31:39 - \Private Studies\Neptune_V16\  / LOAD_TYPE: I - This is the top level of the study and the LOAD_TYPE parameter
+2018/10/12 16:31:39 - load_gene_expression_data - Starting entry [Check number of gene expression data files]
+2018/10/12 16:31:39 - Check number of gene expression data files - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/check_gene_expression_filenames.ktr]
+2018/10/12 16:31:40 - check_gene_expression_filenames - Dispatching started for transformation [check_gene_expression_filenames]
+2018/10/12 16:31:40 - Get File Names.0 - Finished processing (I=0, O=0, R=0, W=4, U=0, E=0)
+2018/10/12 16:31:40 - Select values.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:31:40 - Group by.0 - Finished processing (I=0, O=0, R=4, W=1, U=0, E=0)
+2018/10/12 16:31:40 - Write to log.0 - 
+2018/10/12 16:31:40 - Write to log.0 - ------------> Linenr 1------------------------------
+2018/10/12 16:31:40 - Write to log.0 - *** Number of files to be processed ***
+2018/10/12 16:31:40 - Write to log.0 - 
+2018/10/12 16:31:40 - Write to log.0 - 4
+2018/10/12 16:31:40 - Write to log.0 - 
+2018/10/12 16:31:40 - Write to log.0 - ====================
+2018/10/12 16:31:40 - Set Variables.0 - Setting environment variables...
+2018/10/12 16:31:40 - Set Variables.0 - Set variable TOTAL_FILES to value [4]
+2018/10/12 16:31:40 - Write to log.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:40 - Set Variables.0 - Finished after 1 rows.
+2018/10/12 16:31:40 - Set Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:40 - load_gene_expression_data - Starting entry [Fail if number of files = 0]
+2018/10/12 16:31:40 - load_gene_expression_data - Starting entry [Check if subject-sample map file exists]
+2018/10/12 16:31:40 - load_gene_expression_data - Starting entry [Start Audit]
+2018/10/12 16:31:40 - Start Audit - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/cz_start_audit.ktr]
+2018/10/12 16:31:40 - cz_start_audit - Dispatching started for transformation [cz_start_audit]
+2018/10/12 16:31:40 - Generate Rows.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2018/10/12 16:31:40 - Get Job Name.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:40 - Set Env for the job.0 - Setting environment variables...
+2018/10/12 16:31:40 - Set Env for the job.0 - Set variable ETL_JOB_NAME to value [load_gene_expression_data]
+2018/10/12 16:31:40 - Set Env for the job.0 - Set variable ETL_JOB_ID to value [41]
+2018/10/12 16:31:40 - Set Env for the job.0 - Finished after 1 rows.
+2018/10/12 16:31:40 - Set Env for the job.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:40 - Call cz_start_audit.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:40 - load_gene_expression_data - Starting entry [Load All Gene Expression data for study]
+2018/10/12 16:31:40 - load_all_gene_expression_files_for_study - Starting entry [Check if file-only load]
+2018/10/12 16:31:40 - load_all_gene_expression_files_for_study - Starting entry [Write study_id to audit]
+2018/10/12 16:31:40 - Write study_id to audit - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/write_study_id_to_audit.ktr]
+2018/10/12 16:31:40 - write_study_id_to_audit - Dispatching started for transformation [write_study_id_to_audit]
+2018/10/12 16:31:40 - Get System Info.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:40 - Get job_name, study_id.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:40 - Add constants.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:40 - Set procedure_name.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:40 - Call cz_write_audit.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:40 - load_all_gene_expression_files_for_study - Starting entry [truncate lt_src_mrna_data]
+2018/10/12 16:31:40 - load_all_gene_expression_files_for_study - Starting entry [Load subject-sample map]
+2018/10/12 16:31:40 - Load subject-sample map - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/load_subject_sample_map_to_lt.ktr]
+2018/10/12 16:31:40 - load_subject_sample_map_to_lt - Dispatching started for transformation [load_subject_sample_map_to_lt]
+2018/10/12 16:31:40 - Insert to lt_src_mrna_subj_samp_map.0 - Connected to database [TM_LZ] (commit=1000)
+2018/10/12 16:31:40 - Read subject-sample map file.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/expression/Neptune_V6_Mapping.txt
+2018/10/12 16:31:40 - Read subject-sample map file.0 - Finished processing (I=785, O=0, R=0, W=784, U=1, E=0)
+2018/10/12 16:31:40 - Check for required fields.0 - Finished processing (I=0, O=0, R=784, W=784, U=0, E=0)
+2018/10/12 16:31:40 - Uppercase study_id.0 - Finished processing (I=0, O=0, R=784, W=784, U=0, E=0)
+2018/10/12 16:31:40 - Get SOURCE_CD.0 - Finished processing (I=0, O=0, R=784, W=784, U=0, E=0)
+2018/10/12 16:31:40 - Get marker_type for platform.0 - Finished processing (I=1, O=0, R=784, W=784, U=0, E=0)
+2018/10/12 16:31:40 - Select only Gene Expression marker_type.0 - Finished processing (I=0, O=0, R=784, W=784, U=0, E=0)
+2018/10/12 16:31:40 - Select null or matching source_cd.0 - Finished processing (I=0, O=0, R=784, W=784, U=0, E=0)
+2018/10/12 16:31:40 - Set null tissue_type to Unknown.0 - Finished processing (I=0, O=0, R=784, W=784, U=0, E=0)
+2018/10/12 16:31:40 - Insert to lt_src_mrna_subj_samp_map.0 - Finished processing (I=0, O=784, R=784, W=784, U=0, E=0)
+2018/10/12 16:31:40 - load_all_gene_expression_files_for_study - Starting entry [Get list of filenames for Study]
+2018/10/12 16:31:40 - Get list of filenames for Study - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/get_list_of_gene_expression_filenames.ktr]
+2018/10/12 16:31:40 - get_list_of_gene_expression_filenames - Dispatching started for transformation [get_list_of_gene_expression_filenames]
+2018/10/12 16:31:41 - Get File Names.0 - Finished processing (I=0, O=0, R=0, W=4, U=0, E=0)
+2018/10/12 16:31:41 - Get filename with no extension.0 - Optimization level set to 9.
+2018/10/12 16:31:41 - Get filename with no extension.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:31:41 - Select values.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:31:41 - Copy rows to result.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:31:41 - load_all_gene_expression_files_for_study - Starting entry [load each file for study]
+2018/10/12 16:31:41 - load_gene_expression_one_study - Starting entry [Set gene expression filename as variable]
+2018/10/12 16:31:41 - Set gene expression filename as variable - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/set_gene_expression_filename.ktr]
+2018/10/12 16:31:41 - set_gene_expression_filename - Dispatching started for transformation [set_gene_expression_filename]
+2018/10/12 16:31:41 - Get rows from result.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:41 - Write to log.0 - 
+2018/10/12 16:31:41 - Write to log.0 - ------------> Linenr 1------------------------------
+2018/10/12 16:31:41 - Write to log.0 - *** Processing file ***
+2018/10/12 16:31:41 - Write to log.0 - 
+2018/10/12 16:31:41 - Write to log.0 - Neptune_V6_Exp_N1G-N2G-ComBatCorrected.txt
+2018/10/12 16:31:41 - Write to log.0 - 
+2018/10/12 16:31:41 - Write to log.0 - ====================
+2018/10/12 16:31:41 - Set Variables.0 - Setting environment variables...
+2018/10/12 16:31:41 - Set Variables.0 - Set variable FILENAME to value [Neptune_V6_Exp_N1G-N2G-ComBatCorrected.txt]
+2018/10/12 16:31:41 - Set Variables.0 - Set variable FILENAME_NO_EXT to value [Neptune_V6_Exp_N1G-N2G-ComBatCorrected]
+2018/10/12 16:31:41 - Write to log.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:41 - Set Variables.0 - Finished after 1 rows.
+2018/10/12 16:31:41 - Set Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:41 - load_gene_expression_one_study - Starting entry [Validate gene expression header has same nbr columns as data]
+2018/10/12 16:31:41 - Validate gene expression header has same nbr columns as data - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/validate_gene_expression_columns.ktr]
+2018/10/12 16:31:41 - validate_gene_expression_columns - Dispatching started for transformation [validate_gene_expression_columns]
+2018/10/12 16:31:41 - Get Header Row.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/expression/Neptune_V6_Exp_N1G-N2G-ComBatCorrected.txt
+2018/10/12 16:31:41 - Get Header Row.0 - Finished processing (I=1, O=0, R=0, W=1, U=1, E=0)
+2018/10/12 16:31:41 - Split header.0 - Finished processing (I=0, O=0, R=1, W=229, U=0, E=0)
+2018/10/12 16:31:41 - Get first data row.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/expression/Neptune_V6_Exp_N1G-N2G-ComBatCorrected.txt
+2018/10/12 16:31:41 - Select hdr_col.0 - Finished processing (I=0, O=0, R=229, W=229, U=0, E=0)
+2018/10/12 16:31:41 - Read all records.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/expression/Neptune_V6_Exp_N1G-N2G-ComBatCorrected.txt
+2018/10/12 16:31:41 - Count hdr_col.0 - Finished processing (I=0, O=0, R=229, W=1, U=0, E=0)
+2018/10/12 16:31:41 - Get first data row.0 - Finished processing (I=2, O=0, R=0, W=1, U=1, E=0)
+2018/10/12 16:31:41 - add join_col for hdr_ct.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:41 - Split data.0 - Finished processing (I=0, O=0, R=1, W=229, U=0, E=0)
+2018/10/12 16:31:41 - Select data_col.0 - Finished processing (I=0, O=0, R=229, W=229, U=0, E=0)
+2018/10/12 16:31:41 - Count data_col.0 - Finished processing (I=0, O=0, R=229, W=1, U=0, E=0)
+2018/10/12 16:31:41 - Add join_col for data_ct.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:41 - Join hdr_ct and data_ct.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2018/10/12 16:31:41 - Nbr of header cols = nbr data cols.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:41 - Get LOAD_TYPE.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:41 - Check if LOAD_TYPE = F.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:41 - constant 1.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:41 - Subtract 1 from hdr_ct to get count of samples.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:47 - Read all records.0 - Finished processing (I=25583, O=0, R=0, W=25582, U=1, E=0)
+2018/10/12 16:31:47 - Count probesets.0 - Finished processing (I=0, O=0, R=25582, W=1, U=0, E=0)
+2018/10/12 16:31:48 - add join_col for probeset_ct.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:48 - Add probeset_ct to results.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2018/10/12 16:31:48 - Select counts.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:31:48 - Separate counts into 2 records.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2018/10/12 16:31:48 - Add step_desc.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:31:48 - Set step_desc to step_number.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:31:48 - Convert step_nbr to integer.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:31:48 - Set step_desc based on value from step_number.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:31:48 - Get Variables.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:31:48 - Add procedure_name.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:31:48 - Call cz_write_audit.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:31:48 - load_gene_expression_one_study - Starting entry [Run FilePivot]
+2018/10/12 16:31:48 - Run FilePivot - Running on platform : Linux
+2018/10/12 16:31:48 - Run FilePivot - Executing command : /tmp/kettle_d7db8bbf-ce5d-11e8-8f4d-1367c8fabcffshell
+2018/10/12 16:31:50 - load_gene_expression_one_study - Starting entry [Load gene expression data to lz]
+2018/10/12 16:31:50 - Load gene expression data to lz - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/load_gene_expression_data_to_lz.ktr]
+2018/10/12 16:31:50 - load_gene_expression_data_to_lz - Dispatching started for transformation [load_gene_expression_data_to_lz]
+2018/10/12 16:31:50 - Insert to lt_src_mrna_data.0 - Connected to database [TM_LZ] (commit=1000)
+2018/10/12 16:31:50 - Get pivoted file.0 - Opening file: file:///tmp/Neptune_V6_Exp_N1G-N2G-ComBatCorrected_pivot.txt
+2018/10/12 16:31:50 - Check for numeric intensity.0 - Optimization level set to 9.
+2018/10/12 16:31:51 - Remove SAMPLE_SUFFIX from sample_cd.0 - Optimization level set to 9.
+2018/10/12 16:32:08 - Get pivoted file.0 - linenr 500000
+2018/10/12 16:32:09 - Check for numeric intensity.0 - linenr 500000
+2018/10/12 16:32:09 - Drop non-numeric data.0 - linenr 500000
+2018/10/12 16:32:09 - SAMPLE_REMAP_FILE present.0 - linenr 500000
+2018/10/12 16:32:10 - SAMPLE_SUFFIX present.0 - linenr 500000
+2018/10/12 16:32:10 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 500000
+2018/10/12 16:32:10 - Select values 2.0 - linenr 500000
+2018/10/12 16:32:11 - Select values for mrna data.0 - linenr 500000
+2018/10/12 16:32:11 - Check if LOAD_TYPE = L.0 - linenr 500000
+2018/10/12 16:32:11 - Check if LOAD_TYPE = I.0 - linenr 500000
+2018/10/12 16:32:12 - Insert to lt_src_mrna_data.0 - linenr 500000
+2018/10/12 16:32:20 - Get pivoted file.0 - linenr 1000000
+2018/10/12 16:32:21 - Check for numeric intensity.0 - linenr 1000000
+2018/10/12 16:32:21 - Drop non-numeric data.0 - linenr 1000000
+2018/10/12 16:32:21 - SAMPLE_REMAP_FILE present.0 - linenr 1000000
+2018/10/12 16:32:22 - SAMPLE_SUFFIX present.0 - linenr 1000000
+2018/10/12 16:32:22 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 1000000
+2018/10/12 16:32:22 - Select values 2.0 - linenr 1000000
+2018/10/12 16:32:23 - Select values for mrna data.0 - linenr 1000000
+2018/10/12 16:32:23 - Check if LOAD_TYPE = L.0 - linenr 1000000
+2018/10/12 16:32:23 - Check if LOAD_TYPE = I.0 - linenr 1000000
+2018/10/12 16:32:23 - Insert to lt_src_mrna_data.0 - linenr 1000000
+2018/10/12 16:32:32 - Get pivoted file.0 - linenr 1500000
+2018/10/12 16:32:32 - Check for numeric intensity.0 - linenr 1500000
+2018/10/12 16:32:32 - Drop non-numeric data.0 - linenr 1500000
+2018/10/12 16:32:33 - SAMPLE_REMAP_FILE present.0 - linenr 1500000
+2018/10/12 16:32:33 - SAMPLE_SUFFIX present.0 - linenr 1500000
+2018/10/12 16:32:33 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 1500000
+2018/10/12 16:32:34 - Select values 2.0 - linenr 1500000
+2018/10/12 16:32:34 - Select values for mrna data.0 - linenr 1500000
+2018/10/12 16:32:35 - Check if LOAD_TYPE = L.0 - linenr 1500000
+2018/10/12 16:32:35 - Check if LOAD_TYPE = I.0 - linenr 1500000
+2018/10/12 16:32:35 - Insert to lt_src_mrna_data.0 - linenr 1500000
+2018/10/12 16:32:44 - Get pivoted file.0 - linenr 2000000
+2018/10/12 16:32:44 - Check for numeric intensity.0 - linenr 2000000
+2018/10/12 16:32:44 - Drop non-numeric data.0 - linenr 2000000
+2018/10/12 16:32:45 - SAMPLE_REMAP_FILE present.0 - linenr 2000000
+2018/10/12 16:32:45 - SAMPLE_SUFFIX present.0 - linenr 2000000
+2018/10/12 16:32:45 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 2000000
+2018/10/12 16:32:45 - Select values 2.0 - linenr 2000000
+2018/10/12 16:32:46 - Select values for mrna data.0 - linenr 2000000
+2018/10/12 16:32:46 - Check if LOAD_TYPE = L.0 - linenr 2000000
+2018/10/12 16:32:47 - Check if LOAD_TYPE = I.0 - linenr 2000000
+2018/10/12 16:32:47 - Insert to lt_src_mrna_data.0 - linenr 2000000
+2018/10/12 16:32:55 - Get pivoted file.0 - linenr 2500000
+2018/10/12 16:32:56 - Check for numeric intensity.0 - linenr 2500000
+2018/10/12 16:32:56 - Drop non-numeric data.0 - linenr 2500000
+2018/10/12 16:32:56 - SAMPLE_REMAP_FILE present.0 - linenr 2500000
+2018/10/12 16:32:56 - SAMPLE_SUFFIX present.0 - linenr 2500000
+2018/10/12 16:32:57 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 2500000
+2018/10/12 16:32:57 - Select values 2.0 - linenr 2500000
+2018/10/12 16:32:58 - Select values for mrna data.0 - linenr 2500000
+2018/10/12 16:32:58 - Check if LOAD_TYPE = L.0 - linenr 2500000
+2018/10/12 16:32:58 - Check if LOAD_TYPE = I.0 - linenr 2500000
+2018/10/12 16:32:58 - Insert to lt_src_mrna_data.0 - linenr 2500000
+2018/10/12 16:33:10 - Get pivoted file.0 - linenr 3000000
+2018/10/12 16:33:11 - Check for numeric intensity.0 - linenr 3000000
+2018/10/12 16:33:11 - Drop non-numeric data.0 - linenr 3000000
+2018/10/12 16:33:11 - SAMPLE_REMAP_FILE present.0 - linenr 3000000
+2018/10/12 16:33:12 - SAMPLE_SUFFIX present.0 - linenr 3000000
+2018/10/12 16:33:12 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 3000000
+2018/10/12 16:33:12 - Select values 2.0 - linenr 3000000
+2018/10/12 16:33:13 - Select values for mrna data.0 - linenr 3000000
+2018/10/12 16:33:13 - Check if LOAD_TYPE = L.0 - linenr 3000000
+2018/10/12 16:33:14 - Check if LOAD_TYPE = I.0 - linenr 3000000
+2018/10/12 16:33:14 - Insert to lt_src_mrna_data.0 - linenr 3000000
+2018/10/12 16:33:24 - Get pivoted file.0 - linenr 3500000
+2018/10/12 16:33:24 - Check for numeric intensity.0 - linenr 3500000
+2018/10/12 16:33:25 - Drop non-numeric data.0 - linenr 3500000
+2018/10/12 16:33:25 - SAMPLE_REMAP_FILE present.0 - linenr 3500000
+2018/10/12 16:33:25 - SAMPLE_SUFFIX present.0 - linenr 3500000
+2018/10/12 16:33:26 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 3500000
+2018/10/12 16:33:26 - Select values 2.0 - linenr 3500000
+2018/10/12 16:33:27 - Select values for mrna data.0 - linenr 3500000
+2018/10/12 16:33:27 - Check if LOAD_TYPE = L.0 - linenr 3500000
+2018/10/12 16:33:27 - Check if LOAD_TYPE = I.0 - linenr 3500000
+2018/10/12 16:33:27 - Insert to lt_src_mrna_data.0 - linenr 3500000
+2018/10/12 16:33:36 - Get pivoted file.0 - linenr 4000000
+2018/10/12 16:33:36 - Check for numeric intensity.0 - linenr 4000000
+2018/10/12 16:33:36 - Drop non-numeric data.0 - linenr 4000000
+2018/10/12 16:33:37 - SAMPLE_REMAP_FILE present.0 - linenr 4000000
+2018/10/12 16:33:37 - SAMPLE_SUFFIX present.0 - linenr 4000000
+2018/10/12 16:33:37 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 4000000
+2018/10/12 16:33:37 - Select values 2.0 - linenr 4000000
+2018/10/12 16:33:38 - Select values for mrna data.0 - linenr 4000000
+2018/10/12 16:33:38 - Check if LOAD_TYPE = L.0 - linenr 4000000
+2018/10/12 16:33:39 - Check if LOAD_TYPE = I.0 - linenr 4000000
+2018/10/12 16:33:39 - Insert to lt_src_mrna_data.0 - linenr 4000000
+2018/10/12 16:33:48 - Get pivoted file.0 - linenr 4500000
+2018/10/12 16:33:48 - Check for numeric intensity.0 - linenr 4500000
+2018/10/12 16:33:48 - Drop non-numeric data.0 - linenr 4500000
+2018/10/12 16:33:49 - SAMPLE_REMAP_FILE present.0 - linenr 4500000
+2018/10/12 16:33:49 - SAMPLE_SUFFIX present.0 - linenr 4500000
+2018/10/12 16:33:49 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 4500000
+2018/10/12 16:33:49 - Select values 2.0 - linenr 4500000
+2018/10/12 16:33:50 - Select values for mrna data.0 - linenr 4500000
+2018/10/12 16:33:50 - Check if LOAD_TYPE = L.0 - linenr 4500000
+2018/10/12 16:33:50 - Check if LOAD_TYPE = I.0 - linenr 4500000
+2018/10/12 16:33:51 - Insert to lt_src_mrna_data.0 - linenr 4500000
+2018/10/12 16:33:59 - Get pivoted file.0 - linenr 5000000
+2018/10/12 16:33:59 - Check for numeric intensity.0 - linenr 5000000
+2018/10/12 16:34:00 - Drop non-numeric data.0 - linenr 5000000
+2018/10/12 16:34:00 - SAMPLE_REMAP_FILE present.0 - linenr 5000000
+2018/10/12 16:34:00 - SAMPLE_SUFFIX present.0 - linenr 5000000
+2018/10/12 16:34:00 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 5000000
+2018/10/12 16:34:01 - Select values 2.0 - linenr 5000000
+2018/10/12 16:34:01 - Select values for mrna data.0 - linenr 5000000
+2018/10/12 16:34:02 - Check if LOAD_TYPE = L.0 - linenr 5000000
+2018/10/12 16:34:02 - Check if LOAD_TYPE = I.0 - linenr 5000000
+2018/10/12 16:34:02 - Insert to lt_src_mrna_data.0 - linenr 5000000
+2018/10/12 16:34:11 - Get pivoted file.0 - linenr 5500000
+2018/10/12 16:34:11 - Check for numeric intensity.0 - linenr 5500000
+2018/10/12 16:34:11 - Drop non-numeric data.0 - linenr 5500000
+2018/10/12 16:34:12 - SAMPLE_REMAP_FILE present.0 - linenr 5500000
+2018/10/12 16:34:12 - SAMPLE_SUFFIX present.0 - linenr 5500000
+2018/10/12 16:34:12 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 5500000
+2018/10/12 16:34:13 - Select values 2.0 - linenr 5500000
+2018/10/12 16:34:13 - Select values for mrna data.0 - linenr 5500000
+2018/10/12 16:34:14 - Check if LOAD_TYPE = L.0 - linenr 5500000
+2018/10/12 16:34:14 - Check if LOAD_TYPE = I.0 - linenr 5500000
+2018/10/12 16:34:14 - Insert to lt_src_mrna_data.0 - linenr 5500000
+2018/10/12 16:34:19 - Get pivoted file.0 - Finished processing (I=5832697, O=0, R=0, W=5832696, U=1, E=0)
+2018/10/12 16:34:19 - Check for numeric intensity.0 - Finished processing (I=0, O=0, R=5832696, W=5832696, U=0, E=0)
+2018/10/12 16:34:19 - Drop non-numeric data.0 - Finished processing (I=0, O=0, R=5832696, W=5832696, U=0, E=0)
+2018/10/12 16:34:19 - Get sample variables.0 - Finished processing (I=0, O=0, R=5832696, W=5832696, U=0, E=0)
+2018/10/12 16:34:20 - SAMPLE_REMAP_FILE present.0 - Finished processing (I=0, O=0, R=5832696, W=5832696, U=0, E=0)
+2018/10/12 16:34:20 - SAMPLE_SUFFIX present.0 - Finished processing (I=0, O=0, R=5832696, W=5832696, U=0, E=0)
+2018/10/12 16:34:20 - Remove SAMPLE_SUFFIX from sample_cd.0 - Finished processing (I=0, O=0, R=5832696, W=5832696, U=0, E=0)
+2018/10/12 16:34:20 - Select values 2.0 - Finished processing (I=0, O=0, R=5832696, W=5832696, U=0, E=0)
+2018/10/12 16:34:20 - Get Variables.0 - Finished processing (I=0, O=0, R=5832696, W=5832696, U=0, E=0)
+2018/10/12 16:34:20 - Trim trial_name.0 - Finished processing (I=0, O=0, R=5832696, W=5832696, U=0, E=0)
+2018/10/12 16:34:21 - Select values for mrna data.0 - Finished processing (I=0, O=0, R=5832696, W=5832696, U=0, E=0)
+2018/10/12 16:34:21 - Check if LOAD_TYPE = L.0 - Finished processing (I=0, O=0, R=5832696, W=5832696, U=0, E=0)
+2018/10/12 16:34:21 - Bulk Loader.0 - The input stream of this step and/or the PSQL process is null.  Load was not executed.
+2018/10/12 16:34:21 - Check if LOAD_TYPE = I.0 - Finished processing (I=0, O=0, R=5832696, W=5832696, U=0, E=0)
+2018/10/12 16:34:21 - Insert to lt_src_mrna_data.0 - Finished processing (I=0, O=5832696, R=5832696, W=5832696, U=0, E=0)
+2018/10/12 16:34:21 - Get stats from steps.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:34:21 - Copy rows to result.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:34:21 - load_gene_expression_one_study - Starting entry [Check LOAD_TYPE = F]
+2018/10/12 16:34:21 - load_gene_expression_one_study - Starting entry [Write gene expression audit]
+2018/10/12 16:34:21 - Write gene expression audit - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/write_gene_expression_audit.ktr]
+2018/10/12 16:34:21 - write_gene_expression_audit - Dispatching started for transformation [write_gene_expression_audit]
+2018/10/12 16:34:21 - Get Audit rows.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:34:21 - Reset step names.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:34:21 - Set step_number based on step_name.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:34:21 - Sort audit records by step_number.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:34:21 - Split for input and output counts.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:34:21 - Set counts for output steps.0 - Finished processing (I=0, O=0, R=4, W=3, U=0, E=0)
+2018/10/12 16:34:21 - Set step_number to numeric.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:34:21 - Get Variables.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:34:21 - Add proc_prefix, step_status.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:34:21 - Create procedure_name.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:34:21 - Call cz_write_audit.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:34:21 - load_gene_expression_one_study - Starting entry [Delete file]
+2018/10/12 16:34:21 - Delete file - File [/tmp/Neptune_V6_Exp_N1G-N2G-ComBatCorrected_pivot.txt] deleted!
+2018/10/12 16:34:21 - load_gene_expression_one_study - Finished job entry [Delete file] (result=[true])
+2018/10/12 16:34:21 - load_gene_expression_one_study - Finished job entry [Write gene expression audit] (result=[true])
+2018/10/12 16:34:21 - load_gene_expression_one_study - Finished job entry [Check LOAD_TYPE = F] (result=[true])
+2018/10/12 16:34:21 - load_gene_expression_one_study - Finished job entry [Load gene expression data to lz] (result=[true])
+2018/10/12 16:34:21 - load_gene_expression_one_study - Finished job entry [Run FilePivot] (result=[true])
+2018/10/12 16:34:21 - load_gene_expression_one_study - Finished job entry [Validate gene expression header has same nbr columns as data] (result=[true])
+2018/10/12 16:34:21 - load_gene_expression_one_study - Finished job entry [Set gene expression filename as variable] (result=[true])
+2018/10/12 16:34:21 - load_gene_expression_one_study - Starting entry [Set gene expression filename as variable]
+2018/10/12 16:34:21 - Set gene expression filename as variable - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/set_gene_expression_filename.ktr]
+2018/10/12 16:34:21 - set_gene_expression_filename - Dispatching started for transformation [set_gene_expression_filename]
+2018/10/12 16:34:21 - Get rows from result.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:34:21 - Write to log.0 - 
+2018/10/12 16:34:21 - Write to log.0 - ------------> Linenr 1------------------------------
+2018/10/12 16:34:21 - Write to log.0 - *** Processing file ***
+2018/10/12 16:34:21 - Write to log.0 - 
+2018/10/12 16:34:21 - Write to log.0 - Neptune_V6_Exp_N1G_N2G_N3bG-CombatCorrected_Glom_noped.txt
+2018/10/12 16:34:21 - Write to log.0 - 
+2018/10/12 16:34:21 - Write to log.0 - ====================
+2018/10/12 16:34:21 - Set Variables.0 - Setting environment variables...
+2018/10/12 16:34:21 - Set Variables.0 - Set variable FILENAME to value [Neptune_V6_Exp_N1G_N2G_N3bG-CombatCorrected_Glom_noped.txt]
+2018/10/12 16:34:21 - Set Variables.0 - Set variable FILENAME_NO_EXT to value [Neptune_V6_Exp_N1G_N2G_N3bG-CombatCorrected_Glom_noped]
+2018/10/12 16:34:21 - Write to log.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:34:21 - Set Variables.0 - Finished after 1 rows.
+2018/10/12 16:34:21 - Set Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:34:21 - load_gene_expression_one_study - Starting entry [Validate gene expression header has same nbr columns as data]
+2018/10/12 16:34:21 - Validate gene expression header has same nbr columns as data - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/validate_gene_expression_columns.ktr]
+2018/10/12 16:34:21 - validate_gene_expression_columns - Dispatching started for transformation [validate_gene_expression_columns]
+2018/10/12 16:34:22 - Get Header Row.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/expression/Neptune_V6_Exp_N1G_N2G_N3bG-CombatCorrected_Glom_noped.txt
+2018/10/12 16:34:22 - Get first data row.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/expression/Neptune_V6_Exp_N1G_N2G_N3bG-CombatCorrected_Glom_noped.txt
+2018/10/12 16:34:22 - Read all records.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/expression/Neptune_V6_Exp_N1G_N2G_N3bG-CombatCorrected_Glom_noped.txt
+2018/10/12 16:34:22 - Get Header Row.0 - Finished processing (I=1, O=0, R=0, W=1, U=1, E=0)
+2018/10/12 16:34:22 - Get first data row.0 - Finished processing (I=2, O=0, R=0, W=1, U=1, E=0)
+2018/10/12 16:34:22 - Split header.0 - Finished processing (I=0, O=0, R=1, W=150, U=0, E=0)
+2018/10/12 16:34:22 - Split data.0 - Finished processing (I=0, O=0, R=1, W=150, U=0, E=0)
+2018/10/12 16:34:22 - Select hdr_col.0 - Finished processing (I=0, O=0, R=150, W=150, U=0, E=0)
+2018/10/12 16:34:22 - Count hdr_col.0 - Finished processing (I=0, O=0, R=150, W=1, U=0, E=0)
+2018/10/12 16:34:22 - Select data_col.0 - Finished processing (I=0, O=0, R=150, W=150, U=0, E=0)
+2018/10/12 16:34:22 - add join_col for hdr_ct.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:34:22 - Count data_col.0 - Finished processing (I=0, O=0, R=150, W=1, U=0, E=0)
+2018/10/12 16:34:22 - Add join_col for data_ct.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:34:22 - Join hdr_ct and data_ct.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2018/10/12 16:34:22 - Nbr of header cols = nbr data cols.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:34:22 - Get LOAD_TYPE.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:34:22 - Check if LOAD_TYPE = F.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:34:22 - constant 1.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:34:22 - Subtract 1 from hdr_ct to get count of samples.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:34:25 - Read all records.0 - Finished processing (I=25583, O=0, R=0, W=25582, U=1, E=0)
+2018/10/12 16:34:25 - Count probesets.0 - Finished processing (I=0, O=0, R=25582, W=1, U=0, E=0)
+2018/10/12 16:34:25 - add join_col for probeset_ct.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:34:26 - Add probeset_ct to results.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2018/10/12 16:34:26 - Select counts.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:34:26 - Separate counts into 2 records.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2018/10/12 16:34:26 - Add step_desc.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:34:26 - Set step_desc to step_number.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:34:26 - Convert step_nbr to integer.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:34:26 - Set step_desc based on value from step_number.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:34:26 - Get Variables.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:34:26 - Add procedure_name.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:34:26 - Call cz_write_audit.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:34:26 - load_gene_expression_one_study - Starting entry [Run FilePivot]
+2018/10/12 16:34:26 - Run FilePivot - Running on platform : Linux
+2018/10/12 16:34:26 - Run FilePivot - Executing command : /tmp/kettle_35fef8e0-ce5e-11e8-8f4d-1367c8fabcffshell
+2018/10/12 16:34:28 - load_gene_expression_one_study - Starting entry [Load gene expression data to lz]
+2018/10/12 16:34:28 - Load gene expression data to lz - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/load_gene_expression_data_to_lz.ktr]
+2018/10/12 16:34:28 - load_gene_expression_data_to_lz - Dispatching started for transformation [load_gene_expression_data_to_lz]
+2018/10/12 16:34:28 - Insert to lt_src_mrna_data.0 - Connected to database [TM_LZ] (commit=1000)
+2018/10/12 16:34:28 - Get pivoted file.0 - Opening file: file:///tmp/Neptune_V6_Exp_N1G_N2G_N3bG-CombatCorrected_Glom_noped_pivot.txt
+2018/10/12 16:34:28 - Check for numeric intensity.0 - Optimization level set to 9.
+2018/10/12 16:34:28 - Remove SAMPLE_SUFFIX from sample_cd.0 - Optimization level set to 9.
+2018/10/12 16:34:38 - Get pivoted file.0 - linenr 500000
+2018/10/12 16:34:38 - Check for numeric intensity.0 - linenr 500000
+2018/10/12 16:34:39 - Drop non-numeric data.0 - linenr 500000
+2018/10/12 16:34:39 - SAMPLE_REMAP_FILE present.0 - linenr 500000
+2018/10/12 16:34:39 - SAMPLE_SUFFIX present.0 - linenr 500000
+2018/10/12 16:34:40 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 500000
+2018/10/12 16:34:40 - Select values 2.0 - linenr 500000
+2018/10/12 16:34:40 - Select values for mrna data.0 - linenr 500000
+2018/10/12 16:34:41 - Check if LOAD_TYPE = L.0 - linenr 500000
+2018/10/12 16:34:41 - Check if LOAD_TYPE = I.0 - linenr 500000
+2018/10/12 16:34:41 - Insert to lt_src_mrna_data.0 - linenr 500000
+2018/10/12 16:34:50 - Get pivoted file.0 - linenr 1000000
+2018/10/12 16:34:50 - Check for numeric intensity.0 - linenr 1000000
+2018/10/12 16:34:51 - Drop non-numeric data.0 - linenr 1000000
+2018/10/12 16:34:51 - SAMPLE_REMAP_FILE present.0 - linenr 1000000
+2018/10/12 16:34:51 - SAMPLE_SUFFIX present.0 - linenr 1000000
+2018/10/12 16:34:52 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 1000000
+2018/10/12 16:34:52 - Select values 2.0 - linenr 1000000
+2018/10/12 16:34:52 - Select values for mrna data.0 - linenr 1000000
+2018/10/12 16:34:53 - Check if LOAD_TYPE = L.0 - linenr 1000000
+2018/10/12 16:34:53 - Check if LOAD_TYPE = I.0 - linenr 1000000
+2018/10/12 16:34:53 - Insert to lt_src_mrna_data.0 - linenr 1000000
+2018/10/12 16:35:04 - Get pivoted file.0 - linenr 1500000
+2018/10/12 16:35:04 - Check for numeric intensity.0 - linenr 1500000
+2018/10/12 16:35:04 - Drop non-numeric data.0 - linenr 1500000
+2018/10/12 16:35:05 - SAMPLE_REMAP_FILE present.0 - linenr 1500000
+2018/10/12 16:35:05 - SAMPLE_SUFFIX present.0 - linenr 1500000
+2018/10/12 16:35:05 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 1500000
+2018/10/12 16:35:05 - Select values 2.0 - linenr 1500000
+2018/10/12 16:35:06 - Select values for mrna data.0 - linenr 1500000
+2018/10/12 16:35:06 - Check if LOAD_TYPE = L.0 - linenr 1500000
+2018/10/12 16:35:06 - Check if LOAD_TYPE = I.0 - linenr 1500000
+2018/10/12 16:35:07 - Insert to lt_src_mrna_data.0 - linenr 1500000
+2018/10/12 16:35:15 - Get pivoted file.0 - linenr 2000000
+2018/10/12 16:35:16 - Check for numeric intensity.0 - linenr 2000000
+2018/10/12 16:35:16 - Drop non-numeric data.0 - linenr 2000000
+2018/10/12 16:35:16 - SAMPLE_REMAP_FILE present.0 - linenr 2000000
+2018/10/12 16:35:17 - SAMPLE_SUFFIX present.0 - linenr 2000000
+2018/10/12 16:35:17 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 2000000
+2018/10/12 16:35:18 - Select values 2.0 - linenr 2000000
+2018/10/12 16:35:19 - Select values for mrna data.0 - linenr 2000000
+2018/10/12 16:35:19 - Check if LOAD_TYPE = L.0 - linenr 2000000
+2018/10/12 16:35:19 - Check if LOAD_TYPE = I.0 - linenr 2000000
+2018/10/12 16:35:19 - Insert to lt_src_mrna_data.0 - linenr 2000000
+2018/10/12 16:35:28 - Get pivoted file.0 - linenr 2500000
+2018/10/12 16:35:28 - Check for numeric intensity.0 - linenr 2500000
+2018/10/12 16:35:29 - Drop non-numeric data.0 - linenr 2500000
+2018/10/12 16:35:29 - SAMPLE_REMAP_FILE present.0 - linenr 2500000
+2018/10/12 16:35:29 - SAMPLE_SUFFIX present.0 - linenr 2500000
+2018/10/12 16:35:30 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 2500000
+2018/10/12 16:35:30 - Select values 2.0 - linenr 2500000
+2018/10/12 16:35:30 - Select values for mrna data.0 - linenr 2500000
+2018/10/12 16:35:31 - Check if LOAD_TYPE = L.0 - linenr 2500000
+2018/10/12 16:35:31 - Check if LOAD_TYPE = I.0 - linenr 2500000
+2018/10/12 16:35:31 - Insert to lt_src_mrna_data.0 - linenr 2500000
+2018/10/12 16:35:40 - Get pivoted file.0 - linenr 3000000
+2018/10/12 16:35:40 - Check for numeric intensity.0 - linenr 3000000
+2018/10/12 16:35:41 - Drop non-numeric data.0 - linenr 3000000
+2018/10/12 16:35:41 - SAMPLE_REMAP_FILE present.0 - linenr 3000000
+2018/10/12 16:35:41 - SAMPLE_SUFFIX present.0 - linenr 3000000
+2018/10/12 16:35:42 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 3000000
+2018/10/12 16:35:42 - Select values 2.0 - linenr 3000000
+2018/10/12 16:35:43 - Select values for mrna data.0 - linenr 3000000
+2018/10/12 16:35:43 - Check if LOAD_TYPE = L.0 - linenr 3000000
+2018/10/12 16:35:44 - Check if LOAD_TYPE = I.0 - linenr 3000000
+2018/10/12 16:35:44 - Insert to lt_src_mrna_data.0 - linenr 3000000
+2018/10/12 16:35:53 - Get pivoted file.0 - linenr 3500000
+2018/10/12 16:35:53 - Check for numeric intensity.0 - linenr 3500000
+2018/10/12 16:35:53 - Drop non-numeric data.0 - linenr 3500000
+2018/10/12 16:35:53 - SAMPLE_REMAP_FILE present.0 - linenr 3500000
+2018/10/12 16:35:54 - SAMPLE_SUFFIX present.0 - linenr 3500000
+2018/10/12 16:35:54 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 3500000
+2018/10/12 16:35:54 - Select values 2.0 - linenr 3500000
+2018/10/12 16:35:55 - Select values for mrna data.0 - linenr 3500000
+2018/10/12 16:35:55 - Check if LOAD_TYPE = L.0 - linenr 3500000
+2018/10/12 16:35:56 - Check if LOAD_TYPE = I.0 - linenr 3500000
+2018/10/12 16:35:56 - Insert to lt_src_mrna_data.0 - linenr 3500000
+2018/10/12 16:36:01 - Get pivoted file.0 - Finished processing (I=3811719, O=0, R=0, W=3811718, U=1, E=0)
+2018/10/12 16:36:01 - Check for numeric intensity.0 - Finished processing (I=0, O=0, R=3811718, W=3811718, U=0, E=0)
+2018/10/12 16:36:01 - Drop non-numeric data.0 - Finished processing (I=0, O=0, R=3811718, W=3811718, U=0, E=0)
+2018/10/12 16:36:02 - Get sample variables.0 - Finished processing (I=0, O=0, R=3811718, W=3811718, U=0, E=0)
+2018/10/12 16:36:02 - SAMPLE_REMAP_FILE present.0 - Finished processing (I=0, O=0, R=3811718, W=3811718, U=0, E=0)
+2018/10/12 16:36:02 - SAMPLE_SUFFIX present.0 - Finished processing (I=0, O=0, R=3811718, W=3811718, U=0, E=0)
+2018/10/12 16:36:02 - Remove SAMPLE_SUFFIX from sample_cd.0 - Finished processing (I=0, O=0, R=3811718, W=3811718, U=0, E=0)
+2018/10/12 16:36:02 - Select values 2.0 - Finished processing (I=0, O=0, R=3811718, W=3811718, U=0, E=0)
+2018/10/12 16:36:03 - Get Variables.0 - Finished processing (I=0, O=0, R=3811718, W=3811718, U=0, E=0)
+2018/10/12 16:36:03 - Trim trial_name.0 - Finished processing (I=0, O=0, R=3811718, W=3811718, U=0, E=0)
+2018/10/12 16:36:03 - Select values for mrna data.0 - Finished processing (I=0, O=0, R=3811718, W=3811718, U=0, E=0)
+2018/10/12 16:36:03 - Check if LOAD_TYPE = L.0 - Finished processing (I=0, O=0, R=3811718, W=3811718, U=0, E=0)
+2018/10/12 16:36:03 - Bulk Loader.0 - The input stream of this step and/or the PSQL process is null.  Load was not executed.
+2018/10/12 16:36:03 - Check if LOAD_TYPE = I.0 - Finished processing (I=0, O=0, R=3811718, W=3811718, U=0, E=0)
+2018/10/12 16:36:03 - Insert to lt_src_mrna_data.0 - Finished processing (I=0, O=3811718, R=3811718, W=3811718, U=0, E=0)
+2018/10/12 16:36:03 - Get stats from steps.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:36:03 - Copy rows to result.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:36:03 - load_gene_expression_one_study - Starting entry [Check LOAD_TYPE = F]
+2018/10/12 16:36:03 - load_gene_expression_one_study - Starting entry [Write gene expression audit]
+2018/10/12 16:36:03 - Write gene expression audit - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/write_gene_expression_audit.ktr]
+2018/10/12 16:36:03 - write_gene_expression_audit - Dispatching started for transformation [write_gene_expression_audit]
+2018/10/12 16:36:03 - Get Audit rows.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:36:03 - Reset step names.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:36:03 - Set step_number based on step_name.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:36:03 - Sort audit records by step_number.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:36:03 - Split for input and output counts.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:36:03 - Set counts for output steps.0 - Finished processing (I=0, O=0, R=4, W=3, U=0, E=0)
+2018/10/12 16:36:03 - Set step_number to numeric.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:36:03 - Get Variables.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:36:03 - Add proc_prefix, step_status.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:36:03 - Create procedure_name.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:36:04 - Call cz_write_audit.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:36:04 - load_gene_expression_one_study - Starting entry [Delete file]
+2018/10/12 16:36:04 - Delete file - File [/tmp/Neptune_V6_Exp_N1G_N2G_N3bG-CombatCorrected_Glom_noped_pivot.txt] deleted!
+2018/10/12 16:36:04 - load_gene_expression_one_study - Finished job entry [Delete file] (result=[true])
+2018/10/12 16:36:04 - load_gene_expression_one_study - Finished job entry [Write gene expression audit] (result=[true])
+2018/10/12 16:36:04 - load_gene_expression_one_study - Finished job entry [Check LOAD_TYPE = F] (result=[true])
+2018/10/12 16:36:04 - load_gene_expression_one_study - Finished job entry [Load gene expression data to lz] (result=[true])
+2018/10/12 16:36:04 - load_gene_expression_one_study - Finished job entry [Run FilePivot] (result=[true])
+2018/10/12 16:36:04 - load_gene_expression_one_study - Finished job entry [Validate gene expression header has same nbr columns as data] (result=[true])
+2018/10/12 16:36:04 - load_gene_expression_one_study - Finished job entry [Set gene expression filename as variable] (result=[true])
+2018/10/12 16:36:04 - load_gene_expression_one_study - Starting entry [Set gene expression filename as variable]
+2018/10/12 16:36:04 - Set gene expression filename as variable - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/set_gene_expression_filename.ktr]
+2018/10/12 16:36:04 - set_gene_expression_filename - Dispatching started for transformation [set_gene_expression_filename]
+2018/10/12 16:36:04 - Get rows from result.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:36:04 - Write to log.0 - 
+2018/10/12 16:36:04 - Write to log.0 - ------------> Linenr 1------------------------------
+2018/10/12 16:36:04 - Write to log.0 - *** Processing file ***
+2018/10/12 16:36:04 - Write to log.0 - 
+2018/10/12 16:36:04 - Write to log.0 - Neptune_V6_Exp_N1T_N2T-ComBatCorrected.txt
+2018/10/12 16:36:04 - Write to log.0 - 
+2018/10/12 16:36:04 - Write to log.0 - ====================
+2018/10/12 16:36:04 - Set Variables.0 - Setting environment variables...
+2018/10/12 16:36:04 - Set Variables.0 - Set variable FILENAME to value [Neptune_V6_Exp_N1T_N2T-ComBatCorrected.txt]
+2018/10/12 16:36:04 - Set Variables.0 - Set variable FILENAME_NO_EXT to value [Neptune_V6_Exp_N1T_N2T-ComBatCorrected]
+2018/10/12 16:36:04 - Write to log.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:36:04 - Set Variables.0 - Finished after 1 rows.
+2018/10/12 16:36:04 - Set Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:36:04 - load_gene_expression_one_study - Starting entry [Validate gene expression header has same nbr columns as data]
+2018/10/12 16:36:04 - Validate gene expression header has same nbr columns as data - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/validate_gene_expression_columns.ktr]
+2018/10/12 16:36:04 - validate_gene_expression_columns - Dispatching started for transformation [validate_gene_expression_columns]
+2018/10/12 16:36:04 - Get Header Row.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/expression/Neptune_V6_Exp_N1T_N2T-ComBatCorrected.txt
+2018/10/12 16:36:04 - Get first data row.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/expression/Neptune_V6_Exp_N1T_N2T-ComBatCorrected.txt
+2018/10/12 16:36:04 - Read all records.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/expression/Neptune_V6_Exp_N1T_N2T-ComBatCorrected.txt
+2018/10/12 16:36:04 - Get Header Row.0 - Finished processing (I=1, O=0, R=0, W=1, U=1, E=0)
+2018/10/12 16:36:04 - Get first data row.0 - Finished processing (I=2, O=0, R=0, W=1, U=1, E=0)
+2018/10/12 16:36:04 - Split header.0 - Finished processing (I=0, O=0, R=1, W=279, U=0, E=0)
+2018/10/12 16:36:04 - Split data.0 - Finished processing (I=0, O=0, R=1, W=279, U=0, E=0)
+2018/10/12 16:36:04 - Select hdr_col.0 - Finished processing (I=0, O=0, R=279, W=279, U=0, E=0)
+2018/10/12 16:36:04 - Count hdr_col.0 - Finished processing (I=0, O=0, R=279, W=1, U=0, E=0)
+2018/10/12 16:36:04 - add join_col for hdr_ct.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:36:04 - Select data_col.0 - Finished processing (I=0, O=0, R=279, W=279, U=0, E=0)
+2018/10/12 16:36:04 - Count data_col.0 - Finished processing (I=0, O=0, R=279, W=1, U=0, E=0)
+2018/10/12 16:36:04 - Add join_col for data_ct.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:36:04 - Join hdr_ct and data_ct.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2018/10/12 16:36:04 - Nbr of header cols = nbr data cols.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:36:04 - Get LOAD_TYPE.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:36:04 - Check if LOAD_TYPE = F.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:36:04 - constant 1.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:36:04 - Subtract 1 from hdr_ct to get count of samples.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:36:11 - Read all records.0 - Finished processing (I=25583, O=0, R=0, W=25582, U=1, E=0)
+2018/10/12 16:36:11 - Count probesets.0 - Finished processing (I=0, O=0, R=25582, W=1, U=0, E=0)
+2018/10/12 16:36:11 - add join_col for probeset_ct.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:36:11 - Add probeset_ct to results.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2018/10/12 16:36:11 - Select counts.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:36:11 - Separate counts into 2 records.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2018/10/12 16:36:11 - Add step_desc.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:36:11 - Set step_desc to step_number.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:36:11 - Convert step_nbr to integer.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:36:11 - Set step_desc based on value from step_number.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:36:11 - Get Variables.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:36:11 - Add procedure_name.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:36:11 - Call cz_write_audit.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:36:11 - load_gene_expression_one_study - Starting entry [Run FilePivot]
+2018/10/12 16:36:11 - Run FilePivot - Running on platform : Linux
+2018/10/12 16:36:11 - Run FilePivot - Executing command : /tmp/kettle_74b1d851-ce5e-11e8-8f4d-1367c8fabcffshell
+2018/10/12 16:36:14 - load_gene_expression_one_study - Starting entry [Load gene expression data to lz]
+2018/10/12 16:36:14 - Load gene expression data to lz - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/load_gene_expression_data_to_lz.ktr]
+2018/10/12 16:36:14 - load_gene_expression_data_to_lz - Dispatching started for transformation [load_gene_expression_data_to_lz]
+2018/10/12 16:36:14 - Insert to lt_src_mrna_data.0 - Connected to database [TM_LZ] (commit=1000)
+2018/10/12 16:36:14 - Get pivoted file.0 - Opening file: file:///tmp/Neptune_V6_Exp_N1T_N2T-ComBatCorrected_pivot.txt
+2018/10/12 16:36:14 - Check for numeric intensity.0 - Optimization level set to 9.
+2018/10/12 16:36:14 - Remove SAMPLE_SUFFIX from sample_cd.0 - Optimization level set to 9.
+2018/10/12 16:36:25 - Get pivoted file.0 - linenr 500000
+2018/10/12 16:36:25 - Check for numeric intensity.0 - linenr 500000
+2018/10/12 16:36:25 - Drop non-numeric data.0 - linenr 500000
+2018/10/12 16:36:25 - SAMPLE_REMAP_FILE present.0 - linenr 500000
+2018/10/12 16:36:26 - SAMPLE_SUFFIX present.0 - linenr 500000
+2018/10/12 16:36:26 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 500000
+2018/10/12 16:36:26 - Select values 2.0 - linenr 500000
+2018/10/12 16:36:27 - Select values for mrna data.0 - linenr 500000
+2018/10/12 16:36:27 - Check if LOAD_TYPE = L.0 - linenr 500000
+2018/10/12 16:36:27 - Check if LOAD_TYPE = I.0 - linenr 500000
+2018/10/12 16:36:28 - Insert to lt_src_mrna_data.0 - linenr 500000
+2018/10/12 16:36:36 - Get pivoted file.0 - linenr 1000000
+2018/10/12 16:36:37 - Check for numeric intensity.0 - linenr 1000000
+2018/10/12 16:36:37 - Drop non-numeric data.0 - linenr 1000000
+2018/10/12 16:36:37 - SAMPLE_REMAP_FILE present.0 - linenr 1000000
+2018/10/12 16:36:37 - SAMPLE_SUFFIX present.0 - linenr 1000000
+2018/10/12 16:36:38 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 1000000
+2018/10/12 16:36:38 - Select values 2.0 - linenr 1000000
+2018/10/12 16:36:39 - Select values for mrna data.0 - linenr 1000000
+2018/10/12 16:36:39 - Check if LOAD_TYPE = L.0 - linenr 1000000
+2018/10/12 16:36:39 - Check if LOAD_TYPE = I.0 - linenr 1000000
+2018/10/12 16:36:39 - Insert to lt_src_mrna_data.0 - linenr 1000000
+2018/10/12 16:36:48 - Get pivoted file.0 - linenr 1500000
+2018/10/12 16:36:49 - Check for numeric intensity.0 - linenr 1500000
+2018/10/12 16:36:49 - Drop non-numeric data.0 - linenr 1500000
+2018/10/12 16:36:49 - SAMPLE_REMAP_FILE present.0 - linenr 1500000
+2018/10/12 16:36:50 - SAMPLE_SUFFIX present.0 - linenr 1500000
+2018/10/12 16:36:50 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 1500000
+2018/10/12 16:36:50 - Select values 2.0 - linenr 1500000
+2018/10/12 16:36:51 - Select values for mrna data.0 - linenr 1500000
+2018/10/12 16:36:51 - Check if LOAD_TYPE = L.0 - linenr 1500000
+2018/10/12 16:36:51 - Check if LOAD_TYPE = I.0 - linenr 1500000
+2018/10/12 16:36:51 - Insert to lt_src_mrna_data.0 - linenr 1500000
+2018/10/12 16:37:00 - Get pivoted file.0 - linenr 2000000
+2018/10/12 16:37:00 - Check for numeric intensity.0 - linenr 2000000
+2018/10/12 16:37:00 - Drop non-numeric data.0 - linenr 2000000
+2018/10/12 16:37:01 - SAMPLE_REMAP_FILE present.0 - linenr 2000000
+2018/10/12 16:37:01 - SAMPLE_SUFFIX present.0 - linenr 2000000
+2018/10/12 16:37:01 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 2000000
+2018/10/12 16:37:01 - Select values 2.0 - linenr 2000000
+2018/10/12 16:37:02 - Select values for mrna data.0 - linenr 2000000
+2018/10/12 16:37:02 - Check if LOAD_TYPE = L.0 - linenr 2000000
+2018/10/12 16:37:03 - Check if LOAD_TYPE = I.0 - linenr 2000000
+2018/10/12 16:37:03 - Insert to lt_src_mrna_data.0 - linenr 2000000
+2018/10/12 16:37:11 - Get pivoted file.0 - linenr 2500000
+2018/10/12 16:37:12 - Check for numeric intensity.0 - linenr 2500000
+2018/10/12 16:37:12 - Drop non-numeric data.0 - linenr 2500000
+2018/10/12 16:37:12 - SAMPLE_REMAP_FILE present.0 - linenr 2500000
+2018/10/12 16:37:13 - SAMPLE_SUFFIX present.0 - linenr 2500000
+2018/10/12 16:37:13 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 2500000
+2018/10/12 16:37:13 - Select values 2.0 - linenr 2500000
+2018/10/12 16:37:14 - Select values for mrna data.0 - linenr 2500000
+2018/10/12 16:37:14 - Check if LOAD_TYPE = L.0 - linenr 2500000
+2018/10/12 16:37:14 - Check if LOAD_TYPE = I.0 - linenr 2500000
+2018/10/12 16:37:15 - Insert to lt_src_mrna_data.0 - linenr 2500000
+2018/10/12 16:37:23 - Get pivoted file.0 - linenr 3000000
+2018/10/12 16:37:23 - Check for numeric intensity.0 - linenr 3000000
+2018/10/12 16:37:24 - Drop non-numeric data.0 - linenr 3000000
+2018/10/12 16:37:24 - SAMPLE_REMAP_FILE present.0 - linenr 3000000
+2018/10/12 16:37:24 - SAMPLE_SUFFIX present.0 - linenr 3000000
+2018/10/12 16:37:24 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 3000000
+2018/10/12 16:37:25 - Select values 2.0 - linenr 3000000
+2018/10/12 16:37:25 - Select values for mrna data.0 - linenr 3000000
+2018/10/12 16:37:26 - Check if LOAD_TYPE = L.0 - linenr 3000000
+2018/10/12 16:37:26 - Check if LOAD_TYPE = I.0 - linenr 3000000
+2018/10/12 16:37:26 - Insert to lt_src_mrna_data.0 - linenr 3000000
+2018/10/12 16:37:35 - Get pivoted file.0 - linenr 3500000
+2018/10/12 16:37:35 - Check for numeric intensity.0 - linenr 3500000
+2018/10/12 16:37:35 - Drop non-numeric data.0 - linenr 3500000
+2018/10/12 16:37:36 - SAMPLE_REMAP_FILE present.0 - linenr 3500000
+2018/10/12 16:37:36 - SAMPLE_SUFFIX present.0 - linenr 3500000
+2018/10/12 16:37:36 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 3500000
+2018/10/12 16:37:36 - Select values 2.0 - linenr 3500000
+2018/10/12 16:37:37 - Select values for mrna data.0 - linenr 3500000
+2018/10/12 16:37:37 - Check if LOAD_TYPE = L.0 - linenr 3500000
+2018/10/12 16:37:37 - Check if LOAD_TYPE = I.0 - linenr 3500000
+2018/10/12 16:37:38 - Insert to lt_src_mrna_data.0 - linenr 3500000
+2018/10/12 16:37:46 - Get pivoted file.0 - linenr 4000000
+2018/10/12 16:37:47 - Check for numeric intensity.0 - linenr 4000000
+2018/10/12 16:37:47 - Drop non-numeric data.0 - linenr 4000000
+2018/10/12 16:37:47 - SAMPLE_REMAP_FILE present.0 - linenr 4000000
+2018/10/12 16:37:48 - SAMPLE_SUFFIX present.0 - linenr 4000000
+2018/10/12 16:37:48 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 4000000
+2018/10/12 16:37:48 - Select values 2.0 - linenr 4000000
+2018/10/12 16:37:49 - Select values for mrna data.0 - linenr 4000000
+2018/10/12 16:37:49 - Check if LOAD_TYPE = L.0 - linenr 4000000
+2018/10/12 16:37:49 - Check if LOAD_TYPE = I.0 - linenr 4000000
+2018/10/12 16:37:49 - Insert to lt_src_mrna_data.0 - linenr 4000000
+2018/10/12 16:37:58 - Get pivoted file.0 - linenr 4500000
+2018/10/12 16:37:58 - Check for numeric intensity.0 - linenr 4500000
+2018/10/12 16:37:58 - Drop non-numeric data.0 - linenr 4500000
+2018/10/12 16:37:59 - SAMPLE_REMAP_FILE present.0 - linenr 4500000
+2018/10/12 16:37:59 - SAMPLE_SUFFIX present.0 - linenr 4500000
+2018/10/12 16:37:59 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 4500000
+2018/10/12 16:37:59 - Select values 2.0 - linenr 4500000
+2018/10/12 16:38:00 - Select values for mrna data.0 - linenr 4500000
+2018/10/12 16:38:00 - Check if LOAD_TYPE = L.0 - linenr 4500000
+2018/10/12 16:38:01 - Check if LOAD_TYPE = I.0 - linenr 4500000
+2018/10/12 16:38:01 - Insert to lt_src_mrna_data.0 - linenr 4500000
+2018/10/12 16:38:10 - Get pivoted file.0 - linenr 5000000
+2018/10/12 16:38:10 - Check for numeric intensity.0 - linenr 5000000
+2018/10/12 16:38:10 - Drop non-numeric data.0 - linenr 5000000
+2018/10/12 16:38:11 - SAMPLE_REMAP_FILE present.0 - linenr 5000000
+2018/10/12 16:38:11 - SAMPLE_SUFFIX present.0 - linenr 5000000
+2018/10/12 16:38:11 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 5000000
+2018/10/12 16:38:11 - Select values 2.0 - linenr 5000000
+2018/10/12 16:38:12 - Select values for mrna data.0 - linenr 5000000
+2018/10/12 16:38:12 - Check if LOAD_TYPE = L.0 - linenr 5000000
+2018/10/12 16:38:12 - Check if LOAD_TYPE = I.0 - linenr 5000000
+2018/10/12 16:38:13 - Insert to lt_src_mrna_data.0 - linenr 5000000
+2018/10/12 16:38:24 - Get pivoted file.0 - linenr 5500000
+2018/10/12 16:38:24 - Check for numeric intensity.0 - linenr 5500000
+2018/10/12 16:38:24 - Drop non-numeric data.0 - linenr 5500000
+2018/10/12 16:38:25 - SAMPLE_REMAP_FILE present.0 - linenr 5500000
+2018/10/12 16:38:25 - SAMPLE_SUFFIX present.0 - linenr 5500000
+2018/10/12 16:38:25 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 5500000
+2018/10/12 16:38:25 - Select values 2.0 - linenr 5500000
+2018/10/12 16:38:26 - Select values for mrna data.0 - linenr 5500000
+2018/10/12 16:38:26 - Check if LOAD_TYPE = L.0 - linenr 5500000
+2018/10/12 16:38:26 - Check if LOAD_TYPE = I.0 - linenr 5500000
+2018/10/12 16:38:27 - Insert to lt_src_mrna_data.0 - linenr 5500000
+2018/10/12 16:38:35 - Get pivoted file.0 - linenr 6000000
+2018/10/12 16:38:36 - Check for numeric intensity.0 - linenr 6000000
+2018/10/12 16:38:36 - Drop non-numeric data.0 - linenr 6000000
+2018/10/12 16:38:36 - SAMPLE_REMAP_FILE present.0 - linenr 6000000
+2018/10/12 16:38:37 - SAMPLE_SUFFIX present.0 - linenr 6000000
+2018/10/12 16:38:37 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 6000000
+2018/10/12 16:38:37 - Select values 2.0 - linenr 6000000
+2018/10/12 16:38:38 - Select values for mrna data.0 - linenr 6000000
+2018/10/12 16:38:38 - Check if LOAD_TYPE = L.0 - linenr 6000000
+2018/10/12 16:38:38 - Check if LOAD_TYPE = I.0 - linenr 6000000
+2018/10/12 16:38:38 - Insert to lt_src_mrna_data.0 - linenr 6000000
+2018/10/12 16:38:47 - Get pivoted file.0 - linenr 6500000
+2018/10/12 16:38:48 - Check for numeric intensity.0 - linenr 6500000
+2018/10/12 16:38:48 - Drop non-numeric data.0 - linenr 6500000
+2018/10/12 16:38:48 - SAMPLE_REMAP_FILE present.0 - linenr 6500000
+2018/10/12 16:38:48 - SAMPLE_SUFFIX present.0 - linenr 6500000
+2018/10/12 16:38:49 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 6500000
+2018/10/12 16:38:49 - Select values 2.0 - linenr 6500000
+2018/10/12 16:38:50 - Select values for mrna data.0 - linenr 6500000
+2018/10/12 16:38:50 - Check if LOAD_TYPE = L.0 - linenr 6500000
+2018/10/12 16:38:50 - Check if LOAD_TYPE = I.0 - linenr 6500000
+2018/10/12 16:38:50 - Insert to lt_src_mrna_data.0 - linenr 6500000
+2018/10/12 16:38:59 - Get pivoted file.0 - linenr 7000000
+2018/10/12 16:38:59 - Check for numeric intensity.0 - linenr 7000000
+2018/10/12 16:38:59 - Drop non-numeric data.0 - linenr 7000000
+2018/10/12 16:39:00 - SAMPLE_REMAP_FILE present.0 - linenr 7000000
+2018/10/12 16:39:00 - SAMPLE_SUFFIX present.0 - linenr 7000000
+2018/10/12 16:39:00 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 7000000
+2018/10/12 16:39:00 - Select values 2.0 - linenr 7000000
+2018/10/12 16:39:01 - Select values for mrna data.0 - linenr 7000000
+2018/10/12 16:39:01 - Check if LOAD_TYPE = L.0 - linenr 7000000
+2018/10/12 16:39:01 - Get pivoted file.0 - Finished processing (I=7111797, O=0, R=0, W=7111796, U=1, E=0)
+2018/10/12 16:39:02 - Check if LOAD_TYPE = I.0 - linenr 7000000
+2018/10/12 16:39:02 - Check for numeric intensity.0 - Finished processing (I=0, O=0, R=7111796, W=7111796, U=0, E=0)
+2018/10/12 16:39:02 - Insert to lt_src_mrna_data.0 - linenr 7000000
+2018/10/12 16:39:02 - Drop non-numeric data.0 - Finished processing (I=0, O=0, R=7111796, W=7111796, U=0, E=0)
+2018/10/12 16:39:02 - Get sample variables.0 - Finished processing (I=0, O=0, R=7111796, W=7111796, U=0, E=0)
+2018/10/12 16:39:02 - SAMPLE_REMAP_FILE present.0 - Finished processing (I=0, O=0, R=7111796, W=7111796, U=0, E=0)
+2018/10/12 16:39:02 - SAMPLE_SUFFIX present.0 - Finished processing (I=0, O=0, R=7111796, W=7111796, U=0, E=0)
+2018/10/12 16:39:03 - Remove SAMPLE_SUFFIX from sample_cd.0 - Finished processing (I=0, O=0, R=7111796, W=7111796, U=0, E=0)
+2018/10/12 16:39:03 - Select values 2.0 - Finished processing (I=0, O=0, R=7111796, W=7111796, U=0, E=0)
+2018/10/12 16:39:03 - Get Variables.0 - Finished processing (I=0, O=0, R=7111796, W=7111796, U=0, E=0)
+2018/10/12 16:39:03 - Trim trial_name.0 - Finished processing (I=0, O=0, R=7111796, W=7111796, U=0, E=0)
+2018/10/12 16:39:03 - Select values for mrna data.0 - Finished processing (I=0, O=0, R=7111796, W=7111796, U=0, E=0)
+2018/10/12 16:39:04 - Check if LOAD_TYPE = L.0 - Finished processing (I=0, O=0, R=7111796, W=7111796, U=0, E=0)
+2018/10/12 16:39:04 - Bulk Loader.0 - The input stream of this step and/or the PSQL process is null.  Load was not executed.
+2018/10/12 16:39:04 - Check if LOAD_TYPE = I.0 - Finished processing (I=0, O=0, R=7111796, W=7111796, U=0, E=0)
+2018/10/12 16:39:04 - Insert to lt_src_mrna_data.0 - Finished processing (I=0, O=7111796, R=7111796, W=7111796, U=0, E=0)
+2018/10/12 16:39:04 - Get stats from steps.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:39:04 - Copy rows to result.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:39:04 - load_gene_expression_one_study - Starting entry [Check LOAD_TYPE = F]
+2018/10/12 16:39:04 - load_gene_expression_one_study - Starting entry [Write gene expression audit]
+2018/10/12 16:39:04 - Write gene expression audit - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/write_gene_expression_audit.ktr]
+2018/10/12 16:39:04 - write_gene_expression_audit - Dispatching started for transformation [write_gene_expression_audit]
+2018/10/12 16:39:04 - Get Audit rows.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:39:04 - Reset step names.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:39:04 - Set step_number based on step_name.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:39:04 - Sort audit records by step_number.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:39:04 - Split for input and output counts.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:39:04 - Set counts for output steps.0 - Finished processing (I=0, O=0, R=4, W=3, U=0, E=0)
+2018/10/12 16:39:04 - Set step_number to numeric.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:39:04 - Get Variables.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:39:04 - Add proc_prefix, step_status.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:39:04 - Create procedure_name.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:39:04 - Call cz_write_audit.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:39:04 - load_gene_expression_one_study - Starting entry [Delete file]
+2018/10/12 16:39:04 - Delete file - File [/tmp/Neptune_V6_Exp_N1T_N2T-ComBatCorrected_pivot.txt] deleted!
+2018/10/12 16:39:04 - load_gene_expression_one_study - Finished job entry [Delete file] (result=[true])
+2018/10/12 16:39:04 - load_gene_expression_one_study - Finished job entry [Write gene expression audit] (result=[true])
+2018/10/12 16:39:04 - load_gene_expression_one_study - Finished job entry [Check LOAD_TYPE = F] (result=[true])
+2018/10/12 16:39:04 - load_gene_expression_one_study - Finished job entry [Load gene expression data to lz] (result=[true])
+2018/10/12 16:39:04 - load_gene_expression_one_study - Finished job entry [Run FilePivot] (result=[true])
+2018/10/12 16:39:04 - load_gene_expression_one_study - Finished job entry [Validate gene expression header has same nbr columns as data] (result=[true])
+2018/10/12 16:39:04 - load_gene_expression_one_study - Finished job entry [Set gene expression filename as variable] (result=[true])
+2018/10/12 16:39:04 - load_gene_expression_one_study - Starting entry [Set gene expression filename as variable]
+2018/10/12 16:39:04 - Set gene expression filename as variable - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/set_gene_expression_filename.ktr]
+2018/10/12 16:39:04 - set_gene_expression_filename - Dispatching started for transformation [set_gene_expression_filename]
+2018/10/12 16:39:04 - Get rows from result.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:39:04 - Write to log.0 - 
+2018/10/12 16:39:04 - Write to log.0 - ------------> Linenr 1------------------------------
+2018/10/12 16:39:04 - Write to log.0 - *** Processing file ***
+2018/10/12 16:39:04 - Write to log.0 - 
+2018/10/12 16:39:04 - Write to log.0 - Neptune_V6_Exp_N1T_N2T_N3bT-CombatCorrected_Tub_noped.txt
+2018/10/12 16:39:04 - Write to log.0 - 
+2018/10/12 16:39:04 - Write to log.0 - ====================
+2018/10/12 16:39:04 - Write to log.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:39:04 - Set Variables.0 - Setting environment variables...
+2018/10/12 16:39:04 - Set Variables.0 - Set variable FILENAME to value [Neptune_V6_Exp_N1T_N2T_N3bT-CombatCorrected_Tub_noped.txt]
+2018/10/12 16:39:04 - Set Variables.0 - Set variable FILENAME_NO_EXT to value [Neptune_V6_Exp_N1T_N2T_N3bT-CombatCorrected_Tub_noped]
+2018/10/12 16:39:04 - Set Variables.0 - Finished after 1 rows.
+2018/10/12 16:39:04 - Set Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:39:04 - load_gene_expression_one_study - Starting entry [Validate gene expression header has same nbr columns as data]
+2018/10/12 16:39:04 - Validate gene expression header has same nbr columns as data - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/validate_gene_expression_columns.ktr]
+2018/10/12 16:39:04 - validate_gene_expression_columns - Dispatching started for transformation [validate_gene_expression_columns]
+2018/10/12 16:39:04 - Get Header Row.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/expression/Neptune_V6_Exp_N1T_N2T_N3bT-CombatCorrected_Tub_noped.txt
+2018/10/12 16:39:04 - Get first data row.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/expression/Neptune_V6_Exp_N1T_N2T_N3bT-CombatCorrected_Tub_noped.txt
+2018/10/12 16:39:04 - Read all records.0 - Opening file: file:///transmart/transmart-data/samples/studies/Neptune_V16/expression/Neptune_V6_Exp_N1T_N2T_N3bT-CombatCorrected_Tub_noped.txt
+2018/10/12 16:39:04 - Get Header Row.0 - Finished processing (I=1, O=0, R=0, W=1, U=1, E=0)
+2018/10/12 16:39:04 - Get first data row.0 - Finished processing (I=2, O=0, R=0, W=1, U=1, E=0)
+2018/10/12 16:39:04 - Split header.0 - Finished processing (I=0, O=0, R=1, W=194, U=0, E=0)
+2018/10/12 16:39:04 - Split data.0 - Finished processing (I=0, O=0, R=1, W=194, U=0, E=0)
+2018/10/12 16:39:04 - Select hdr_col.0 - Finished processing (I=0, O=0, R=194, W=194, U=0, E=0)
+2018/10/12 16:39:04 - Select data_col.0 - Finished processing (I=0, O=0, R=194, W=194, U=0, E=0)
+2018/10/12 16:39:04 - Count data_col.0 - Finished processing (I=0, O=0, R=194, W=1, U=0, E=0)
+2018/10/12 16:39:04 - Count hdr_col.0 - Finished processing (I=0, O=0, R=194, W=1, U=0, E=0)
+2018/10/12 16:39:04 - Add join_col for data_ct.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:39:04 - add join_col for hdr_ct.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:39:05 - Join hdr_ct and data_ct.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2018/10/12 16:39:05 - Nbr of header cols = nbr data cols.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:39:05 - Get LOAD_TYPE.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:39:05 - Check if LOAD_TYPE = F.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:39:05 - constant 1.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:39:05 - Subtract 1 from hdr_ct to get count of samples.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:39:09 - Read all records.0 - Finished processing (I=25583, O=0, R=0, W=25582, U=1, E=0)
+2018/10/12 16:39:09 - Count probesets.0 - Finished processing (I=0, O=0, R=25582, W=1, U=0, E=0)
+2018/10/12 16:39:09 - add join_col for probeset_ct.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:39:09 - Add probeset_ct to results.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2018/10/12 16:39:09 - Select counts.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:39:09 - Separate counts into 2 records.0 - Finished processing (I=0, O=0, R=1, W=2, U=0, E=0)
+2018/10/12 16:39:09 - Add step_desc.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:39:09 - Set step_desc to step_number.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:39:09 - Convert step_nbr to integer.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:39:09 - Set step_desc based on value from step_number.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:39:09 - Get Variables.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:39:09 - Add procedure_name.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:39:09 - Call cz_write_audit.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2018/10/12 16:39:09 - load_gene_expression_one_study - Starting entry [Run FilePivot]
+2018/10/12 16:39:09 - Run FilePivot - Running on platform : Linux
+2018/10/12 16:39:09 - Run FilePivot - Executing command : /tmp/kettle_df05ffb2-ce5e-11e8-8f4d-1367c8fabcffshell
+2018/10/12 16:39:12 - load_gene_expression_one_study - Starting entry [Load gene expression data to lz]
+2018/10/12 16:39:12 - Load gene expression data to lz - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/load_gene_expression_data_to_lz.ktr]
+2018/10/12 16:39:12 - load_gene_expression_data_to_lz - Dispatching started for transformation [load_gene_expression_data_to_lz]
+2018/10/12 16:39:12 - Insert to lt_src_mrna_data.0 - Connected to database [TM_LZ] (commit=1000)
+2018/10/12 16:39:12 - Get pivoted file.0 - Opening file: file:///tmp/Neptune_V6_Exp_N1T_N2T_N3bT-CombatCorrected_Tub_noped_pivot.txt
+2018/10/12 16:39:12 - Check for numeric intensity.0 - Optimization level set to 9.
+2018/10/12 16:39:12 - Remove SAMPLE_SUFFIX from sample_cd.0 - Optimization level set to 9.
+2018/10/12 16:39:23 - Get pivoted file.0 - linenr 500000
+2018/10/12 16:39:23 - Check for numeric intensity.0 - linenr 500000
+2018/10/12 16:39:24 - Drop non-numeric data.0 - linenr 500000
+2018/10/12 16:39:24 - SAMPLE_REMAP_FILE present.0 - linenr 500000
+2018/10/12 16:39:24 - SAMPLE_SUFFIX present.0 - linenr 500000
+2018/10/12 16:39:25 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 500000
+2018/10/12 16:39:25 - Select values 2.0 - linenr 500000
+2018/10/12 16:39:25 - Select values for mrna data.0 - linenr 500000
+2018/10/12 16:39:26 - Check if LOAD_TYPE = L.0 - linenr 500000
+2018/10/12 16:39:26 - Check if LOAD_TYPE = I.0 - linenr 500000
+2018/10/12 16:39:26 - Insert to lt_src_mrna_data.0 - linenr 500000
+2018/10/12 16:39:35 - Get pivoted file.0 - linenr 1000000
+2018/10/12 16:39:35 - Check for numeric intensity.0 - linenr 1000000
+2018/10/12 16:39:36 - Drop non-numeric data.0 - linenr 1000000
+2018/10/12 16:39:36 - SAMPLE_REMAP_FILE present.0 - linenr 1000000
+2018/10/12 16:39:36 - SAMPLE_SUFFIX present.0 - linenr 1000000
+2018/10/12 16:39:37 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 1000000
+2018/10/12 16:39:37 - Select values 2.0 - linenr 1000000
+2018/10/12 16:39:38 - Select values for mrna data.0 - linenr 1000000
+2018/10/12 16:39:38 - Check if LOAD_TYPE = L.0 - linenr 1000000
+2018/10/12 16:39:38 - Check if LOAD_TYPE = I.0 - linenr 1000000
+2018/10/12 16:39:38 - Insert to lt_src_mrna_data.0 - linenr 1000000
+2018/10/12 16:39:48 - Get pivoted file.0 - linenr 1500000
+2018/10/12 16:39:48 - Check for numeric intensity.0 - linenr 1500000
+2018/10/12 16:39:48 - Drop non-numeric data.0 - linenr 1500000
+2018/10/12 16:39:49 - SAMPLE_REMAP_FILE present.0 - linenr 1500000
+2018/10/12 16:39:49 - SAMPLE_SUFFIX present.0 - linenr 1500000
+2018/10/12 16:39:49 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 1500000
+2018/10/12 16:39:49 - Select values 2.0 - linenr 1500000
+2018/10/12 16:39:50 - Select values for mrna data.0 - linenr 1500000
+2018/10/12 16:39:50 - Check if LOAD_TYPE = L.0 - linenr 1500000
+2018/10/12 16:39:50 - Check if LOAD_TYPE = I.0 - linenr 1500000
+2018/10/12 16:39:51 - Insert to lt_src_mrna_data.0 - linenr 1500000
+2018/10/12 16:40:00 - Get pivoted file.0 - linenr 2000000
+2018/10/12 16:40:00 - Check for numeric intensity.0 - linenr 2000000
+2018/10/12 16:40:00 - Drop non-numeric data.0 - linenr 2000000
+2018/10/12 16:40:00 - SAMPLE_REMAP_FILE present.0 - linenr 2000000
+2018/10/12 16:40:01 - SAMPLE_SUFFIX present.0 - linenr 2000000
+2018/10/12 16:40:01 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 2000000
+2018/10/12 16:40:01 - Select values 2.0 - linenr 2000000
+2018/10/12 16:40:02 - Select values for mrna data.0 - linenr 2000000
+2018/10/12 16:40:02 - Check if LOAD_TYPE = L.0 - linenr 2000000
+2018/10/12 16:40:02 - Check if LOAD_TYPE = I.0 - linenr 2000000
+2018/10/12 16:40:03 - Insert to lt_src_mrna_data.0 - linenr 2000000
+2018/10/12 16:40:12 - Get pivoted file.0 - linenr 2500000
+2018/10/12 16:40:12 - Check for numeric intensity.0 - linenr 2500000
+2018/10/12 16:40:12 - Drop non-numeric data.0 - linenr 2500000
+2018/10/12 16:40:12 - SAMPLE_REMAP_FILE present.0 - linenr 2500000
+2018/10/12 16:40:13 - SAMPLE_SUFFIX present.0 - linenr 2500000
+2018/10/12 16:40:13 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 2500000
+2018/10/12 16:40:13 - Select values 2.0 - linenr 2500000
+2018/10/12 16:40:14 - Select values for mrna data.0 - linenr 2500000
+2018/10/12 16:40:14 - Check if LOAD_TYPE = L.0 - linenr 2500000
+2018/10/12 16:40:15 - Check if LOAD_TYPE = I.0 - linenr 2500000
+2018/10/12 16:40:15 - Insert to lt_src_mrna_data.0 - linenr 2500000
+2018/10/12 16:40:24 - Get pivoted file.0 - linenr 3000000
+2018/10/12 16:40:24 - Check for numeric intensity.0 - linenr 3000000
+2018/10/12 16:40:24 - Drop non-numeric data.0 - linenr 3000000
+2018/10/12 16:40:24 - SAMPLE_REMAP_FILE present.0 - linenr 3000000
+2018/10/12 16:40:25 - SAMPLE_SUFFIX present.0 - linenr 3000000
+2018/10/12 16:40:25 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 3000000
+2018/10/12 16:40:25 - Select values 2.0 - linenr 3000000
+2018/10/12 16:40:26 - Select values for mrna data.0 - linenr 3000000
+2018/10/12 16:40:26 - Check if LOAD_TYPE = L.0 - linenr 3000000
+2018/10/12 16:40:26 - Check if LOAD_TYPE = I.0 - linenr 3000000
+2018/10/12 16:40:27 - Insert to lt_src_mrna_data.0 - linenr 3000000
+2018/10/12 16:40:35 - Get pivoted file.0 - linenr 3500000
+2018/10/12 16:40:36 - Check for numeric intensity.0 - linenr 3500000
+2018/10/12 16:40:36 - Drop non-numeric data.0 - linenr 3500000
+2018/10/12 16:40:37 - SAMPLE_REMAP_FILE present.0 - linenr 3500000
+2018/10/12 16:40:37 - SAMPLE_SUFFIX present.0 - linenr 3500000
+2018/10/12 16:40:37 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 3500000
+2018/10/12 16:40:37 - Select values 2.0 - linenr 3500000
+2018/10/12 16:40:38 - Select values for mrna data.0 - linenr 3500000
+2018/10/12 16:40:38 - Check if LOAD_TYPE = L.0 - linenr 3500000
+2018/10/12 16:40:38 - Check if LOAD_TYPE = I.0 - linenr 3500000
+2018/10/12 16:40:39 - Insert to lt_src_mrna_data.0 - linenr 3500000
+2018/10/12 16:40:48 - Get pivoted file.0 - linenr 4000000
+2018/10/12 16:40:48 - Check for numeric intensity.0 - linenr 4000000
+2018/10/12 16:40:48 - Drop non-numeric data.0 - linenr 4000000
+2018/10/12 16:40:48 - SAMPLE_REMAP_FILE present.0 - linenr 4000000
+2018/10/12 16:40:49 - SAMPLE_SUFFIX present.0 - linenr 4000000
+2018/10/12 16:40:49 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 4000000
+2018/10/12 16:40:49 - Select values 2.0 - linenr 4000000
+2018/10/12 16:40:50 - Select values for mrna data.0 - linenr 4000000
+2018/10/12 16:40:50 - Check if LOAD_TYPE = L.0 - linenr 4000000
+2018/10/12 16:40:50 - Check if LOAD_TYPE = I.0 - linenr 4000000
+2018/10/12 16:40:50 - Insert to lt_src_mrna_data.0 - linenr 4000000
+2018/10/12 16:40:59 - Get pivoted file.0 - linenr 4500000
+2018/10/12 16:41:00 - Check for numeric intensity.0 - linenr 4500000
+2018/10/12 16:41:00 - Drop non-numeric data.0 - linenr 4500000
+2018/10/12 16:41:00 - SAMPLE_REMAP_FILE present.0 - linenr 4500000
+2018/10/12 16:41:00 - SAMPLE_SUFFIX present.0 - linenr 4500000
+2018/10/12 16:41:01 - Remove SAMPLE_SUFFIX from sample_cd.0 - linenr 4500000
+2018/10/12 16:41:01 - Select values 2.0 - linenr 4500000
+2018/10/12 16:41:02 - Select values for mrna data.0 - linenr 4500000
+2018/10/12 16:41:02 - Check if LOAD_TYPE = L.0 - linenr 4500000
+2018/10/12 16:41:02 - Check if LOAD_TYPE = I.0 - linenr 4500000
+2018/10/12 16:41:02 - Insert to lt_src_mrna_data.0 - linenr 4500000
+2018/10/12 16:41:10 - Get pivoted file.0 - Finished processing (I=4937327, O=0, R=0, W=4937326, U=1, E=0)
+2018/10/12 16:41:10 - Check for numeric intensity.0 - Finished processing (I=0, O=0, R=4937326, W=4937326, U=0, E=0)
+2018/10/12 16:41:10 - Drop non-numeric data.0 - Finished processing (I=0, O=0, R=4937326, W=4937326, U=0, E=0)
+2018/10/12 16:41:10 - Get sample variables.0 - Finished processing (I=0, O=0, R=4937326, W=4937326, U=0, E=0)
+2018/10/12 16:41:11 - SAMPLE_REMAP_FILE present.0 - Finished processing (I=0, O=0, R=4937326, W=4937326, U=0, E=0)
+2018/10/12 16:41:11 - SAMPLE_SUFFIX present.0 - Finished processing (I=0, O=0, R=4937326, W=4937326, U=0, E=0)
+2018/10/12 16:41:11 - Remove SAMPLE_SUFFIX from sample_cd.0 - Finished processing (I=0, O=0, R=4937326, W=4937326, U=0, E=0)
+2018/10/12 16:41:11 - Select values 2.0 - Finished processing (I=0, O=0, R=4937326, W=4937326, U=0, E=0)
+2018/10/12 16:41:11 - Get Variables.0 - Finished processing (I=0, O=0, R=4937326, W=4937326, U=0, E=0)
+2018/10/12 16:41:12 - Trim trial_name.0 - Finished processing (I=0, O=0, R=4937326, W=4937326, U=0, E=0)
+2018/10/12 16:41:12 - Select values for mrna data.0 - Finished processing (I=0, O=0, R=4937326, W=4937326, U=0, E=0)
+2018/10/12 16:41:12 - Check if LOAD_TYPE = L.0 - Finished processing (I=0, O=0, R=4937326, W=4937326, U=0, E=0)
+2018/10/12 16:41:12 - Bulk Loader.0 - The input stream of this step and/or the PSQL process is null.  Load was not executed.
+2018/10/12 16:41:12 - Check if LOAD_TYPE = I.0 - Finished processing (I=0, O=0, R=4937326, W=4937326, U=0, E=0)
+2018/10/12 16:41:12 - Insert to lt_src_mrna_data.0 - Finished processing (I=0, O=4937326, R=4937326, W=4937326, U=0, E=0)
+2018/10/12 16:41:12 - Get stats from steps.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:41:12 - Copy rows to result.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:41:12 - load_gene_expression_one_study - Starting entry [Check LOAD_TYPE = F]
+2018/10/12 16:41:12 - load_gene_expression_one_study - Starting entry [Write gene expression audit]
+2018/10/12 16:41:12 - Write gene expression audit - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/write_gene_expression_audit.ktr]
+2018/10/12 16:41:12 - write_gene_expression_audit - Dispatching started for transformation [write_gene_expression_audit]
+2018/10/12 16:41:12 - Get Audit rows.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:41:12 - Reset step names.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:41:12 - Set step_number based on step_name.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:41:12 - Sort audit records by step_number.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:41:12 - Split for input and output counts.0 - Finished processing (I=0, O=0, R=4, W=4, U=0, E=0)
+2018/10/12 16:41:12 - Set counts for output steps.0 - Finished processing (I=0, O=0, R=4, W=3, U=0, E=0)
+2018/10/12 16:41:12 - Set step_number to numeric.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:41:12 - Get Variables.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:41:12 - Add proc_prefix, step_status.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:41:12 - Create procedure_name.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:41:12 - Call cz_write_audit.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2018/10/12 16:41:12 - load_gene_expression_one_study - Starting entry [Delete file]
+2018/10/12 16:41:12 - Delete file - File [/tmp/Neptune_V6_Exp_N1T_N2T_N3bT-CombatCorrected_Tub_noped_pivot.txt] deleted!
+2018/10/12 16:41:12 - load_gene_expression_one_study - Finished job entry [Delete file] (result=[true])
+2018/10/12 16:41:12 - load_gene_expression_one_study - Finished job entry [Write gene expression audit] (result=[true])
+2018/10/12 16:41:12 - load_gene_expression_one_study - Finished job entry [Check LOAD_TYPE = F] (result=[true])
+2018/10/12 16:41:12 - load_gene_expression_one_study - Finished job entry [Load gene expression data to lz] (result=[true])
+2018/10/12 16:41:12 - load_gene_expression_one_study - Finished job entry [Run FilePivot] (result=[true])
+2018/10/12 16:41:12 - load_gene_expression_one_study - Finished job entry [Validate gene expression header has same nbr columns as data] (result=[true])
+2018/10/12 16:41:12 - load_gene_expression_one_study - Finished job entry [Set gene expression filename as variable] (result=[true])
+2018/10/12 16:41:12 - load_all_gene_expression_files_for_study - Finished job entry [load each file for study] (result=[true])
+2018/10/12 16:41:12 - load_all_gene_expression_files_for_study - Finished job entry [Get list of filenames for Study] (result=[true])
+2018/10/12 16:41:12 - load_all_gene_expression_files_for_study - Finished job entry [Load subject-sample map] (result=[true])
+2018/10/12 16:41:12 - load_all_gene_expression_files_for_study - Finished job entry [truncate lt_src_mrna_data] (result=[true])
+2018/10/12 16:41:12 - load_all_gene_expression_files_for_study - Finished job entry [Write study_id to audit] (result=[true])
+2018/10/12 16:41:12 - load_all_gene_expression_files_for_study - Finished job entry [Check if file-only load] (result=[true])
+2018/10/12 16:41:12 - load_gene_expression_data - Starting entry [Check for File Only load]
+2018/10/12 16:41:12 - load_gene_expression_data - Starting entry [run i2b2_process_mrna_data]
+2018/10/12 16:41:12 - run i2b2_process_mrna_data - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/run_i2b2_process_mrna_data.ktr]
+2018/10/12 16:41:12 - run_i2b2_process_mrna_data - Dispatching started for transformation [run_i2b2_process_mrna_data]
+2018/10/12 16:41:13 - Get Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:41:13 - Uppercase fields.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:41:13 - Write parameters.0 - 
+2018/10/12 16:41:13 - Write parameters.0 - ------------> Linenr 1------------------------------
+2018/10/12 16:41:13 - Write parameters.0 - *** i2b2_process_mrna_data ***
+2018/10/12 16:41:13 - Write parameters.0 - 
+2018/10/12 16:41:13 - Write parameters.0 - study_id = NEPTUNE_V16
+2018/10/12 16:41:13 - Write parameters.0 - top_node = \Private Studies\Neptune_V16\
+2018/10/12 16:41:13 - Write parameters.0 - data_type = L
+2018/10/12 16:41:13 - Write parameters.0 - source_cd = STD
+2018/10/12 16:41:13 - Write parameters.0 - log_base =  00000002
+2018/10/12 16:41:13 - Write parameters.0 - security_required = Y
+2018/10/12 16:41:13 - Write parameters.0 - job_id =  00000000000000000000000000041.00
+2018/10/12 16:41:13 - Write parameters.0 - 
+2018/10/12 16:41:13 - Write parameters.0 - ====================
+2018/10/12 16:41:13 - Check for valid DATA_TYPE.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 16:41:13 - Write parameters.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 17:41:49 - Execute i2b2_process_mrna_data.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 17:41:49 - Check for 1 return code.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 17:41:49 - Dummy (do nothing).0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 17:41:49 - load_gene_expression_data - Starting entry [End Audit]
+2018/10/12 17:41:49 - End Audit - Loading transformation from XML file [file:///transmart/tranSMART-ETL/Postgres/GPL-1.0/Kettle/Kettle-ETL/cz_end_audit.ktr]
+2018/10/12 17:41:49 - cz_end_audit - Dispatching started for transformation [cz_end_audit]
+2018/10/12 17:41:49 - Generate Rows.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2018/10/12 17:41:49 - Get Job Name.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 17:41:49 - Call cz_end_audit.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2018/10/12 17:41:49 - load_gene_expression_data - Finished job entry [End Audit] (result=[true])
+2018/10/12 17:41:49 - load_gene_expression_data - Finished job entry [run i2b2_process_mrna_data] (result=[true])
+2018/10/12 17:41:49 - load_gene_expression_data - Finished job entry [Check for File Only load] (result=[true])
+2018/10/12 17:41:49 - load_gene_expression_data - Finished job entry [Load All Gene Expression data for study] (result=[true])
+2018/10/12 17:41:49 - load_gene_expression_data - Finished job entry [Start Audit] (result=[true])
+2018/10/12 17:41:49 - load_gene_expression_data - Finished job entry [Check if subject-sample map file exists] (result=[true])
+2018/10/12 17:41:49 - load_gene_expression_data - Finished job entry [Fail if number of files = 0] (result=[true])
+2018/10/12 17:41:49 - load_gene_expression_data - Finished job entry [Check number of gene expression data files] (result=[true])
+2018/10/12 17:41:49 - load_gene_expression_data - Finished job entry [Write To Log] (result=[true])
+2018/10/12 17:41:49 - load_gene_expression_data - Finished job entry [Validate parameters] (result=[true])
+2018/10/12 17:41:49 - load_gene_expression_data - Job execution finished
+2018/10/12 17:41:49 - Kitchen - Finished!
+2018/10/12 17:41:49 - Kitchen - Start=2018/10/12 16:31:38.729, Stop=2018/10/12 17:41:49.783
+2018/10/12 17:41:49 - Kitchen - Processing ended after 1 hours, 10 minutes and 11 seconds (4211 seconds total).
+make: Leaving directory `/transmart/transmart-data/samples/postgres'
